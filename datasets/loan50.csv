@@ -1,0 +1,51 @@
+state,emp_length,term,homeownership,annual_income,verified_income,debt_to_income,total_credit_limit,total_credit_utilized,num_cc_carrying_balance,loan_purpose,loan_amount,grade,interest_rate,public_record_bankrupt,loan_status,has_second_income,total_income
+NJ,3.0,60.0,rent,59000.0,Not Verified,0.5575254237288135,95131,32894,8,debt_consolidation,22000,B,10.9,0,Current,False,59000.0
+CA,10.0,36.0,rent,60000.0,Not Verified,1.3056833333333333,51929,78341,2,credit_card,6000,B,9.92,1,Current,False,60000.0
+SC,,36.0,mortgage,75000.0,Verified,1.05628,301373,79221,14,debt_consolidation,25000,E,26.3,0,Current,False,75000.0
+CA,0.0,36.0,rent,75000.0,Not Verified,0.5743466666666667,59890,43076,10,credit_card,6000,B,9.92,0,Current,False,75000.0
+OH,4.0,60.0,mortgage,254000.0,Not Verified,0.23814960629921259,422619,60490,2,home_improvement,25000,B,9.43,0,Current,False,254000.0
+IN,6.0,36.0,mortgage,67000.0,Source Verified,1.077044776119403,349825,72162,4,home_improvement,6400,B,9.92,0,Current,False,67000.0
+NY,2.0,36.0,rent,28800.0,Source Verified,0.09972222222222223,15980,2872,1,debt_consolidation,3000,D,17.09,0,Current,False,28800.0
+MO,10.0,36.0,mortgage,80000.0,Not Verified,0.3509125,258439,28073,3,credit_card,14500,A,6.08,0,Current,False,80000.0
+FL,6.0,60.0,rent,34000.0,Not Verified,0.6975,87705,23715,10,credit_card,10000,A,7.97,0,Current,False,34000.0
+FL,3.0,60.0,mortgage,80000.0,Source Verified,0.16685416666666666,330394,32036,4,debt_consolidation,18500,C,12.62,1,Current,True,192000.0
+MD,8.0,36.0,rent,73000.0,Source Verified,0.41432876712328764,36182,30246,3,debt_consolidation,17000,D,17.09,0,Current,False,73000.0
+HI,10.0,36.0,mortgage,120000.0,Not Verified,0.7989083333333333,452712,95869,4,credit_card,12000,A,5.31,0,Current,False,120000.0
+CT,10.0,36.0,rent,100000.0,Source Verified,0.27809,74805,27809,3,credit_card,16000,A,7.35,0,Current,False,100000.0
+NE,2.0,36.0,mortgage,105000.0,Not Verified,0.2681904761904762,279386,28160,2,home_improvement,16500,A,5.31,0,Current,False,105000.0
+CA,5.0,36.0,rent,34000.0,Not Verified,0.6292941176470588,33038,21396,3,debt_consolidation,3000,A,7.96,0,Current,False,34000.0
+TX,2.0,60.0,mortgage,98000.0,Verified,1.1071020408163266,319551,108496,6,credit_card,29400,E,24.85,0,Fully Paid,False,98000.0
+HI,5.0,60.0,rent,68700.0,Source Verified,1.4995487627365356,119325,103019,5,debt_consolidation,13500,D,18.06,0,Current,False,68700.0
+CA,3.0,60.0,rent,43000.0,Source Verified,0.15465277777777778,60693,22270,4,debt_consolidation,18200,B,10.42,0,Current,True,144000.0
+CA,3.0,36.0,rent,100000.0,Source Verified,0.13823,69100,13823,5,other,6000,A,7.96,0,Current,False,100000.0
+FL,10.0,60.0,mortgage,76000.0,Source Verified,0.5898157894736842,249700,44826,10,debt_consolidation,18000,D,19.42,0,Current,False,76000.0
+MS,10.0,36.0,mortgage,80000.0,Verified,0.7373059317634845,136046,124994,1,car,5000,C,14.08,0,Current,True,169528.0
+WI,10.0,60.0,mortgage,50000.0,Verified,0.5234166666666666,375828,87934,11,debt_consolidation,40000,D,20.0,0,Fully Paid,True,168000.0
+WV,0.0,36.0,mortgage,80000.0,Not Verified,0.7045375,197299,56363,6,debt_consolidation,4500,B,9.44,0,Fully Paid,False,80000.0
+CA,1.0,36.0,rent,185000.0,Not Verified,0.2546756756756757,102500,47115,2,credit_card,15000,B,9.92,0,Current,False,185000.0
+NJ,5.0,60.0,mortgage,42000.0,Source Verified,0.08666666666666667,64800,3640,5,house,20000,B,10.91,0,Current,False,42000.0
+MA,2.0,36.0,rent,100000.0,Verified,0.3281962962962963,144700,88613,4,small_business,20000,A,5.32,0,Current,True,270000.0
+TX,5.0,36.0,mortgage,65000.0,Not Verified,0.24273846153846154,256974,15778,7,debt_consolidation,10000,A,6.71,0,Fully Paid,False,65000.0
+IN,5.0,36.0,own,45000.0,Not Verified,0.15731111111111112,121323,7079,4,debt_consolidation,9000,C,15.04,0,Current,False,45000.0
+RI,10.0,60.0,mortgage,245000.0,Verified,0.16736326530612244,495163,41004,6,credit_card,35000,B,11.98,0,Current,False,245000.0
+TX,0.0,36.0,mortgage,50000.0,Source Verified,0.6396770833333333,203326,122818,4,debt_consolidation,40000,C,12.62,0,Current,True,192000.0
+VA,0.0,36.0,rent,116000.0,Source Verified,0.584396551724138,446850,67790,7,debt_consolidation,13125,B,10.91,0,Current,False,116000.0
+NV,5.0,36.0,mortgage,30000.0,Not Verified,0.5120089285714285,190832,57345,6,home_improvement,32000,B,9.44,0,Current,True,112000.0
+MA,4.0,60.0,mortgage,80000.0,Not Verified,0.24454128440366973,432092,53310,5,debt_consolidation,18000,B,9.93,0,Current,True,218000.0
+CA,7.0,36.0,rent,103000.0,Source Verified,0.2658349514563107,124900,27381,5,other,30000,A,7.35,0,Fully Paid,False,103000.0
+IL,5.0,36.0,rent,58000.0,Not Verified,4.777258620689655,236668,277081,5,credit_card,4400,D,18.45,0,Current,False,58000.0
+AZ,0.0,36.0,own,55000.0,Source Verified,0.2990909090909091,35900,16450,12,debt_consolidation,7000,D,17.09,0,Current,False,55000.0
+MN,,36.0,mortgage,65000.0,Not Verified,0.7522461538461539,174860,48896,4,credit_card,25000,A,7.96,0,Current,False,65000.0
+IL,2.0,36.0,rent,32000.0,Source Verified,0.72128125,45594,23081,4,renewable_energy,6500,A,6.08,1,Current,False,32000.0
+MD,5.0,36.0,mortgage,325000.0,Source Verified,0.3077507692307692,793009,100019,11,credit_card,35000,A,6.71,0,Current,False,325000.0
+MD,3.0,36.0,rent,70000.0,Source Verified,5.333728571428572,272878,373361,2,other,7500,A,7.34,0,Current,False,70000.0
+CA,10.0,60.0,mortgage,160000.0,Verified,0.3344,581604,53504,3,debt_consolidation,38500,C,12.62,1,Current,False,160000.0
+NJ,6.0,36.0,rent,50000.0,Source Verified,1.25744,90398,62872,5,credit_card,15000,C,16.02,0,Current,False,50000.0
+IL,10.0,60.0,rent,71000.0,Not Verified,0.7425211267605634,115970,52719,8,car,24000,B,10.9,0,Current,False,71000.0
+MI,0.0,36.0,mortgage,85000.0,Not Verified,0.818764705882353,131847,69595,3,debt_consolidation,24000,B,9.93,0,Fully Paid,False,85000.0
+CA,5.0,36.0,mortgage,87000.0,Source Verified,0.054724137931034485,294946,4761,3,debt_consolidation,12800,B,9.44,0,Current,False,87000.0
+TX,10.0,36.0,mortgage,60000.0,Not Verified,0.7311833333333333,64017,43871,5,home_improvement,6000,B,10.42,0,Current,False,60000.0
+NV,0.0,36.0,mortgage,58500.0,Verified,0.39682051282051284,49234,23214,2,debt_consolidation,30000,D,21.45,0,Current,False,58500.0
+NH,2.0,36.0,rent,50000.0,Source Verified,0.50262,39814,25131,4,debt_consolidation,5825,B,10.91,0,Current,False,50000.0
+IL,2.0,36.0,own,103000.0,Not Verified,0.9735922330097088,150027,100280,4,debt_consolidation,20000,B,9.43,0,Current,False,103000.0
+TX,9.0,36.0,mortgage,77500.0,Verified,0.6778580645161291,390156,52534,2,other,15000,A,6.08,0,Current,False,77500.0
