@@ -1,6 +1,6 @@
 {
   "backend": "matplotlib-plotly",
-  "branch": "notebooks/w05-w07-matplotlib-plotly",
+  "branch": "matplotlib-plotly",
   "converted_weeks": [
     5,
     6,
