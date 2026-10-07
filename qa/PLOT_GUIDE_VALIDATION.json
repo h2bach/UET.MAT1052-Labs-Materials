@@ -1,0 +1,10 @@
+{
+  "backend": "plotnine",
+  "guide_sha256": "8a8a598f7cb0e2a82904ae37c5bb8174997e2be21c0abe46a4aa92cdb1976cfc",
+  "code_examples": 9,
+  "fresh_kernel": true,
+  "errors": 0,
+  "stderr_outputs": 0,
+  "png_outputs": 9,
+  "plotly_outputs": 0
+}

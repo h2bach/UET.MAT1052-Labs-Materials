@@ -33,7 +33,16 @@
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
       "changed_markdown_ids": [
+        "w05-000",
         "w05-001",
+        "w05-009",
+        "w05-038",
+        "w05-042",
+        "w05-044",
+        "w05-049",
+        "w05-051",
+        "w05-054",
+        "w05-060",
         "w05-090"
       ],
       "changed_code_ids": [
@@ -65,7 +74,24 @@
       "source_ids_metadata_attachments_preserved": true,
       "changed_markdown_ids": [
         "473db095",
-        "66f65aea"
+        "f7f7c7e5",
+        "8da01df2",
+        "e6fdb013",
+        "6d553f34",
+        "cc2faeeb",
+        "4b9545e7",
+        "7d2bbf3d",
+        "1b157ebd",
+        "e9fbf9bd",
+        "66f65aea",
+        "aff29460",
+        "024f5188",
+        "51026150",
+        "16e27173",
+        "8f930193",
+        "85d6ff1d",
+        "351f67c3",
+        "7ce0dd97"
       ],
       "changed_code_ids": [
         "d8abdcb7",
@@ -105,8 +131,21 @@
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
       "changed_markdown_ids": [
+        "bbfb94ed",
+        "9090f2c7",
+        "f012c18e",
+        "9ea3ab57",
+        "a5ded162",
+        "2628c704",
+        "b5e11ecd",
         "4f43d6de",
+        "b51386be",
+        "904b2b09",
+        "7ddcafeb",
+        "f733bf37",
+        "9786df4a",
         "e3619f5f",
+        "49c63be5",
         "b257227b"
       ],
       "changed_code_ids": [

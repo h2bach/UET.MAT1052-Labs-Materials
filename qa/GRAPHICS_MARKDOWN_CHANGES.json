@@ -2,90 +2,702 @@
   "W2_TomTatDuLieu.ipynb": {
     "3fd27fc4": {
       "original_sha256": "0b263f65fbb4566d91536c66179b08ca930ea9dea349f37ce8e231ca3c1f21ed",
-      "current_sha256": "a848a5bf501193accfc9ce1db96f52dd96db4830ca5613d61382a618f5f68aeb",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "eb0c72ee2fc0cbe2b41fba2fc35c3ce36622f5446f527199e80230814f227391",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "dc9457ce": {
+      "original_sha256": "ceade10c24c57b4afb865fb65ea92589b07ffc01ea58bdbd97b10f561a624578",
+      "current_sha256": "4feea54899b48a7333a85b913cef973ca6456c7d2fb2ae6d6571a20af75ce4b0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "a81f3d0a": {
+      "original_sha256": "72a7281e2588a550cec440c6254d5c506706094959bd9544c308080ca2de648e",
+      "current_sha256": "2a3dccbe32ef3582b3b73443c3dfe369587028645c07fb9fc63e6551b8e917ad",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "40a8b2a3": {
+      "original_sha256": "56983534147c73f8c0bc9d53aa8e83d996d878bb2877270d83bd1abe2718bf0e",
+      "current_sha256": "177f57b3048d1c06b5b798ed967899e6f5b0db41c6c1f842884ed55a43d98362",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "65c6e511": {
+      "original_sha256": "f597b995835cb704342291f45e9fa84773546cb7b9cc85352813e35a5ee9551d",
+      "current_sha256": "a8094011fc618b4ba1b21d5f7222f10b5b066a6f189860e0dfb3e62c3a2b3b41",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "6254ce65": {
+      "original_sha256": "df15c3e4228dc858a194606c626b0519b31adf1b179027df40c777173137a580",
+      "current_sha256": "7b4ad3cd18c3fbeb340543e80d8984ec4643a4c7ab8cbb291ff9c3c90cb49d60",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "6b63e524": {
+      "original_sha256": "aec6b59c50b3bc47fc6a97486edcf98bc58092820b299b39d97cb12b3639b0c3",
+      "current_sha256": "3a557f2d8d31f9bd180179e7a69fd627693ef9362b430c87b8dc5efc816418ec",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "da97e2a7": {
+      "original_sha256": "c520c718b2be28ece14bc791f894d291188593be9aafbccf1ab18755a2711ab7",
+      "current_sha256": "05796fb936f007e9f9d290be9bfa09234b23d7a744dcfb68f907717ca0e8ab40",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "66d21918": {
+      "original_sha256": "bb6f98fcc204b6f889c2ba15c1f3d3f375b95aedf1ee0946d15e8ade94518184",
+      "current_sha256": "5588ab95d7be0aa5ad0cdffbbed125ba45faa70ea0e301305bbfe34d93bbe698",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "863f8e93": {
+      "original_sha256": "214ba404a42c64cd48cc86a077b4d7ca5a26652e03001902a692dae5eb04080c",
+      "current_sha256": "5cf125399dc2cd57501935eb0ca02333c82322cca37981e37cc18b01c8d42b19",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "4372cd77": {
+      "original_sha256": "8904e85102c59a68a142c24334802c5a90e28ae7289d5bb0301db7988f84972d",
+      "current_sha256": "25127cba05de7f253e56666cdd3dbcb81aa6331c5d0d01833a3732c7aa513b3b",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "ff171c3e": {
+      "original_sha256": "aaa59fd9ff6993e3e80e436abd52d98a1b54a8f89f62a71b78df53d50cb78f19",
+      "current_sha256": "d5681ad4754fded8baf6e15eb72537b118ca997b666a7cfe26ca977d1296bde7",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "2e7f6f6d": {
+      "original_sha256": "a6d4671abd063276689b663bd0e9575010ef0f60415adf5e0ac89523264857b4",
+      "current_sha256": "7d43584713f02e5c3677af81b9d4a55fabe2481f2ae7bf866bc5bcb1e3d051ed",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "95157107": {
+      "original_sha256": "e6941498cae327777c861a440380ec8ec6cc41faf2f48f7d1be6c2c9d57f3cce",
+      "current_sha256": "84afc003319a4e34e350070003cc2d25a96da4eeaef398d711cc8a02fc44305b",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "4d2c1ede": {
+      "original_sha256": "117b6821cebb3894566d6901f8ea26e5ce02812e634d3be0aac782948dbf7ae6",
+      "current_sha256": "eb18e96571b3d4ec56a06549c57f5cfa5bd82c8afbed90d476d51322722aae4d",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "21f6eb9e": {
+      "original_sha256": "5bb142710b0ddfe60cdf326eb356bfc6ffaae95e5e7776c804f64b6e47068c7a",
+      "current_sha256": "66cdf84a0c31c43e870387ca9c19f31c62524a11255a81799032927ae25967cb",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "780b058b": {
+      "original_sha256": "a78930fc6e66eae2781776c39968c28aa9212b8268a69ba9b619730193dfd745",
+      "current_sha256": "c3dd4f957c0e6a138e4ef6e324284f75377eb9746e278af984b0918cc80d0f02",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "604d5e26": {
+      "original_sha256": "76c1fa9cc7e97404222e41396c059c6bdb2847e16e7c565f14bd75ebfe08bd6c",
+      "current_sha256": "7f5a9c3e2decf9a85494e24366489a1f4a9a8d7b1bdb9d917190e361e4b6bd70",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "2bfb6b3a": {
+      "original_sha256": "e38cc019dc188f082e7786d9c74fde45b245c316ab09102d782ee9c8345bbc27",
+      "current_sha256": "0f6d024c9ea440fc740ce5dacbd3443800f9a871fe8ae77feabd2e7fbc1d35a1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "551c752f": {
+      "original_sha256": "68e8414690e9cdcd65b6939eb1f92472755675dafa10ddccf1a37f63da2b123d",
+      "current_sha256": "2a62ee274ebdfe00058f2228e35eecacb92069bfea7575498f19ed22570d799f",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "04007517": {
+      "original_sha256": "46db342860443ec180b9733ceb593df85076c81f2710fbc244024585b478d0e2",
+      "current_sha256": "25bdf484474fdd7abb8cdec41dc28581cdafa94c50e986ae2d69b0e53ad1abe0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "7168abf4": {
+      "original_sha256": "bb7ca58e6baf7421c315b0173319d0c7eabebaad480d2fd419dc79eb4b839378",
+      "current_sha256": "b88d2cb59fe0831e5541668d0176f0e0fb66172d09bc67d37d8a98de42bca252",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b1fab63e": {
+      "original_sha256": "66db5385241103120418ce602b57404cb28876b8e8970ce4b3fbd96baa7a83ed",
+      "current_sha256": "6b24a3e04ab9133912ac07b271c14af8e7c048faa66561fa993fcc30c0fda58b",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "cef467ce": {
+      "original_sha256": "3d7a1742f8e3b88944c25d6cf56b99f0cf07c29f3cf314de01178054a41b50b6",
+      "current_sha256": "07317321471366e9d475cfedc93ee7a23da3278cbc4dbe2b8b063bf20ceae86c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "d57883ed": {
+      "original_sha256": "72c4f13c2d2f8896f79e01ff943fdac468db69f5b128ed1cbdaf31a2c16bb18a",
+      "current_sha256": "6baef76e9b49dd3dd090d3ce55cd6bbfc8f609ddea84084dd1e13480516bd378",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W3_NguPhapDoHoaVaDieuKienHoa.ipynb": {
     "97422d7f": {
       "original_sha256": "ee92cbece3c39ed7150e3f20651e3be2b94c8a346b3b41ef7e1f2fac506be492",
-      "current_sha256": "8d0ce87169ac7e2e8ad409dc805cbf1eb82c58f80932aaa3f817f4697dea29df",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "4df92ff6b6b93449151ff1e3886b2713683c099e480bd9628231a9cf32d835f3",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "b82bc694": {
       "original_sha256": "059bfe88f42ae2213726795efc7d25ab2e6a5ac3167aed2af663ae87547eb9b9",
-      "current_sha256": "c95fb6a8f6a8dd41f40abf2b236917bcf7d527c79bc7fab495d841fe7b28eddd",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "6e3c9304ebe18ccd2f61c1156eddc4ec5a1a0ec477e969aaacccf5486be4eff9",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "5d70ca4a": {
       "original_sha256": "63c2213e3acc4d9abe24787be6a83a9a1c2005c214c52612757faf959a6f27f9",
-      "current_sha256": "eef7f12d91e81f140c278e77e7add158831b30771153f24aa561ec50839bde89",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "f1aa05774e49ac6c9f950e30b94cc5361753aa3d020cf3e9f483ae376c4d7a12",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "420cfd41": {
       "original_sha256": "79564460b877f38218572c0e38fb72b3d5b84e01915feedb4f20ed8f3bfcaf00",
-      "current_sha256": "4c9558e3437a115bf4da6e3c03ea2b9092235dffcce230435a7b4987b6f87a3e",
-      "reason": "Reviewed explanation of color mapping versus fixed color using Plotnine syntax."
+      "current_sha256": "d0607c4aeb924a030ac958c3ad80745531ed9422620f0e840f61906426cf58df",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "ca06bbdc": {
+      "original_sha256": "dfdfc77143272e895e4a3ce11c334d32a426b7fb00af16e393df8e459338643f",
+      "current_sha256": "37a470daac87cb215fc7b71525b97bc2fe098532a2f8844f20d5197727c6a8d9",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "681dda4c": {
+      "original_sha256": "ae50bae6dda09aec13dc3fa829ea4b07ef0f49267909f7280716b8828b939e03",
+      "current_sha256": "bfcbd65a9e7c10f68b8ee338451aa615231df77896f2ae26d7dc5a24c913fbb6",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "c31d02ee": {
+      "original_sha256": "6ccea5315dfdac441ea9e6e041468a32a92539161f31fc5763c79c3ebf9ffce1",
+      "current_sha256": "bc5fc2c60358827e37162f0704d6dcaa65dbfae32fe374cb93cb627a8cb41c19",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "78a352c2": {
+      "original_sha256": "bcefc5a2868b10a0dae47fa50a0484c58ab5be6d513adfb5d684ce92647b3e22",
+      "current_sha256": "b05838a606846b5f6c9b4fae3c028448f2ee17261a897fc91ff1263b63938f6c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "4c35504a": {
+      "original_sha256": "f4761337cafd20ee4ad1b44ebabb1c4bdda13bbf7ed9b87c4ab788f847e08318",
+      "current_sha256": "534ed693b1acc748db06c4ae36da3567330fca4fcae8d3744c5e3d9fac5c74f8",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "29cf312a": {
+      "original_sha256": "41f5e261c0775e197bd0551a5f7f931d427798e52ea9ff21d38670be5e271721",
+      "current_sha256": "64025d06a201d2bfec12064221b5261cda9b049dc170a7b3f28c9fb0104f3145",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "9b7ead37": {
+      "original_sha256": "772322dbf70ef51697d3c8ea90e1d9fa387ed4ef9d864b6d2878d3cebb46241e",
+      "current_sha256": "51f4ae081f23fcbd7ff8c21f24725b69620738e594cd18f2ba259f9faedb08b3",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "6d5452d1": {
+      "original_sha256": "920e9358ad0e482b7342b673b1a3c9e8af564a01d3e5411d5e5f6753ef2e6871",
+      "current_sha256": "b9c7385d5db38f736afd18987d2533b22e31a968ba665bc60460ee38e81f4cd4",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "14eb38d6": {
+      "original_sha256": "e92b47a2cbfee3e212bef918cb4b3adbb50bddc7b5bc36aea6ee57f58f403741",
+      "current_sha256": "79cbd06789bf61a2fc34d2b20c9ae0be96d6d534085e41a78b5e246c00e890d0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "661379f2": {
+      "original_sha256": "743074521c749f1e817dedc7ee649cd48ed34a341e2172ae2c0ba8d765b8cc38",
+      "current_sha256": "f632cb761322bdb8030400abf73383e413ac00407e2f39c3cc36b6a2d7d7625e",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "1fe50335": {
+      "original_sha256": "6dc2e3761d618c8328da73c215b2bda040595321c8c26c7e20ae2445a2ff99f2",
+      "current_sha256": "04207dc5a5fccd1519c3f06886512be7ab067aa234394876ca07fe2b508c7228",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "baf15ba0": {
+      "original_sha256": "148720ff323389e5c231b40608aaffee71029933f06ae9ecc24775ee1b8dddae",
+      "current_sha256": "27e9799b12725dbefddd1d97811639798095b995fb70a059c8534752cff0a43f",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "a22cd6f0": {
+      "original_sha256": "97de18f0d289728fbfe0f84655ab42781b0a595f96222c53eab8978b0150fe09",
+      "current_sha256": "8d301b990517a9a2e21eeda7deda770067eb4199031b01c47633783b7c5f916f",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "27488b10": {
+      "original_sha256": "d6e2a41c633241306df75a2f1af506eb404e4f8440884134befea15d8aa66cae",
+      "current_sha256": "f0d2ad65cf62b7762dc29727839fabfc3e4e3957d84266801bb643338c8825d1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "a31cbc29": {
+      "original_sha256": "96c704f3920a4a4eb12b1fa1ec47b59579bfc1746c841df017b06fd0983784b1",
+      "current_sha256": "1fb623e3e82fb3283e0026493571d5e86c192850f170b262f788d4ad13245331",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "19869007": {
+      "original_sha256": "30e3f33a2f90ccba914aaa752236cbad9600f7bd7ee157637e1c2ff4eaae8690",
+      "current_sha256": "ead2cd0db8e9f32c54a24fbdcaf8959cde419f55011401dc04ae4d3c97a47178",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "a3f38534": {
+      "original_sha256": "809dab4ef456efea446e68f539c5d37854a5238459ad33ae3ba231ed172a2083",
+      "current_sha256": "3b260c58840cf7d92517355d8423837155f6097f05946ab2e9664112255041f5",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "df069f9b": {
+      "original_sha256": "b093bef9210d4f0423ddab3be45bd074fc13411072196cb9520e714754c3d0a0",
+      "current_sha256": "939e378f91527419a469990ad3053101592f51f6356069bdfec143a09f6c13a9",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "f87b14a6": {
+      "original_sha256": "0427a087273c0c3e02dc0f7bdb6e40929b8e207f1ddbb59a42a577348e579d8b",
+      "current_sha256": "a89441c0e4c2758997a6656d73d56490bf31e58b474253a40bfbec0bf37e759d",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb": {
     "tft-030-python-question": {
       "original_sha256": "1b14cab613e07e2a0ee255d5269566c2ccfc0e832b390f93dbe048b2611baa8f",
-      "current_sha256": "3a5ab4d67ff1c6316f0353fb07cfc75c13d075972bc4f7b0e45b4cf603dde988",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "b310c5862c1d4825d4380da3d1b29971c7e6407f7b04a3d5ab87bc4fd9bc6530",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-001-title": {
+      "original_sha256": "2cd4cf551797813c2ae7074c65d58c82ce5ad57f3139a6927875df31de9f8577",
+      "current_sha256": "9ceba9848755e988154c84eb151a0b6cce7c4ba0fe36fe44ee421e1ae532cdbe",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-006-part-1": {
+      "original_sha256": "b219db3a6f7b730c2919a6b8b72c9b66a87105f2fb4d9e30f9419de01204ef9b",
+      "current_sha256": "2b4dbd24a18b061ffb06cb4f4282388daad9f25d48b27fbb4c1ebece49b946ae",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-008-grammar": {
+      "original_sha256": "ee9108a6cd923100f89b33bd2681a0120c8f512dd8e510d47de1247c064bc969",
+      "current_sha256": "ace9e389b33ab404371977050b01c16893e447afe945fe412f6455bfb44172c8",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-010-grammar-explain": {
+      "original_sha256": "ff67d5fbe8e34476273a81911e42aed2be2a4d9667c9eec0b99a63125abfacde",
+      "current_sha256": "1d46e1f03064577a049b45a337cc76f080621c3614a223694e322325dacd7a1d",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-012-geom-note": {
+      "original_sha256": "042852c2438bdc8636c57ebbf4a973c72b9336f50f39c1de0eedf70ef2b53bd7",
+      "current_sha256": "512a51482cb8f5fa65f464c6c81bd9a2bfc0405af6f8cfa924054ea37fa07206",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-014-mapping-setting": {
+      "original_sha256": "e687c92c2b7a34ad0e707b0ee84ce337b43295ac8c5ef44ec1e0e50284dae5f3",
+      "current_sha256": "1732ce1c4c3838a7fafa62d13f9591f18bcbc26a3889f9202070c0888cde2e73",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-016-geometry-semantics": {
+      "original_sha256": "201dfa16e96423247da2dd2cf4f83711967cb60e02ecade2d3408d39a5475fe1",
+      "current_sha256": "047780c079d1863615d46c8f93a1342b18db8e8c73f1dcb10ceea9d274e13c85",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-019-part-2": {
+      "original_sha256": "bb7f24d8eb720bb5db9649c3dcb5f3411f25030469c54b217e7ce0fe54c13032",
+      "current_sha256": "0667f60d84e3cb1072148047fd6ef91760ca53138b2df1f2ce451ac17b353ff3",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-022-history-question": {
+      "original_sha256": "eb248bd340b9f9b21758cd655596b220055bc09cf9b39b759ee130d01a77c7af",
+      "current_sha256": "312d7b7a88f502da652d2b3b5393e7340823756b63a03603f8d1b2dc22a5bfc0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-025-modify-heading": {
+      "original_sha256": "f352a7722c00b1aefc816ab640c16e7d1a0b06a27ca3d951556ba90d03fdb77e",
+      "current_sha256": "480d47613eef40f0782f6e130537851d18ce47d9d1c70c9b7dc1e7d3e190f754",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-028-part-3": {
+      "original_sha256": "dfb2b42334e947039c9cbf3a05beb8e94af8ad1012af9a4e79154cd49ac030fb",
+      "current_sha256": "7acc0d3e1add31da50556e9daea28b5d64f59b45c21b63c63f85de527fe836e1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-033-missing-heading": {
+      "original_sha256": "ad2e2d2baa5c603a42eec578c7d1b398f3a1eac1b37554c8cf5c9b41439a0007",
+      "current_sha256": "4ab5fb03d845c858de01de80af39d6b514510c09957e0dad85da7e9492a58b45",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-045-log-heading": {
+      "original_sha256": "584c2240d274c8b54ccc593f36e4d89e99274da52883d7847ad4f02affcf346c",
+      "current_sha256": "123af55888dc909862c44e2818ac6128758ae750f994dac587744bfc5e1c2ec0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-054-group-summary-heading": {
+      "original_sha256": "72ed5acf64fdb649dde5b87de3d6ff00fe8e0bb0715da0024c37fbdbbcc68b16",
+      "current_sha256": "c328888734658329619fe0a3440bba9d113e5f868375389f4ce2358898eb6e2f",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-059-simpson-intro": {
+      "original_sha256": "aa09bdfddfe9f3472dadd0bbffa534c5b4d373a1182096da9bcadf0726ee1a9c",
+      "current_sha256": "beb7650f24939569085b2371b83ba6a5540176edc449fd9e2c8ed5caa0187cec",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-062-simpson-explain": {
+      "original_sha256": "27c714c57d47dfb8fcec3bc69e380f71af6e5949c3865a9bcd0fa24e105dd62d",
+      "current_sha256": "f2b643f3c3d1a62cdd8404c6d143d4ba3ec711d0403a71e42940f086e3686fd2",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-065-axis-heading": {
+      "original_sha256": "ee9e329591b11123b692fa75c3894a63d93470b669c39b16fadc4bef47ad645a",
+      "current_sha256": "d6717dd2ee326d21b340b0c0e7da667c96b475fdf4ae6ca3e96d2d73e93e7263",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-068-part-6": {
+      "original_sha256": "6bb165bfa699b71771d80b8687c607b414d4b9e075ee99be5e89eda29dbdde18",
+      "current_sha256": "83077ff4b2d0d4e42d1bd0788e9fd838bbfaa146390a84a2ad5d69fc25e13b49",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "tft-073-case-heading": {
+      "original_sha256": "a4247d2a2ce66fccc628c45d18c90f4669311910d14a4ee7935632d0da0cf915",
+      "current_sha256": "c8702b55ce6e8a20262467552086354b58edc2ec61468073a706d46bea44f9f7",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb": {
     "d649326b": {
       "original_sha256": "e912f4d15e057a379e979d3186857e3c4a3faf4ab99a7696fac8027f3e81d85e",
-      "current_sha256": "2a43d7a8b3b09bac91df94af6482ff84dab09ad45e4b13e1e247415b2471a929",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "42923f946c20719edce71351ecf436e0461115a526becc8e75eac6d7108ce95d",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "793ff48b": {
       "original_sha256": "8ae3351aa306ce13cf9b91484eeef552a8a330f716bf7f1ba77e9db98f9d0492",
-      "current_sha256": "158502c11b7e4ad02c6d94b7d54aacbccdc18f91c8d99f3f367ae05b693b9879",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "340b74827bf6d615e85e21281663b918b4cc70514935906ef76ad039067dd6b1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "fd0a20ef": {
+      "original_sha256": "d13b67b5d7d7b9e5bb8f4ef600bb481378c01e99f164a0a900d67f95b4ed4939",
+      "current_sha256": "219c0a6201ecd221184ce189b8b3af4e64c1fa60cdc688b30adda1a68b9ab394",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "fff3e09c": {
+      "original_sha256": "2a588b787926740adf6e11795b6fb9679b879a8d9bc495ceb725e9115b135fee",
+      "current_sha256": "526d8f7d748d5f7606eae8717666d1bd3f9a40ba687a8cf103cc8f52d473e26c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "8268c57a": {
+      "original_sha256": "5bea06ab7814dfc1f03243aa15246374f64f7e600dd83ca9d78e23bcf47392b1",
+      "current_sha256": "a66414ff9569b6069d609089202f8a4acabca76512430fe93d3f5fc160c5b8e4",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "41aeb9b3": {
+      "original_sha256": "4d656d62b90739f9a05d4ddae9c8cca83b3bf04592b73c6c8491ce1b6a01e43c",
+      "current_sha256": "746a23ce8ea0de1d2840c6d292a277667539773dd67c2c5a38936a74eb1ae4f4",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b90c55e5": {
+      "original_sha256": "3f1937db674561055aabd6def5d89ff5b0006653eb6f6a34252a2c48273659ba",
+      "current_sha256": "c8fcada70daa19894895a0d851fadbe0dd01edd9c2b3f0a30f7e6b9a1b2d4f98",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "728853c3": {
+      "original_sha256": "1d32e6138fc8a8e5bd7fcc081df2261a084be215a2522fe024b91f0a4dec72db",
+      "current_sha256": "c8459fedf4ed4483e5bc7e43b90d0aa3e14bc88eb84c3e035af944f5f7c5d839",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b3a89ef5": {
+      "original_sha256": "3cbfc49eeb2f580a7c9c824b41a5f10086bbefc30633d55382cf513bba414921",
+      "current_sha256": "085afa015b49fe40498182e759af719a281d0529fe07f481f8b8bc05c855fcf2",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "5467758f": {
+      "original_sha256": "71e8bf871cda444f56779b5e6d2bca45485cf48f6d6d7ad471638374b2182e5f",
+      "current_sha256": "422e7fb82dd512dc247dfed3720ea9922a01c15dc514738487236eaca8e6bedc",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "0ed84bba": {
+      "original_sha256": "aa5d8ca313746b1e159a53c35eacb84433f5883178f2db18da41f6c7818311b5",
+      "current_sha256": "03ed36a3854732d957843d8d791cb4dfd8cf3dd3aa0e647122849c643e8216b7",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "534db9bd": {
+      "original_sha256": "09f81ad582bd4bdd3f52a966dfddc170649b73897689dbffdd6da895c998b3d8",
+      "current_sha256": "652c18cd078461726b85435a368ca2eb3809576ed169c4a3fd5d2bca31f3d7ec",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "1c71da60": {
+      "original_sha256": "7050322c98e402a04e2c727a7b8b982f75bfb38a1c8a9e16c9f372963ec341b3",
+      "current_sha256": "b3a36604ef49a787a82e22ed46d615f547204ad77d1d33078c3f8139731c17c1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "782cf9c9": {
+      "original_sha256": "2f2deb567a6b62c6bdf994aaf0ec818fc5e5ec9d26fe16b04afd2d935ff553ff",
+      "current_sha256": "e80e008888e2f03933febf55c53b83bb8ed19dae97efb086bbe9ff30fcd98a0a",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "91949c2b": {
+      "original_sha256": "a1a0efb1c283b69c06e1b2974a2580042b9303b3e469eaaf8b253fcc5ee01dcc",
+      "current_sha256": "0c7bb0ad923604275fa96a36da2f1cf7ad8279e5735af2c7ef8164e7c5d990de",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "31fe6972": {
+      "original_sha256": "a6056f27c4d03d4b0c747d671bea5ed056453f67e34b7e70b760376466542f08",
+      "current_sha256": "31aec531ab96fa849ec93ad11f58c673cef9c4729d6fc14729e2dd2914ee31b2",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "2a1a7099": {
+      "original_sha256": "fb7369f3944ac54e8fd9ce13dae9ada8170049263ec29792f4941929d31cdf7f",
+      "current_sha256": "847f22b319cc0106634ac8fbfd70fbbb87d7f93b83417c583afc961d1d555863",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "86ce8583": {
+      "original_sha256": "32574d2141a005acf17fc5ce66cef537b93747e19b80f51663dc95bcba762bae",
+      "current_sha256": "c2d67e2dbe8039daa43b20cc8d70ddafe5735d312c2df833eacdad2829e492e3",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "2eae7d5c": {
+      "original_sha256": "c39e322b2d1aa5f30b36571579d97d9a7374fc2c8a6f7e26757b41633f85f78a",
+      "current_sha256": "8751982ea461a1f21f3c2c06b0742d643365843e419b7620c6692719f461c7b2",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W5_NenTangVaTinhToanXacSuat.ipynb": {
     "w05-001": {
       "original_sha256": "d1bb5b4d9a8985c4fac83e3747d3f007d7e7e2855108c60da3156fbf99e99aab",
       "current_sha256": "19b95df2839875e1c9c2cc42432cb17bb50bdd13bcdc4d42342b553d09bebc38",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "w05-090": {
       "original_sha256": "c431492c246b52dd7bb81591c5307b6ad346b9e0592b2b871fee9ed3bdd0d4a7",
       "current_sha256": "39caafc2affc9b9b0ec4a4d99b7f30da6652824a7bad504df8fc19231cc93f7d",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-000": {
+      "original_sha256": "9328c83562159e7547378ca104974b25d435b5f6f4c02de7651063b19cf1f8f0",
+      "current_sha256": "ae4e4d87ea6d94d7d3f4a1e7b6af1e9f8be469634b6e1c04cfa9d986d48f0df3",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-009": {
+      "original_sha256": "4602436a588f04b836d1ca283575ca55126ed159ec94bdfafecaafe3c6033702",
+      "current_sha256": "ebf1d51eec54b77ecf302f33ceea7cfbc6959b96159489e06539a7697e965515",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-038": {
+      "original_sha256": "34bc82fa2b5b5745661610a51a6cc57f612714f7c8dc90304267fd507a63ad3b",
+      "current_sha256": "cabb093cbeb56356aea78c90fa095e3412a675ef2add78b985c0ea49a979221e",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-042": {
+      "original_sha256": "19c63b0f7df3cfc807b7cc17a2ab7505186dc439ab4d53ea39f131d21b08a44c",
+      "current_sha256": "761cc85a7baeeb6943b09087b600b98f13b60a62266b390e49653460eb2cc3a6",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-044": {
+      "original_sha256": "b94a2a96cdb0b18b185299df4797f563828fc70f719763358b885a5d5cc6886f",
+      "current_sha256": "7e6a8348320db679f24b5bccf4357508296f038a633be277d985610646dc57ae",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-049": {
+      "original_sha256": "093cc0182c53b73a64ccacdea1960e77c9bbd791cb65ddf7d014aff184a7ec8c",
+      "current_sha256": "6cc7022af4cbb805eed576822f3986e2d9872fc8ccf423b94e5d4211bf72e144",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-051": {
+      "original_sha256": "1d1f03981a856ea0cd0eb95ac203244709ed132d7ada3ddc44602395008ad495",
+      "current_sha256": "48bdd1a54cf1d0aa08c625fb0011fbefa679e3097aaf700ed0ecf96e85dede29",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-054": {
+      "original_sha256": "1ed203fc026a18d94c07eec91ee9f4df60abc309f7d091c41d000f093eb4616b",
+      "current_sha256": "cb84b0b3df9b35f3c06eb5e3d723f23e57396d5a23008238ba06383561f61eea",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "w05-060": {
+      "original_sha256": "eddadf47ef52b04c1f23e9405d47cf61ce16e766ad753ab22a7d22f569389a86",
+      "current_sha256": "e94324bb3bb028a33f9f367616de18462b9967d2efc7de70b65321b03a2bc9a1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W6_PhanPhoiVaBienNgauNhien.ipynb": {
     "473db095": {
       "original_sha256": "5545c38eedb9bd6ea0326806536a6726b30556b3c4346c40918b57293bf64608",
-      "current_sha256": "1fb0708dfbb2970d27fbd558476766689b395f00c79ce2145a05e2640f51dd9b",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "b1e4e47c75abe6af0dd17af18d7c73baecc7a61fdd7de2f981a396124fce0721",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "66f65aea": {
       "original_sha256": "85fc215a5006689892d0c5a98dcbd9221e59ca681a4faa370e77caab429fc20d",
-      "current_sha256": "405b84c45e21cd534814818c1d06ec5529b043d5cd802c102b8f68a628d9d756",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "c7dfcf7b5fa8fe2e58a76f0c78c149912b0fe636acccb2cb28f4599be5d4ef6f",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "f7f7c7e5": {
+      "original_sha256": "8c6d0636b22a5850ec763daa50e0e40198d5905a971193da1b1ee798bb35e997",
+      "current_sha256": "993a72111b76ccb9e28995d8bba8376bc5c1c1dccbe7eeefb927248bc81561a0",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "8da01df2": {
+      "original_sha256": "646794cff472ec78b99737cb609fa74872a0d087f0f717a774da43cc771ec941",
+      "current_sha256": "70647f8f5c2d9474c881fe43a66000c59b7835e366b414ad56c092e7fd8ca2b8",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "e6fdb013": {
+      "original_sha256": "bf9505eb788436be6e398a23b9e11f52890c970abc21f36868019b98cf6cb744",
+      "current_sha256": "4c4f380043a3803c7151e7c4a69542eea08286848d2a3e443e98e6bd32eb739b",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "6d553f34": {
+      "original_sha256": "465729ee455bc025e53d2deb3c5f0c4eb7a37fcf7947d48b95a01f116de775c8",
+      "current_sha256": "558f463ee835327d2bc4ecaaf39ddc51efca6ce589e9eadd8e248357bbc3fa5e",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "cc2faeeb": {
+      "original_sha256": "e196a6718072b68228cb350f20d1a94b3a053d88c01cc1946b6da855bc6630ae",
+      "current_sha256": "4f52eaf266ada6fe266b822829a3451e570044ab48f4b1b55cb57f8a546b0563",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "4b9545e7": {
+      "original_sha256": "8c8a657a9864e2dea19a95c21b3096833074724f039cbb86a28c27c287c23358",
+      "current_sha256": "e301dea6affc479867c0ad8e00d2309ddc2b2b6fc9af829bccfe9f808027b550",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "7d2bbf3d": {
+      "original_sha256": "33b8dc4203d59c7d685ac2badc1e5d6825f9c6a5445db6b8ac04f70970dec10e",
+      "current_sha256": "09155c2000c381dac48ec3d0fd3ae0e1f6c5922115e168bbe3509dfce664ac66",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "1b157ebd": {
+      "original_sha256": "dd9b9997c91e7c58a52e75b2de6f8af90f2f7d755108baff916dfab9bccb3e95",
+      "current_sha256": "7951107ad5993f5537633efbae2d1df9184c93055872997535971093c37a35d9",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "e9fbf9bd": {
+      "original_sha256": "c9bfab7bd8e60ddcb613f4c9b715dc0114ee52446f08fb57dbec76472371d3ad",
+      "current_sha256": "559fcd1ba6047c7c8e7eb138ced29dfff2b080d1ed625711301bad8e092ac8d9",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "aff29460": {
+      "original_sha256": "ecafc7d83ba6fca5d7feafbf62265dfbec20243da4cf49c2fe2339df6dd0574b",
+      "current_sha256": "d106efa0f0eb1925053cec838479fa6df92f35b4eadc4e258c7fd33b5e9eb504",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "024f5188": {
+      "original_sha256": "89ca63d6cbda7b877d032c0266b8684e90f2d1166555d749cf6c4d25563f2a82",
+      "current_sha256": "93ed67177892b3f3054ef588f03be6afcb240acb1a81bf982cdab106496811d2",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "51026150": {
+      "original_sha256": "4ce0c0ce225576181726056c999a704db531d086f41bb990cd0426bb2607cf3f",
+      "current_sha256": "e8bd203cd31104bc013ac54128626aa7b4c16fb48a36d0dac464c0eeb750fa72",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "16e27173": {
+      "original_sha256": "676e36be27706bad8b606028d6d3d9b3d1fa2278a39c6a7d300cb3adba819547",
+      "current_sha256": "0bf00f407e65e88b7aaa83cdd682d3d920f08ad5f204a80e090021202ccdfeba",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "8f930193": {
+      "original_sha256": "076520c4f8704997292bca168afc617fa2fd77687ec9da3aa64fbc4c8ea91b6a",
+      "current_sha256": "39f29601e72b2688379e18657091a558028ac9e214be8917b2dfe7a9b17b7116",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "85d6ff1d": {
+      "original_sha256": "60a91719ea6e43e61d752831f262f02041f4e73e71abe73b2e0e3de2171e4bd6",
+      "current_sha256": "3abb885639d719a255f9ac4d9606558ebadbbf1a5c8fc657a975972c7af77dc1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "351f67c3": {
+      "original_sha256": "2706477cbdd64575df57056d0a217d8d4631a8968a99635628f77d828b2939a1",
+      "current_sha256": "f04ee9af9d0aebba1beaabb6e06ffd8459de7244a44858e776c6ff59caa51cca",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "7ce0dd97": {
+      "original_sha256": "40ab9e327e606c8982685854493a2acdd4b6a3321bc0357bf64b9b507295e699",
+      "current_sha256": "f848beb5e4ddb96403d3f13f57553af521a38502a37962d0442d76313c82b1f6",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   },
   "W7_KyVongPhuongSaiVaXapXiChuan.ipynb": {
     "4f43d6de": {
       "original_sha256": "d5c70e91fe350adb21a65792f5d71b8564dacd158813fd32225fa81f5d5d6ecd",
-      "current_sha256": "541671f11f586032fa690ffb6591b082218b0bb6f1b66de2da8e3f1fc6e1f4b0",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "ec8ef7155b82629f41813a46ee5c40c9fefd1411c22154222bbf24f79d1f6b31",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "e3619f5f": {
       "original_sha256": "3bc4fae57ea3876afeaa225a9a74674d1baa81a4ee09c799756ac55656a14178",
-      "current_sha256": "65879c3aa8ff65898ac9b148a1b2bf3bf120cd1ae9f529ef207d65ae58937987",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "current_sha256": "36fbc8f4b8da7b068fae9c1e06269cc4c32e996b8e74ff76c2105115cd3869be",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     },
     "b257227b": {
       "original_sha256": "6ad74e0516c9bc0c3ca80127f4de5e733e08d7f78461e24210243b2cae0566d6",
       "current_sha256": "f39480651d1f3b6101ac52b1d9042d5adebc168a8670ae6ecabd584e5d10c91d",
-      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "bbfb94ed": {
+      "original_sha256": "add596684b75604034c241010ef337f74c11a319f93ff9efc91c870ea2849df1",
+      "current_sha256": "9cfe40ae8929fc8ee1cebbb8eba89de10a199a687e950a3b3c422d2215fbffd4",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "9090f2c7": {
+      "original_sha256": "ad6c5150fd9ac975be2201282bffa9862663fba88d809b40d72b354faa18cc5f",
+      "current_sha256": "48a5de1f41373ad1ae28e1e27965ac2c5f2831bfbe37ed5cb41056dca6026db1",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "f012c18e": {
+      "original_sha256": "f9699aad61eca5fd3a03e7d692b1aa568411217cfde20c665ebbab9c3ec2b81c",
+      "current_sha256": "863909e2cce711b4fef65283a3ee19ee24cbc5a199aea63057331da4165f74b5",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "9ea3ab57": {
+      "original_sha256": "d7d0234a93a9047193af58811157de0a8e5c45652373ebf1c4a8cc2dac4a619b",
+      "current_sha256": "b74cb88abd4343b972012634077dfb36b8fc93423d4da9b88031bd9ad8a5bcfc",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "a5ded162": {
+      "original_sha256": "393a305a97e5a58bbaa3fe53af4b8683f89a9ca0977b1e064ff7989559fae951",
+      "current_sha256": "439212fdba993c89f6241a8fd9e2d892dc2662e58a3c071e9fdb1566cb9f4e9d",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "2628c704": {
+      "original_sha256": "5a9ca2f6c833605ec2a040b76eaf99d8954ce4fc449c6ef84a423e7eeac6a024",
+      "current_sha256": "018aa63a049f10b2f15da74a7ba00cb5015dd9a596901b68a8f612634c84ec38",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b5e11ecd": {
+      "original_sha256": "d5599ad64f8636ae8e0b987dfb04af951f0e02cccacbd4eb6cdf9ed028f5c27b",
+      "current_sha256": "f5fe3a449c80655e1f69d22f01108e6d89a0d4de1a6057cb291e49cdbfcf925e",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b51386be": {
+      "original_sha256": "dde6a5518ccb4e4d7d4b772a66586ee22cdd5eecdb10db0e49131467fe4e2a91",
+      "current_sha256": "ec3b83808859a32afb37b9ca13b49878ab50225f88ca5416622be468bb3381d8",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "904b2b09": {
+      "original_sha256": "6bc4c0d2511733250f60ba020e4e551a240d89080e6a6508c1d8e7d8b641c26d",
+      "current_sha256": "bb622871f33f14784e170667d207e5b194d650e49491ed851194c7931cb57bff",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "7ddcafeb": {
+      "original_sha256": "cf8fe72cd0e2ea65f8c364bc18f3b247483b33008979a0303188cb6144d044f8",
+      "current_sha256": "b7e4899cea09727fe1410c8fb86b3e89f9b33633996cc40c3427c949a2c35028",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "f733bf37": {
+      "original_sha256": "95cb306fb78cdd70db76acbe6500edba5b5378c13e7f69963ee711751155fe55",
+      "current_sha256": "9926b2a9739f6fe7e78932eaeecb8f758826d24902f0673c9cba654628de3c8c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "9786df4a": {
+      "original_sha256": "0fe933f7336dbaadc24676f2502d2efb860abd92e5ca1ba88c508f5bc5d8cfda",
+      "current_sha256": "655cde26a6eb1461bed20051d160fef65b78cd8b4b1d782e26bc684e28b4e3f6",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "49c63be5": {
+      "original_sha256": "cf7cf8d4e77cd6b9cadde5baa288f274272e8e91851854255ee8f160d70c36a3",
+      "current_sha256": "875753a70d19672413d4bd110cea6112370c05e78f0a75f32a92fb7e7d11c736",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    }
+  },
+  "W1_CauHoiVaDuLieu.ipynb": {
+    "c52b378f": {
+      "original_sha256": "789f69b9a6a8d114853b408a24d8650873de40e129a489d7363016502538733c",
+      "current_sha256": "4aa004d1930d639462ae2626137b3cb0c08b0674c7d8776d5ee3c76bca7a7d9c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "778eec7f": {
+      "original_sha256": "46a765466caef56f084a23e4183a80f2d96c9ca64973a563459f20e410d074a5",
+      "current_sha256": "701ae42e7400bc9c1ca2b84346243ab84695f1b6366faa88356cbf25a3eb09a7",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "91163ac6": {
+      "original_sha256": "81593be1cdeb12d86f3568d7929590c6f2b8ddb51b498a00dd353e70fa755316",
+      "current_sha256": "0a3b0a3909d003534fa7ad033fd95e953d93b428cb7a597ff639615df5e9659c",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
+    },
+    "b1d09a7b": {
+      "original_sha256": "460f4c90b3be780441f9d2ce6c9046b45cd582c8110d11c3773145ee34300c1a",
+      "current_sha256": "c599fafd6ad03fb40240a79fc8c28cb9bdb428cd966243f7401a83397e52a84b",
+      "reason": "Branch-specific plotting instructions added; original lesson, formulae and exercises preserved."
     }
   }
 }

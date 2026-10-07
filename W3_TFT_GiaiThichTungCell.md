@@ -1,5 +1,7 @@
 # Hướng dẫn đọc từng cell — Tuần 3 với dữ liệu TFT
 
+ThS. Hoàng Hữu Bách — BM. Khoa học & Kỹ thuật tính toán - Khoa Công nghệ Thông tin, VNU-UET
+
 Tài liệu này đi kèm notebook [W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb](./W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb). Mục tiêu là giúp người mới không chỉ chạy được mã Python, mà còn hiểu:
 
 - mỗi cell đang làm gì và vì sao cần làm như vậy;
@@ -240,6 +242,8 @@ Cell nêu tư tưởng cốt lõi: một biểu đồ không chỉ là một “
 - Scatter trả lời “hai đại lượng có cùng thay đổi không”.
 - Boxplot trả lời “các nhóm khác nhau về trung vị và độ phân tán ra sao”.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='chien_thuat', y='n', fill='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. `geom_rect` vẽ mỗi hình chữ nhật từ các cận `xmin`, `xmax`, `ymin` và `ymax`. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 07 — Phân tích ngữ pháp của biểu đồ
 
 - **Loại:** Markdown
@@ -281,6 +285,8 @@ Minh họa cách một điểm dữ liệu có thể mang nhiều lớp thông t
 
 Mỗi điểm là một lượt người chơi-trận. Hai điểm gần nhau có máu và thứ hạng gần nhau; màu cho biết chiến thuật; điểm lớn hơn biểu thị đội hình có giá trị cao hơn. Biểu đồ cho thấy nhiều biến cùng lúc, nhưng cũng có nguy cơ quá tải thị giác.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='mau_4_1', y='placement', color='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 09 — Tách cấu trúc biểu đồ thành lời
 
 - **Loại:** Markdown
@@ -321,6 +327,8 @@ So sánh trực tiếp hai cách biểu diễn xếp hạng theo chiến thuật
 
 Biểu đồ điểm giữ lại từng quan sát và cho thấy cỡ mẫu. Boxplot gọn hơn nhưng che bớt cấu trúc rời rạc của hạng 1–8. Không có geometry nào luôn tốt hơn; lựa chọn phụ thuộc câu hỏi.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='chien_thuat', y='placement', fill='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_boxplot` tính hộp và râu từ các quan sát trong từng nhóm. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 11 — Hình học và facet
 
 - **Loại:** Markdown
@@ -357,6 +365,8 @@ Quan sát mối liên hệ máu–thứ hạng riêng trong từng bậc, thay v
 #### Cách đọc
 
 Đọc từng ô như cùng một câu hỏi trong một điều kiện bậc cụ thể. Nếu hình dạng quan hệ khác nhau giữa các ô, kết luận gộp toàn bộ bậc có thể che mất tính không đồng nhất.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='mau_4_1', y='placement', color='chien_thuat', shape='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Facet chia cùng một biểu đồ theo biến nhóm; kiểm tra tham số `scales` trước khi so độ lớn giữa các ô. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 13 — Bài tập mapping và setting
 
@@ -401,6 +411,8 @@ Cell phân biệt:
 
 Biểu đồ trái chỉ cho thấy quan hệ vàng–placement. Biểu đồ phải cho phép hỏi thêm liệu ba chiến thuật có chiếm các vùng khác nhau hay không. Đổi màu cố định không làm xuất hiện thông tin mới; ánh xạ màu theo biến thì có.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='vang_4_1', y='placement'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 15 — Chọn geometry theo ngữ nghĩa
 
 - **Loại:** Markdown
@@ -437,6 +449,8 @@ Q02 đặt câu hỏi về việc dùng đường nối. Một đường ngầm 
 #### Ý nghĩa
 
 Một biểu đồ có thể chạy đúng cú pháp nhưng sai về ngữ nghĩa. Kiểm tra “điểm A có thực sự đứng trước điểm B không?” trước khi dùng line chart.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='thu_tu_hang', y='placement'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. `geom_line` nối các điểm theo thứ tự của `x`; đọc `group` hoặc ánh xạ màu để biết các đường được tách thế nào. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 17 — Đáp án về đường nối
 
@@ -508,6 +522,8 @@ So sánh hai mức độ xử lý cùng một chuỗi lịch sử: chỉ hiển 
 
 Đường trung bình 5 trận giúp thấy xu hướng nhưng không thay thế dữ liệu gốc. Một chuỗi ngắn có thể thay đổi hình dạng đáng kể khi đổi cửa sổ, nên cần trình bày cả điểm/đường thật.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='tran_thu', y='placement'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. `geom_line` nối các điểm theo thứ tự của `x`; đọc `group` hoặc ánh xạ màu để biết các đường được tách thế nào. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 21 — Câu hỏi về làm mượt
 
 - **Loại:** Markdown
@@ -547,6 +563,8 @@ Minh họa cách thêm chú thích dựa trên dữ liệu thay vì ghi cứng m
 #### Cách đọc
 
 Nếu có nhiều trận đồng hạng tốt nhất, **idxmin** chọn lần xuất hiện đầu tiên. Chú thích phải hỗ trợ thông điệp cụ thể, không nên dùng quá nhiều làm che dữ liệu.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='tran_thu', y='hang', color='duong'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. `geom_line` nối các điểm theo thứ tự của `x`; đọc `group` hoặc ánh xạ màu để biết các đường được tách thế nào. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 23 — Nguyên tắc truyền đạt bằng chú thích
 
@@ -598,6 +616,8 @@ Cho người học chủ động đổi độ mượt của đường xu hướn
 
 Không có một cửa sổ đúng tuyệt đối; lựa chọn phải gắn với câu hỏi và độ dài chuỗi.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='tran_thu', y='hang', color='duong'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. `geom_line` nối các điểm theo thứ tự của `x`; đọc `group` hoặc ánh xạ màu để biết các đường được tách thế nào. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 26 — Câu hỏi sau thử nghiệm
 
 - **Loại:** Markdown
@@ -644,6 +664,8 @@ Minh họa một quy trình ngắn: tạo bảng con, sau đó trực quan hóa 
 
 Mọi điểm đều thuộc bậc Gold. Vì đã điều kiện hóa theo bậc, sự khác biệt nhìn thấy giữa màu không còn do so sánh Gold với Silver/Platinum/Diamond, nhưng vẫn có thể chịu ảnh hưởng của nhiều biến khác.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='mau_4_1', y='placement', color='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 29 — Câu hỏi về thứ tự thao tác
 
 - **Loại:** Markdown
@@ -678,6 +700,8 @@ Giữ dữ liệu Gold nhưng đổi câu hỏi: từ liên hệ hai biến số
 #### Cách đọc
 
 Mỗi hộp tóm tắt phân phối hạng của một nhóm lõi trong bậc Gold. Boxplot không cho biết nguyên nhân lõi tạo ra thứ hạng; đây chỉ là so sánh mô tả.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='loai_loi', y='placement', fill='loai_loi'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_boxplot` tính hộp và râu từ các quan sát trong từng nhóm. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 31 — Bài học về thay đổi thành phần
 
@@ -724,6 +748,8 @@ Dữ liệu có 960 hàng, 922 hàng đầy đủ cho hai biến này và 38 hà
 #### Lưu ý thống kê
 
 Loại hàng chỉ an toàn khi cơ chế thiếu không làm mẫu còn lại bị lệch nghiêm trọng. Trong dữ liệu thật, cần kiểm tra thiếu có tập trung ở bậc, chiến thuật hoặc loại trận nào không.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='so_lan_scout', y='placement'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_point` mỗi điểm lấy tọa độ từ hai biến được ánh xạ vào `x` và `y`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 34 — Trả lời về dữ liệu thiếu
 
@@ -921,6 +947,8 @@ Quan sát cùng một biến sát thương trên hai thang đo.
 
 Logarit chỉ xác định trực tiếp cho giá trị dương. Cell tạo dữ liệu đã bảo đảm sát thương dương bằng cách cắt cận dưới. Với dữ liệu có 0, cần một quyết định rõ ràng như dùng log1p hoặc xử lý 0 theo ý nghĩa thực tế.
 
+**Đọc code vẽ bằng Plotnine.** `geom_rect` vẽ mỗi hình chữ nhật từ các cận `xmin`, `xmax`, `ymin` và `ymax`. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 46 — Ý nghĩa của phép đổi thang
 
 - **Loại:** Markdown
@@ -1111,6 +1139,8 @@ Chuyển cột ti_le_top4 của bảng tóm tắt thành biểu đồ cột ph�
 
 Chiều cao cột là tỷ lệ, không phải số lượng. Biểu đồ dựa trên bảng đã tóm tắt nên mỗi cột đại diện một nhóm, không phải một quan sát cá nhân.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='chien_thuat', y='ti_le_top4', fill='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_hline` thêm đường ngang tại `yintercept`. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 56 — Bài tập nhóm theo hai biến
 
 - **Loại:** Markdown
@@ -1219,6 +1249,8 @@ Sự đảo chiều xảy ra vì Fast 8 có phần lớn quan sát ở lobby nha
 
 Biểu đồ không tự giải quyết nhiễu. Điều quan trọng là chọn đúng mức tổng hợp và hiển thị biến phân tầng có liên quan.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='nhom', y='ti_le_top4', fill='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Facet chia cùng một biểu đồ theo biến nhóm; kiểm tra tham số `scales` trước khi so độ lớn giữa các ô. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 61 — Giải thích sự đảo chiều
 
 - **Loại:** Markdown
@@ -1260,6 +1292,8 @@ So sánh bảng đếm với bảng tỷ lệ top 4 theo loại lõi bổ trợ.
 #### Cách đọc
 
 Bảng đếm trả lời “có bao nhiêu lượt top 4?”. Bảng tỷ lệ trả lời “trong các lượt dùng lõi này, bao nhiêu phần đạt top 4?”. Một nhóm lớn có thể có nhiều ca top 4 nhưng tỷ lệ thấp hơn nhóm nhỏ.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='loai_loi', y='n', fill='ket_qua'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 63 — Ghi nhớ mẫu số
 
@@ -1306,6 +1340,8 @@ Cho thấy tác động thị giác của giới hạn trục y.
 #### Cách đọc
 
 Biểu đồ phải phóng đại chênh lệch vì bỏ phần trục từ 0 tới cận **lo**. Với biểu đồ cột, chiều dài cột thường được so từ gốc 0, nên cắt trục đặc biệt dễ gây ấn tượng sai. Nếu cần phóng to khác biệt, nên báo rõ và cân nhắc dùng điểm với khoảng tin cậy.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='chien_thuat', y='rate', fill='chien_thuat'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 66 — Nguyên tắc chọn trục
 
@@ -1412,6 +1448,8 @@ Biến bảng conditioned thành biểu đồ cột ghép để so sánh hai nh�
 
 So sánh chiều cao hai cột trong mỗi cụm bậc. Không chỉ nhìn các cột cùng màu qua các bậc, vì câu hỏi chính là chênh lệch nhóm máu trong cùng điều kiện bậc.
 
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `x='bac_xep_hang', y='ti_le_top4', fill='nhom_mau'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
+
 ### Cell 71 — Diễn giải và câu hỏi mở
 
 - **Loại:** Markdown
@@ -1487,6 +1525,8 @@ Trình bày tỷ lệ top 4 theo ba nhóm scouting và ghi trực tiếp cỡ m�
 #### Cách đọc
 
 Đọc đồng thời chiều cao cột và n. Một tỷ lệ từ nhóm rất nhỏ thường bất định hơn tỷ lệ từ nhóm lớn, dù notebook chưa vẽ khoảng tin cậy.
+
+**Đọc code vẽ bằng Plotnine.** Đọc ánh xạ đầu tiên `y='y_nhan'` trong `aes`; tên biến được lấy từ bảng dữ liệu của lớp tương ứng. `geom_text` đặt chữ từ biến `label` tại tọa độ của từng hàng. `geom_col` vẽ cột có độ dài lấy trực tiếp từ giá trị `y` đã tính trong bảng. Thử đổi một thuộc tính hiển thị đang có trong lớp vẽ hoặc `theme`, rồi chạy lại ô; giữ dữ liệu để so sánh hình trước và sau.
 
 ### Cell 75 — Kết luận case study và giới hạn
 
