@@ -1,4 +1,4 @@
-> Báo cáo đối chiếu nội dung độc lập. Các finding của bản đầu (nếu có) đã được xử lý; kết quả chạy và kiểm tra bản phát hành cuối ngày 07/10/2026 nằm trong `W05_W07_VALIDATION.json` và `../REVIEW_W05_W07.md`.
+> Báo cáo đối chiếu nội dung độc lập. Các finding của bản đầu (nếu có) đã được xử lý; kết quả chạy và kiểm tra bản phát hành cuối ngày 07/10/2026 nằm trong `W05_W07_VALIDATION.json` và `../KIEM_TRA_NOTEBOOKS.md`.
 
 # QA độc lập W6 — 2026-10-06
 

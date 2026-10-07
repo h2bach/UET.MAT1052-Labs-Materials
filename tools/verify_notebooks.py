@@ -199,9 +199,86 @@ def execute(path):
     nbformat.write(n, path)
 
 
+def validate_plot_guide(run=False, artifact_dir=None):
+    guide = BASE / 'HUONG_DAN_PLOT.md'
+    text = guide.read_text(encoding='utf-8')
+    snippets = re.findall(r'```python\s*\n(.*?)```', text, flags=re.S)
+    require(len(snippets) == 9, 'Plot guide: expected nine executable code examples')
+    for index, source in enumerate(snippets):
+        check_graphics_source(source, f'Plot guide: example {index + 1}')
+    report_path = BASE / 'qa/PLOT_GUIDE_VALIDATION.json'
+    sha = hashlib.sha256(text.encode('utf-8')).hexdigest()
+    if run:
+        with tempfile.TemporaryDirectory(prefix='xstk-plot-guide-') as directory:
+            path = Path(directory) / 'guide.ipynb'
+            n = nbformat.v4.new_notebook(cells=[nbformat.v4.new_code_cell(s) for s in snippets])
+            nbformat.write(n, path)
+            execute(path)
+            n = nbformat.read(path, as_version=4)
+            outputs = [o for c in n.cells for o in c.outputs]
+            require(not any(o.output_type == 'error' for o in outputs), 'Plot guide: execution error')
+            require(not any(o.output_type == 'stream' and o.name == 'stderr' and o.text.strip()
+                            for o in outputs), 'Plot guide: stderr')
+            if artifact_dir:
+                import base64
+                from html import escape
+                artifact_dir.mkdir(parents=True, exist_ok=True)
+                nbformat.write(n, artifact_dir / 'executed_examples.ipynb')
+                html = ['<!doctype html><meta charset="utf-8"><title>Plot examples</title>',
+                        '<style>body{max-width:1100px;margin:auto;font-family:sans-serif}pre{white-space:pre-wrap;background:#f4f4f4;padding:1em}img{max-width:100%}</style>']
+                for i, c in enumerate(n.cells):
+                    html.append(f'<h2>Example {i+1}</h2><pre>{escape(c.source)}</pre>')
+                    for j, o in enumerate(c.outputs):
+                        if 'image/png' in o.get('data', {}):
+                            (artifact_dir / f'example_{i+1}_{j}.png').write_bytes(base64.b64decode(o.data['image/png']))
+                            html.append('<img src="data:image/png;base64,' + o.data['image/png'] + '">')
+                        if 'application/vnd.plotly.v1+json' in o.get('data', {}):
+                            (artifact_dir / f'example_{i+1}_{j}.plotly.json').write_text(
+                                json.dumps(o.data['application/vnd.plotly.v1+json']), encoding='utf-8')
+                        if o.output_type == 'stream':
+                            html.append('<pre>' + escape(o.text) + '</pre>')
+                (artifact_dir / 'examples.html').write_text('\n'.join(html), encoding='utf-8')
+            report = {'backend': BACKEND, 'guide_sha256': sha, 'code_examples': len(snippets),
+                      'fresh_kernel': True, 'errors': 0, 'stderr_outputs': 0,
+                      'png_outputs': sum('image/png' in o.get('data', {}) for o in outputs),
+                      'plotly_outputs': sum('application/vnd.plotly.v1+json' in o.get('data', {}) for o in outputs)}
+            report_path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    report = json.loads(report_path.read_text(encoding='utf-8'))
+    require(report['guide_sha256'] == sha and report['backend'] == BACKEND,
+            'Plot guide: execution report does not match current guide')
+    require(report['errors'] == report['stderr_outputs'] == 0 and report['fresh_kernel'],
+            'Plot guide: incomplete execution validation')
+    return report
+
+
+def validate_plot_instructions():
+    report = json.loads((BASE / 'qa/PLOT_INSTRUCTIONS.json').read_text(encoding='utf-8'))
+    require(report['backend'] == BACKEND, 'Plot instructions: wrong backend')
+    actual_files = {p.name for p in BASE.glob('W*.ipynb')}
+    require({item['file'] for item in report['notebooks']} == actual_files,
+            'Plot instructions: notebook coverage mismatch')
+    total = 0
+    for item in report['notebooks']:
+        n = nbformat.read(BASE / item['file'], as_version=4)
+        cells = {c.id: c for c in n.cells}
+        plots = {c.id for c in n.cells if c.cell_type == 'code' and any(
+            'image/png' in o.get('data', {}) or 'application/vnd.plotly.v1+json' in o.get('data', {})
+            for o in c.outputs)}
+        require(plots == {p['cell_id'] for p in item['plots']},
+                f'{item["file"]}: plot instruction coverage mismatch')
+        for plot in item['plots']:
+            c = cells[plot['instruction_cell_id']]
+            require(c.cell_type == 'markdown' and plot['instruction'] in c.source,
+                    f'{item["file"]}: missing plot instruction at {plot["cell_id"]}')
+        total += len(plots)
+    return {'backend': BACKEND, 'notebooks': len(actual_files), 'plot_cells_with_instructions': total}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--execute', action='store_true', help='Run from a fresh kernel and save outputs')
+    parser.add_argument('--execute-guide', action='store_true', help='Run the nine examples in HUONG_DAN_PLOT.md')
+    parser.add_argument('--guide-artifacts', type=Path, help='Save executed guide examples, HTML and PNGs to this directory')
     parser.add_argument('--weeks', nargs='+', type=int)
     args = parser.parse_args(argv)
     results = []
@@ -212,7 +289,10 @@ def main(argv=None):
         if args.execute:
             execute(path)
         results.append(validate(path))
-    print(json.dumps({'variant': VARIANT, 'notebooks': results}, ensure_ascii=False, indent=2))
+    guide = validate_plot_guide(args.execute or args.execute_guide, args.guide_artifacts)
+    instructions = validate_plot_instructions()
+    print(json.dumps({'variant': VARIANT, 'notebooks': results, 'plot_guide': guide,
+                      'plot_instructions': instructions}, ensure_ascii=False, indent=2))
 
 
 if __name__ == '__main__':

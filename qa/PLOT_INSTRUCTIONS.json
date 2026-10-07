@@ -1,0 +1,815 @@
+{
+  "backend": "matplotlib-plotly",
+  "notebooks": [
+    {
+      "file": "W1_CauHoiVaDuLieu.ipynb",
+      "plot_cells_with_instructions": 3,
+      "plots": [
+        {
+          "cell_id": "510f52c6",
+          "cell_index_zero_based": 13,
+          "instruction_cell_id": "778eec7f",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "c4cd3d0a",
+          "cell_index_zero_based": 44,
+          "instruction_cell_id": "91163ac6",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "d69bddf3",
+          "cell_index_zero_based": 62,
+          "instruction_cell_id": "b1d09a7b",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W2_TomTatDuLieu.ipynb",
+      "plot_cells_with_instructions": 24,
+      "plots": [
+        {
+          "cell_id": "21ff183a",
+          "cell_index_zero_based": 8,
+          "instruction_cell_id": "a81f3d0a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `bang_loai_dao.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "1080e372",
+          "cell_index_zero_based": 19,
+          "instruction_cell_id": "40a8b2a3",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `dao_trong_loai.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. `loai_tren_dao.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2b658bbb",
+          "cell_index_zero_based": 21,
+          "instruction_cell_id": "65c6e511",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `loai_tren_dao.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. `khong_lien_he.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "93d5f834",
+          "cell_index_zero_based": 28,
+          "instruction_cell_id": "6254ce65",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "faf4a835",
+          "cell_index_zero_based": 30,
+          "instruction_cell_id": "6b63e524",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `titanic.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. `ti_le_theo_hang.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "f7c95baa",
+          "cell_index_zero_based": 33,
+          "instruction_cell_id": "da97e2a7",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `muc_dich_vay.sort_values().plot(kind='barh')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "9ec87073",
+          "cell_index_zero_based": 39,
+          "instruction_cell_id": "66d21918",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "484d0daf",
+          "cell_index_zero_based": 41,
+          "instruction_cell_id": "863f8e93",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "25ae3a99",
+          "cell_index_zero_based": 43,
+          "instruction_cell_id": "4372cd77",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.figure` tạo khung hình; các lệnh `plt` tiếp theo tác động lên hệ trục hiện hành. `plt.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "e5a67b34",
+          "cell_index_zero_based": 45,
+          "instruction_cell_id": "ff171c3e",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "d9135e91",
+          "cell_index_zero_based": 48,
+          "instruction_cell_id": "2e7f6f6d",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "3f9d0862",
+          "cell_index_zero_based": 50,
+          "instruction_cell_id": "95157107",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].violinplot` vẽ hình dạng phân phối của từng nhóm quan sát. `axes[1].boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "5c771317",
+          "cell_index_zero_based": 54,
+          "instruction_cell_id": "4d2c1ede",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "19bc3dac",
+          "cell_index_zero_based": 56,
+          "instruction_cell_id": "21f6eb9e",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[2].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "461758c2",
+          "cell_index_zero_based": 58,
+          "instruction_cell_id": "780b058b",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "4b766bd3",
+          "cell_index_zero_based": 63,
+          "instruction_cell_id": "604d5e26",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.figure` tạo khung hình; các lệnh `plt` tiếp theo tác động lên hệ trục hiện hành. `plt.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `plt.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "13b971d5",
+          "cell_index_zero_based": 69,
+          "instruction_cell_id": "2bfb6b3a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.figure` tạo khung hình; các lệnh `plt` tiếp theo tác động lên hệ trục hiện hành. `plt.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `plt.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "8575ee5a",
+          "cell_index_zero_based": 74,
+          "instruction_cell_id": "551c752f",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.figure` tạo khung hình; các lệnh `plt` tiếp theo tác động lên hệ trục hiện hành. `plt.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "be4cebcb",
+          "cell_index_zero_based": 80,
+          "instruction_cell_id": "3fd27fc4",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "af95f5be",
+          "cell_index_zero_based": 82,
+          "instruction_cell_id": "04007517",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "d927ef5b",
+          "cell_index_zero_based": 84,
+          "instruction_cell_id": "7168abf4",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].boxplot` tính hộp và râu cho từng nhóm quan sát. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "f0f6bc19",
+          "cell_index_zero_based": 86,
+          "instruction_cell_id": "b1fab63e",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].boxplot` tính hộp và râu cho từng nhóm quan sát. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "8e1a8bca",
+          "cell_index_zero_based": 91,
+          "instruction_cell_id": "cef467ce",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "a2b39dcf",
+          "cell_index_zero_based": 108,
+          "instruction_cell_id": "d57883ed",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W3_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "plot_cells_with_instructions": 23,
+      "plots": [
+        {
+          "cell_id": "7b5cd7ed",
+          "cell_index_zero_based": 3,
+          "instruction_cell_id": "681dda4c",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0, 0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[0, 1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1, 0].boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "9b4a0da6",
+          "cell_index_zero_based": 6,
+          "instruction_cell_id": "c31d02ee",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "db70152e",
+          "cell_index_zero_based": 8,
+          "instruction_cell_id": "78a352c2",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.violinplot` vẽ hình dạng phân phối của từng nhóm quan sát. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "06644b3c",
+          "cell_index_zero_based": 10,
+          "instruction_cell_id": "4c35504a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "c23e5586",
+          "cell_index_zero_based": 13,
+          "instruction_cell_id": "29cf312a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ea087944",
+          "cell_index_zero_based": 16,
+          "instruction_cell_id": "97422d7f",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "492630a4",
+          "cell_index_zero_based": 18,
+          "instruction_cell_id": "420cfd41",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b27ae2bc",
+          "cell_index_zero_based": 20,
+          "instruction_cell_id": "9b7ead37",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].boxplot` tính hộp và râu cho từng nhóm quan sát. `axes[1].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "1abb0d17",
+          "cell_index_zero_based": 25,
+          "instruction_cell_id": "6d5452d1",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "82217c52",
+          "cell_index_zero_based": 27,
+          "instruction_cell_id": "14eb38d6",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "0a4c1854",
+          "cell_index_zero_based": 29,
+          "instruction_cell_id": "661379f2",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "3e063ee8",
+          "cell_index_zero_based": 31,
+          "instruction_cell_id": "1fe50335",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b15c3a50",
+          "cell_index_zero_based": 34,
+          "instruction_cell_id": "b82bc694",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2147a8df-ab4a-4ea7-aa19-de828e0c68bd",
+          "cell_index_zero_based": 38,
+          "instruction_cell_id": "5d70ca4a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax_A.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax_B.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2faf0765-c997-4c2e-8d93-a0f59227efb0",
+          "cell_index_zero_based": 44,
+          "instruction_cell_id": "baf15ba0",
+          "instruction": "**Đọc code vẽ bằng Plotly.** Plotly Express lấy tên cột từ data frame để tạo các trace; dùng rê chuột để đọc giá trị từng quan sát. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "a9af0bea",
+          "cell_index_zero_based": 45,
+          "instruction_cell_id": "baf15ba0",
+          "instruction": "**Đọc code vẽ bằng Plotly.** Plotly Express lấy tên cột từ data frame để tạo các trace; dùng rê chuột để đọc giá trị từng quan sát. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "8adfc4f9",
+          "cell_index_zero_based": 51,
+          "instruction_cell_id": "a22cd6f0",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b8552d5e",
+          "cell_index_zero_based": 65,
+          "instruction_cell_id": "27488b10",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.text` đặt chữ tại tọa độ trong hệ trục. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "8c251cf6",
+          "cell_index_zero_based": 72,
+          "instruction_cell_id": "a31cbc29",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `bang.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "d842b26a",
+          "cell_index_zero_based": 74,
+          "instruction_cell_id": "19869007",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "a50b7d13",
+          "cell_index_zero_based": 76,
+          "instruction_cell_id": "a3f38534",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "fcc8a85c",
+          "cell_index_zero_based": 82,
+          "instruction_cell_id": "df069f9b",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "90fd25f0",
+          "cell_index_zero_based": 85,
+          "instruction_cell_id": "f87b14a6",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "plot_cells_with_instructions": 19,
+      "plots": [
+        {
+          "cell_id": "tft-007-four-plots",
+          "cell_index_zero_based": 6,
+          "instruction_cell_id": "tft-006-part-1",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0, 0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[0, 1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1, 0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-009-grammar-scatter",
+          "cell_index_zero_based": 8,
+          "instruction_cell_id": "tft-008-grammar",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-011-geom-compare",
+          "cell_index_zero_based": 10,
+          "instruction_cell_id": "tft-010-grammar-explain",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].boxplot` tính hộp và râu cho từng nhóm quan sát. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-013-facet-rank",
+          "cell_index_zero_based": 12,
+          "instruction_cell_id": "tft-012-geom-note",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-015-mapping-plot",
+          "cell_index_zero_based": 14,
+          "instruction_cell_id": "tft-014-mapping-setting",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-017-line-semantics",
+          "cell_index_zero_based": 16,
+          "instruction_cell_id": "tft-016-geometry-semantics",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-021-history-plots",
+          "cell_index_zero_based": 20,
+          "instruction_cell_id": "tft-019-part-2",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-023-annotated-history",
+          "cell_index_zero_based": 22,
+          "instruction_cell_id": "tft-022-history-question",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-026-modify-code",
+          "cell_index_zero_based": 25,
+          "instruction_cell_id": "tft-025-modify-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-029-python-grammar",
+          "cell_index_zero_based": 28,
+          "instruction_cell_id": "tft-028-part-3",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-031-change-one-component",
+          "cell_index_zero_based": 30,
+          "instruction_cell_id": "tft-030-python-question",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-034-missing-code",
+          "cell_index_zero_based": 33,
+          "instruction_cell_id": "tft-033-missing-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-046-log-plot",
+          "cell_index_zero_based": 45,
+          "instruction_cell_id": "tft-045-log-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-056-group-plot",
+          "cell_index_zero_based": 55,
+          "instruction_cell_id": "tft-054-group-summary-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-061-simpson-plot",
+          "cell_index_zero_based": 60,
+          "instruction_cell_id": "tft-059-simpson-intro",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `theo_nhip.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-063-count-vs-rate",
+          "cell_index_zero_based": 62,
+          "instruction_cell_id": "tft-062-simpson-explain",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `bang_loi.rename(columns={False: 'Ngoài top 4', True: 'Top 4'}).plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. `ti_le_loi.rename(columns={False: 'Ngoài top 4', True: 'Top 4'}).plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-066-axis-plot",
+          "cell_index_zero_based": 65,
+          "instruction_cell_id": "tft-065-axis-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-071-challenge-plot",
+          "cell_index_zero_based": 70,
+          "instruction_cell_id": "tft-068-part-6",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "tft-075-case-plot",
+          "cell_index_zero_based": 74,
+          "instruction_cell_id": "tft-073-case-heading",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb",
+      "plot_cells_with_instructions": 18,
+      "plots": [
+        {
+          "cell_id": "896cfff4",
+          "cell_index_zero_based": 5,
+          "instruction_cell_id": "fff3e09c",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax_mat_do.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "10dcfef3",
+          "cell_index_zero_based": 8,
+          "instruction_cell_id": "8268c57a",
+          "instruction": "**Đọc code vẽ bằng Plotly.** Plotly Express lấy tên cột từ data frame để tạo các trace; dùng rê chuột để đọc giá trị từng quan sát. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "0d961cd7",
+          "cell_index_zero_based": 12,
+          "instruction_cell_id": "41aeb9b3",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "92be077a",
+          "cell_index_zero_based": 16,
+          "instruction_cell_id": "b90c55e5",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "dbc99edf",
+          "cell_index_zero_based": 18,
+          "instruction_cell_id": "728853c3",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2d51f566",
+          "cell_index_zero_based": 21,
+          "instruction_cell_id": "b3a89ef5",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "e83d58e0",
+          "cell_index_zero_based": 26,
+          "instruction_cell_id": "d649326b",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "f9c3c3ce",
+          "cell_index_zero_based": 29,
+          "instruction_cell_id": "5467758f",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "45943086",
+          "cell_index_zero_based": 31,
+          "instruction_cell_id": "0ed84bba",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.contour` vẽ các đường cùng giá trị trên lưới tọa độ đã tính. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "678c8358",
+          "cell_index_zero_based": 35,
+          "instruction_cell_id": "534db9bd",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b4981aec",
+          "cell_index_zero_based": 37,
+          "instruction_cell_id": "1c71da60",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0, j].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[0, j].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[1, j].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "19fbcc81",
+          "cell_index_zero_based": 42,
+          "instruction_cell_id": "782cf9c9",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "c235e47c",
+          "cell_index_zero_based": 46,
+          "instruction_cell_id": "91949c2b",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "1dc16598",
+          "cell_index_zero_based": 48,
+          "instruction_cell_id": "31fe6972",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "0854ea05",
+          "cell_index_zero_based": 50,
+          "instruction_cell_id": "793ff48b",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Kéo để xoay mặt phẳng và các điểm 3D, rồi xem giá trị bằng rê chuột. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ae76423c",
+          "cell_index_zero_based": 57,
+          "instruction_cell_id": "2a1a7099",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2f920fd6",
+          "cell_index_zero_based": 59,
+          "instruction_cell_id": "86ce8583",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "904719ad",
+          "cell_index_zero_based": 72,
+          "instruction_cell_id": "2eae7d5c",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
+      "plot_cells_with_instructions": 8,
+      "plots": [
+        {
+          "cell_id": "w05-010",
+          "cell_index_zero_based": 10,
+          "instruction_cell_id": "w05-009",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.add_patch` thêm một hình học vào hệ trục để dựng sơ đồ. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-039",
+          "cell_index_zero_based": 39,
+          "instruction_cell_id": "w05-038",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-043",
+          "cell_index_zero_based": 43,
+          "instruction_cell_id": "w05-042",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.text` đặt chữ tại tọa độ trong hệ trục. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-045",
+          "cell_index_zero_based": 45,
+          "instruction_cell_id": "w05-044",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-050",
+          "cell_index_zero_based": 50,
+          "instruction_cell_id": "w05-049",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-052",
+          "cell_index_zero_based": 52,
+          "instruction_cell_id": "w05-051",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-055",
+          "cell_index_zero_based": 55,
+          "instruction_cell_id": "w05-054",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "w05-061",
+          "cell_index_zero_based": 61,
+          "instruction_cell_id": "w05-060",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.text` đặt chữ tại tọa độ trong hệ trục. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
+      "plot_cells_with_instructions": 18,
+      "plots": [
+        {
+          "cell_id": "f5a1d546",
+          "cell_index_zero_based": 6,
+          "instruction_cell_id": "f7f7c7e5",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "c05cf923",
+          "cell_index_zero_based": 10,
+          "instruction_cell_id": "8da01df2",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "75b7fd6e",
+          "cell_index_zero_based": 13,
+          "instruction_cell_id": "e6fdb013",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b1b9c6a7",
+          "cell_index_zero_based": 25,
+          "instruction_cell_id": "6d553f34",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "b9aa66be",
+          "cell_index_zero_based": 32,
+          "instruction_cell_id": "cc2faeeb",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "6d9da21f",
+          "cell_index_zero_based": 36,
+          "instruction_cell_id": "4b9545e7",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.step` vẽ đường bậc thang; ở CDF, `where=\"post\"` giữ giá trị sau điểm nhảy trên đoạn kế tiếp. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "6d66160b",
+          "cell_index_zero_based": 43,
+          "instruction_cell_id": "7d2bbf3d",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.step` vẽ đường bậc thang; ở CDF, `where=\"post\"` giữ giá trị sau điểm nhảy trên đoạn kế tiếp. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ebefccda",
+          "cell_index_zero_based": 46,
+          "instruction_cell_id": "1b157ebd",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "32577c3f",
+          "cell_index_zero_based": 49,
+          "instruction_cell_id": "e9fbf9bd",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "2bc37b0f",
+          "cell_index_zero_based": 60,
+          "instruction_cell_id": "66f65aea",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "562c7fe8",
+          "cell_index_zero_based": 72,
+          "instruction_cell_id": "aff29460",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "e0c3a24e",
+          "cell_index_zero_based": 80,
+          "instruction_cell_id": "024f5188",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "6a5b983d",
+          "cell_index_zero_based": 87,
+          "instruction_cell_id": "51026150",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "0f9bfaa4",
+          "cell_index_zero_based": 106,
+          "instruction_cell_id": "16e27173",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "c4435d6e",
+          "cell_index_zero_based": 109,
+          "instruction_cell_id": "8f930193",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "6f636b56",
+          "cell_index_zero_based": 111,
+          "instruction_cell_id": "85d6ff1d",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "0f48a198",
+          "cell_index_zero_based": 113,
+          "instruction_cell_id": "351f67c3",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ac79cff3",
+          "cell_index_zero_based": 115,
+          "instruction_cell_id": "7ce0dd97",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.step` vẽ đường bậc thang; ở CDF, `where=\"post\"` giữ giá trị sau điểm nhảy trên đoạn kế tiếp. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    },
+    {
+      "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
+      "plot_cells_with_instructions": 14,
+      "plots": [
+        {
+          "cell_id": "5eaa8fce",
+          "cell_index_zero_based": 3,
+          "instruction_cell_id": "9090f2c7",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ec2b1eee",
+          "cell_index_zero_based": 16,
+          "instruction_cell_id": "f012c18e",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "72a11a5c",
+          "cell_index_zero_based": 29,
+          "instruction_cell_id": "9ea3ab57",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[0].axhline` thêm đường ngang làm giá trị đối chiếu. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "5d6ccd9b",
+          "cell_index_zero_based": 37,
+          "instruction_cell_id": "a5ded162",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "42fd777d",
+          "cell_index_zero_based": 40,
+          "instruction_cell_id": "2628c704",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[0].fill_between` tô miền giữa hai đường theo các tọa độ x. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ccd3f75e",
+          "cell_index_zero_based": 44,
+          "instruction_cell_id": "b5e11ecd",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.fill_between` tô miền giữa hai đường theo các tọa độ x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "203ad075",
+          "cell_index_zero_based": 46,
+          "instruction_cell_id": "4f43d6de",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "3d6e5b27",
+          "cell_index_zero_based": 48,
+          "instruction_cell_id": "b51386be",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.fill_between` tô miền giữa hai đường theo các tọa độ x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "20f75c86",
+          "cell_index_zero_based": 52,
+          "instruction_cell_id": "904b2b09",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.fill_between` tô miền giữa hai đường theo các tọa độ x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "ff4ea521",
+          "cell_index_zero_based": 54,
+          "instruction_cell_id": "7ddcafeb",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "11a068d0",
+          "cell_index_zero_based": 56,
+          "instruction_cell_id": "f733bf37",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "20c34c95",
+          "cell_index_zero_based": 58,
+          "instruction_cell_id": "9786df4a",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "7892949e",
+          "cell_index_zero_based": 61,
+          "instruction_cell_id": "e3619f5f",
+          "instruction": "**Đọc code vẽ bằng Plotly.** `go.Figure` chứa các trace; mỗi `go.Scatter`, `go.Bar` hoặc trace khác nhận các mảng dữ liệu đã tính. `update_layout` đặt tiêu đề, nhãn và bộ điều khiển. Thanh trượt chọn trạng thái được dựng sẵn trong `steps`; đối chiếu `visible` hoặc dữ liệu của trace để biết hình thay đổi thế nào. Thử đổi thuộc tính hiển thị trong trace hoặc layout, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        },
+        {
+          "cell_id": "f7347abd",
+          "cell_index_zero_based": 65,
+          "instruction_cell_id": "49c63be5",
+          "instruction": "**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `ax.axvline` thêm đường dọc làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh."
+        }
+      ]
+    }
+  ]
+}

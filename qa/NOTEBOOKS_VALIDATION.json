@@ -32,8 +32,15 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
-      "changed_code_ids": []
+      "changed_markdown_ids": [
+        "c52b378f",
+        "778eec7f",
+        "91163ac6",
+        "b1d09a7b"
+      ],
+      "changed_code_ids": [
+        "c4cd3d0a"
+      ]
     },
     {
       "file": "W2_TomTatDuLieu.ipynb",
@@ -50,7 +57,33 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "dc9457ce",
+        "a81f3d0a",
+        "40a8b2a3",
+        "65c6e511",
+        "6254ce65",
+        "6b63e524",
+        "da97e2a7",
+        "66d21918",
+        "863f8e93",
+        "4372cd77",
+        "ff171c3e",
+        "2e7f6f6d",
+        "95157107",
+        "4d2c1ede",
+        "21f6eb9e",
+        "780b058b",
+        "604d5e26",
+        "2bfb6b3a",
+        "551c752f",
+        "3fd27fc4",
+        "04007517",
+        "7168abf4",
+        "b1fab63e",
+        "cef467ce",
+        "d57883ed"
+      ],
       "changed_code_ids": []
     },
     {
@@ -68,7 +101,31 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "ca06bbdc",
+        "681dda4c",
+        "c31d02ee",
+        "78a352c2",
+        "4c35504a",
+        "29cf312a",
+        "97422d7f",
+        "420cfd41",
+        "9b7ead37",
+        "6d5452d1",
+        "14eb38d6",
+        "661379f2",
+        "1fe50335",
+        "b82bc694",
+        "5d70ca4a",
+        "baf15ba0",
+        "a22cd6f0",
+        "27488b10",
+        "a31cbc29",
+        "19869007",
+        "a3f38534",
+        "df069f9b",
+        "f87b14a6"
+      ],
       "changed_code_ids": []
     },
     {
@@ -86,7 +143,28 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "tft-001-title",
+        "tft-006-part-1",
+        "tft-008-grammar",
+        "tft-010-grammar-explain",
+        "tft-012-geom-note",
+        "tft-014-mapping-setting",
+        "tft-016-geometry-semantics",
+        "tft-019-part-2",
+        "tft-022-history-question",
+        "tft-025-modify-heading",
+        "tft-028-part-3",
+        "tft-030-python-question",
+        "tft-033-missing-heading",
+        "tft-045-log-heading",
+        "tft-054-group-summary-heading",
+        "tft-059-simpson-intro",
+        "tft-062-simpson-explain",
+        "tft-065-axis-heading",
+        "tft-068-part-6",
+        "tft-073-case-heading"
+      ],
       "changed_code_ids": []
     },
     {
@@ -105,7 +183,25 @@
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
       "changed_markdown_ids": [
-        "0ed84bba"
+        "fd0a20ef",
+        "fff3e09c",
+        "8268c57a",
+        "41aeb9b3",
+        "b90c55e5",
+        "728853c3",
+        "b3a89ef5",
+        "d649326b",
+        "5467758f",
+        "0ed84bba",
+        "534db9bd",
+        "1c71da60",
+        "782cf9c9",
+        "91949c2b",
+        "31fe6972",
+        "793ff48b",
+        "2a1a7099",
+        "86ce8583",
+        "2eae7d5c"
       ],
       "changed_code_ids": []
     },
@@ -124,7 +220,17 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "w05-000",
+        "w05-009",
+        "w05-038",
+        "w05-042",
+        "w05-044",
+        "w05-049",
+        "w05-051",
+        "w05-054",
+        "w05-060"
+      ],
       "changed_code_ids": []
     },
     {
@@ -142,7 +248,27 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "473db095",
+        "f7f7c7e5",
+        "8da01df2",
+        "e6fdb013",
+        "6d553f34",
+        "cc2faeeb",
+        "4b9545e7",
+        "7d2bbf3d",
+        "1b157ebd",
+        "e9fbf9bd",
+        "66f65aea",
+        "aff29460",
+        "024f5188",
+        "51026150",
+        "16e27173",
+        "8f930193",
+        "85d6ff1d",
+        "351f67c3",
+        "7ce0dd97"
+      ],
       "changed_code_ids": []
     },
     {
@@ -160,7 +286,23 @@
       "baseline_available": true,
       "mathematical_expressions_preserved": true,
       "source_ids_metadata_attachments_preserved": true,
-      "changed_markdown_ids": [],
+      "changed_markdown_ids": [
+        "bbfb94ed",
+        "9090f2c7",
+        "f012c18e",
+        "9ea3ab57",
+        "a5ded162",
+        "2628c704",
+        "b5e11ecd",
+        "4f43d6de",
+        "b51386be",
+        "904b2b09",
+        "7ddcafeb",
+        "f733bf37",
+        "9786df4a",
+        "e3619f5f",
+        "49c63be5"
+      ],
       "changed_code_ids": []
     }
   ],
@@ -184,5 +326,25 @@
   "limits": {
     "colab_execution_tested": false,
     "plotnine_frontend_widget_drag_tested": false
+  },
+  "plot_guide": {
+    "backend": "matplotlib-plotly",
+    "guide_sha256": "7cb5a9221e1829560d0a2a8c7879b1ab109baccdddabed25d8ddf3d657ea97ec",
+    "code_examples": 9,
+    "fresh_kernel": true,
+    "errors": 0,
+    "stderr_outputs": 0,
+    "png_outputs": 7,
+    "plotly_outputs": 2,
+    "png_figures_visually_checked": true,
+    "slider_states_checked": 3,
+    "slider_check": "Visibility selects one trace; all bins total 342 observations; each title matches the step label.",
+    "frontend_interactions_checked": false
+  },
+  "plot_instructions": {
+    "backend": "matplotlib-plotly",
+    "notebooks": 8,
+    "plot_cells_with_instructions": 127,
+    "original_lesson_text_preserved": true
   }
 }

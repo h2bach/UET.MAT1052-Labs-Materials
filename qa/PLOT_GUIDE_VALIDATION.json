@@ -1,0 +1,10 @@
+{
+  "backend": "matplotlib-plotly",
+  "guide_sha256": "7cb5a9221e1829560d0a2a8c7879b1ab109baccdddabed25d8ddf3d657ea97ec",
+  "code_examples": 9,
+  "fresh_kernel": true,
+  "errors": 0,
+  "stderr_outputs": 0,
+  "png_outputs": 7,
+  "plotly_outputs": 2
+}

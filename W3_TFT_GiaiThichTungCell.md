@@ -1,5 +1,7 @@
 # Hướng dẫn đọc từng cell — Tuần 3 với dữ liệu TFT
 
+ThS. Hoàng Hữu Bách — BM. Khoa học & Kỹ thuật tính toán - Khoa Công nghệ Thông tin, VNU-UET
+
 Tài liệu này đi kèm notebook [W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb](./W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb). Mục tiêu là giúp người mới không chỉ chạy được mã Python, mà còn hiểu:
 
 - mỗi cell đang làm gì và vì sao cần làm như vậy;
@@ -278,6 +280,8 @@ Cell nêu tư tưởng cốt lõi: một biểu đồ không chỉ là một “
 - Scatter trả lời “hai đại lượng có cùng thay đổi không”.
 - Boxplot trả lời “các nhóm khác nhau về trung vị và độ phân tán ra sao”.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0, 0].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `axes[0, 1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1, 0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 07 — Phân tích ngữ pháp của biểu đồ
 
 - **Loại:** Markdown
@@ -319,6 +323,8 @@ Minh họa cách một điểm dữ liệu có thể mang nhiều lớp thông t
 
 Mỗi điểm là một lượt người chơi-trận. Hai điểm gần nhau có máu và thứ hạng gần nhau; màu cho biết chiến thuật; điểm lớn hơn biểu thị đội hình có giá trị cao hơn. Biểu đồ cho thấy nhiều biến cùng lúc, nhưng cũng có nguy cơ quá tải thị giác.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 09 — Tách cấu trúc biểu đồ thành lời
 
 - **Loại:** Markdown
@@ -354,6 +360,8 @@ Biểu đồ phải dùng **boxplot** để tóm tắt trung vị, tứ phân v�
 #### Cách đọc
 
 Biểu đồ điểm giữ lại từng quan sát và cho thấy cỡ mẫu. Boxplot gọn hơn nhưng che bớt cấu trúc rời rạc của hạng 1–8. Không có geometry nào luôn tốt hơn; lựa chọn phụ thuộc câu hỏi.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].boxplot` tính hộp và râu cho từng nhóm quan sát. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 11 — Hình học và facet
 
@@ -392,6 +400,8 @@ Vòng lặp ngoài dùng **zip(axes, BAC)** để ghép từng trục với từ
 
 Đọc từng ô như cùng một câu hỏi trong một điều kiện bậc cụ thể. Nếu hình dạng quan hệ khác nhau giữa các ô, kết luận gộp toàn bộ bậc có thể che mất tính không đồng nhất.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 13 — Bài tập mapping và setting
 
 - **Loại:** Markdown
@@ -428,6 +438,8 @@ Biểu đồ trái gọi **scatter** một lần. Biểu đồ phải gọi scat
 
 Biểu đồ trái chỉ cho thấy quan hệ máu–hạng. Biểu đồ phải cho phép hỏi thêm liệu ba chiến thuật có chiếm các vùng khác nhau hay không. Đổi màu cố định không làm xuất hiện thông tin mới; ánh xạ màu theo biến thì có.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 15 — Chọn geometry theo ngữ nghĩa
 
 - **Loại:** Markdown
@@ -461,6 +473,8 @@ Biểu đồ phải nối các quan sát của P007 theo ngày. **marker="o"** v
 #### Ý nghĩa
 
 Một biểu đồ có thể chạy đúng cú pháp nhưng sai về ngữ nghĩa. Kiểm tra “điểm A có thực sự đứng trước điểm B không?” trước khi dùng line chart.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 17 — Đáp án về đường nối
 
@@ -521,6 +535,8 @@ Biểu đồ trái dùng **scatter** để giữ các trận độc lập. Biể
 
 Đường trung bình 5 trận giúp thấy xu hướng nhưng không thay thế dữ liệu gốc. Một chuỗi ngắn có thể thay đổi hình dạng đáng kể khi đổi cửa sổ, nên cần trình bày cả điểm/đường thật.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. `axes[1].plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 21 — Câu hỏi về làm mượt
 
 - **Loại:** Markdown
@@ -557,6 +573,8 @@ Minh họa cách thêm chú thích dựa trên dữ liệu thay vì ghi cứng m
 #### Cách đọc
 
 Nếu có nhiều trận đồng hạng tốt nhất, **idxmin** chọn lần xuất hiện đầu tiên. Chú thích phải hỗ trợ thông điệp cụ thể, không nên dùng quá nhiều làm che dữ liệu.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. `ax.annotate` gắn lời chú thích vào tọa độ được chỉ định. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 23 — Nguyên tắc truyền đạt bằng chú thích
 
@@ -598,6 +616,8 @@ Cho người học chủ động đổi độ mượt của đường xu hướn
 - **CUA_SO = 10:** đường mượt hơn nhưng che nhiều biến động ngắn hạn.
 
 Không có một cửa sổ đúng tuyệt đối; lựa chọn phải gắn với câu hỏi và độ dài chuỗi.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.plot` nối điểm theo thứ tự của các mảng truyền vào; sắp xếp tọa độ trước nếu cần đường theo thứ tự x. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 26 — Câu hỏi sau thử nghiệm
 
@@ -645,6 +665,8 @@ Minh họa một quy trình ngắn: tạo bảng con, sau đó trực quan hóa 
 
 Mọi điểm đều thuộc bậc Gold. Vì đã điều kiện hóa theo bậc, sự khác biệt nhìn thấy giữa màu không còn do so sánh Gold với Silver/Platinum/Diamond, nhưng vẫn có thể chịu ảnh hưởng của nhiều biến khác.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 29 — Câu hỏi về thứ tự thao tác
 
 - **Loại:** Markdown
@@ -668,6 +690,8 @@ Giữ dữ liệu Gold nhưng đổi câu hỏi: từ liên hệ hai biến số
 #### Cách đọc
 
 Mỗi hộp tóm tắt phân phối hạng của một nhóm lõi trong bậc Gold. Boxplot không cho biết nguyên nhân lõi tạo ra thứ hạng; đây chỉ là so sánh mô tả.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.boxplot` tính hộp và râu cho từng nhóm quan sát. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 31 — Bài học về thay đổi thành phần
 
@@ -714,6 +738,8 @@ Dữ liệu có 960 hàng, 922 hàng đầy đủ cho hai biến này và 38 hà
 #### Lưu ý thống kê
 
 Loại hàng chỉ an toàn khi cơ chế thiếu không làm mẫu còn lại bị lệch nghiêm trọng. Trong dữ liệu thật, cần kiểm tra thiếu có tập trung ở bậc, chiến thuật hoặc loại trận nào không.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.scatter` đặt các cặp giá trị vào biểu đồ phân tán; `s` điều chỉnh diện tích điểm và `alpha` điều chỉnh độ trong suốt. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 34 — Trả lời về dữ liệu thiếu
 
@@ -881,6 +907,8 @@ Biểu đồ trái dùng thang gốc; biểu đồ phải dùng log10. Trên tha
 #### Lưu ý
 
 Logarit chỉ xác định trực tiếp cho giá trị dương. Cell tạo dữ liệu đã bảo đảm sát thương dương bằng cách cắt cận dưới. Với dữ liệu có 0, cần một quyết định rõ ràng như dùng log1p hoặc xử lý 0 theo ý nghĩa thực tế.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[0].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. `axes[1].hist` chia quan sát theo `bins`; đọc `density` để phân biệt số đếm và mật độ. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 46 — Ý nghĩa của phép đổi thang
 
@@ -1055,6 +1083,8 @@ Chuyển cột ty_le_top4 của bảng tóm tắt thành biểu đồ cột ph�
 
 Chiều cao cột là tỷ lệ, không phải số lượng. Biểu đồ dựa trên bảng đã tóm tắt nên mỗi cột đại diện một nhóm, không phải một quan sát cá nhân.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.axhline` thêm đường ngang làm giá trị đối chiếu. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 56 — Bài tập nhóm theo hai biến
 
 - **Loại:** Markdown
@@ -1155,6 +1185,8 @@ Cả hai trục dùng **PercentFormatter(1.0)**. Trục trái giới hạn 0–1
 
 Biểu đồ không tự giải quyết nhiễu. Điều quan trọng là chọn đúng mức tổng hợp và hiển thị biến phân tầng có liên quan.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `axes[1].bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `theo_nhip.plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 61 — Giải thích sự đảo chiều
 
 - **Loại:** Markdown
@@ -1190,6 +1222,8 @@ So sánh bảng đếm với bảng tỷ lệ top 4 theo loại lõi bổ trợ.
 #### Cách đọc
 
 Bảng đếm trả lời “có bao nhiêu lượt top 4?”. Bảng tỷ lệ trả lời “trong các lượt dùng lõi này, bao nhiêu phần đạt top 4?”. Một nhóm lớn có thể có nhiều ca top 4 nhưng tỷ lệ thấp hơn nhóm nhỏ.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `bang_loi.rename(columns={False: 'Ngoài top 4', True: 'Top 4'}).plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. `ti_le_loi.rename(columns={False: 'Ngoài top 4', True: 'Top 4'}).plot(kind='bar')` dùng bảng pandas để vẽ qua Matplotlib trên hệ trục truyền bằng `ax`; kiểm tra `stacked` để phân biệt cột chồng và cột nhóm. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 63 — Ghi nhớ mẫu số
 
@@ -1229,6 +1263,8 @@ Cả hai ô vẽ cùng dữ liệu, cùng màu, cùng loại cột. Chỉ **set_
 #### Cách đọc
 
 Biểu đồ phải phóng đại chênh lệch vì bỏ phần 0–40% của trục. Với biểu đồ cột, chiều dài cột thường được so từ gốc 0, nên cắt trục đặc biệt dễ gây ấn tượng sai. Nếu cần phóng to khác biệt, nên báo rõ và cân nhắc dùng điểm với khoảng tin cậy.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 66 — Nguyên tắc chọn trục
 
@@ -1323,6 +1359,8 @@ Biến bảng conditioned thành biểu đồ cột ghép để so sánh hai nh�
 
 So sánh chiều cao hai cột trong mỗi cụm bậc. Không chỉ nhìn các cột cùng màu qua các bậc, vì câu hỏi chính là chênh lệch nhóm máu trong cùng điều kiện bậc.
 
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
+
 ### Cell 71 — Diễn giải và câu hỏi mở
 
 - **Loại:** Markdown
@@ -1399,6 +1437,8 @@ Trình bày tỷ lệ top 4 theo ba nhóm scouting và ghi trực tiếp cỡ m�
 #### Cách đọc
 
 Đọc đồng thời chiều cao cột và n. Một tỷ lệ từ nhóm rất nhỏ thường bất định hơn tỷ lệ từ nhóm lớn, dù notebook chưa vẽ khoảng tin cậy.
+
+**Đọc code vẽ bằng Matplotlib.** `plt.subplots` tạo `Figure` chứa một hoặc nhiều `Axes`; từng lệnh trên `ax`/`axes` vẽ vào hệ trục tương ứng. `ax.bar` dùng vị trí và độ dài cột đã tính để vẽ biểu đồ cột. `ax.text` đặt chữ tại tọa độ trong hệ trục. Thử đổi một thuộc tính hiển thị đang có, như màu, kích thước hoặc nhãn, rồi chạy lại ô; giữ dữ liệu để so sánh.
 
 ### Cell 75 — Kết luận case study và giới hạn
 

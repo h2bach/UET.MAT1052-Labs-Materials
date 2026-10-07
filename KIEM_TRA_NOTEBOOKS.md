@@ -21,7 +21,7 @@ Bản Plotnine dùng `aes`, các lớp `geom_*`, facet và lát cắt 2D. Các h
 
 Đã bỏ ký hiệu thừa `<\hat y>` trong công thức SSE của W4 ở cả hai branch để biểu thức là tổng bình phương phần dư chuẩn; phép tính hồi quy giữ nguyên. Những thay đổi Markdown còn lại là cú pháp vẽ và hướng dẫn thao tác, được kiểm tra theo ID và SHA-256 trong [manifest](qa/GRAPHICS_MARKDOWN_CHANGES.json).
 
-Kiểm chứng tại máy; chưa chạy trực tiếp trên Colab và chưa kiểm kéo các widget Plotnine qua frontend. Tương tác cần kernel Jupyter đang chạy. Các báo cáo `w05_*`, `w06_*`, `w07_*` và `REVIEW_W05_W07.md` ghi nhận đợt xây nội dung gốc; kết quả hiện tại là [QA toàn bộ notebook](qa/NOTEBOOKS_VALIDATION.json) và [đối chiếu hai backend](qa/NOTEBOOK_BACKEND_PARITY.json).
+Kiểm chứng tại máy; chưa chạy trực tiếp trên Colab và chưa kiểm kéo các widget Plotnine qua frontend. Tương tác cần kernel Jupyter đang chạy. Kết quả hiện tại là [QA toàn bộ notebook](qa/NOTEBOOKS_VALIDATION.json) và [đối chiếu hai backend](qa/NOTEBOOK_BACKEND_PARITY.json).
 
 ```bash
 python -X utf8 tools/verify_notebooks.py
@@ -29,3 +29,11 @@ python -X utf8 tools/verify_notebooks.py --execute
 ```
 
 Script dùng Python đang gọi lệnh, kiểm tra backend trong code và ví dụ Python ở Markdown, output thực thi, ảnh, công thức, mã bài tập và phần lý thuyết giữ nguyên. Commit nguồn `2937ae5` là mốc đối chiếu; clone nông/ZIP có thể không chứa mốc này.
+
+Hướng dẫn Plot đã được viết theo code thực tế của từng branch tại [HUONG_DAN_PLOT.md](HUONG_DAN_PLOT.md) và ngay trước các ô vẽ trong cả 8 notebook. [Danh mục hướng dẫn theo cell](qa/PLOT_INSTRUCTIONS.json) cho phép đối chiếu từng hình.
+
+Cập nhật phần Plot: 127 ô vẽ có chỉ dẫn API theo đúng branch; 9 đoạn code trong hướng dẫn Plot đã chạy tuần tự từ kernel sạch, không lỗi hoặc stderr. Hình PNG mới đã được xem. W1 dùng tham số hiển thị tách rõ khỏi công thức mô phỏng; bản Matplotlib dùng `Figure`/`Axes` cho ví dụ phân tán. Các notebook còn lại giữ code tính toán và bổ sung hướng dẫn trước ô vẽ. Xem [kết quả chạy ví dụ Plot](qa/PLOT_GUIDE_VALIDATION.json).
+
+```bash
+python -X utf8 tools/verify_notebooks.py --execute-guide
+```

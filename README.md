@@ -11,7 +11,9 @@ Thư mục `Notebooks-Matplotlib-Plotly` dùng branch [`matplotlib-plotly`](http
 
 Notebook dùng Matplotlib cho hình tĩnh và Plotly cho các hoạt động thay tham số, đọc thông tin bằng rê chuột hoặc xem đồ thị 3D.
 
-Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [báo cáo toàn bộ notebook](./REVIEW_NOTEBOOKS.md) và [kết quả QA](./qa/NOTEBOOKS_VALIDATION.json).
+Xem [hướng dẫn code vẽ biểu đồ](./HUONG_DAN_PLOT.md) dành riêng cho branch này.
+
+Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [báo cáo toàn bộ notebook](./KIEM_TRA_NOTEBOOKS.md) và [kết quả QA](./qa/NOTEBOOKS_VALIDATION.json).
 
 ## 1. Giới thiệu học phần
 
@@ -34,9 +36,9 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | 2 | Tóm tắt dữ liệu (1/3) | Bảng liên hợp; số đếm và tỉ lệ; dữ liệu phân loại; dữ liệu số; biểu đồ và mô tả phân phối | [`W2_TomTatDuLieu.ipynb`](./W2_TomTatDuLieu.ipynb) |
 | 3 | Tóm tắt dữ liệu (2/3) | Ngữ pháp đồ họa; thuộc tính hình ảnh; hình học; điều kiện hóa; lọc; pipeline và phép toán theo nhóm | [`W3_NguPhapDoHoaVaDieuKienHoa.ipynb`](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
 | 4 | Tóm tắt dữ liệu (3/3) | Tương quan; hồi quy tuyến tính đơn; hồi quy đa biến; biến phân loại và diễn giải hệ số | [`W4_TuongQuanVaHoiQuyTuyenTinh.ipynb`](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
-| 5 | Khái quát dữ liệu (1/7) | Nền tảng và tiên đề xác suất; sơ đồ Venn; xác suất có điều kiện; độc lập; quy tắc cộng và nhân | [`W5_NenTangVaTinhToanXacSuat.ipynb`](./W5_NenTangVaTinhToanXacSuat.ipynb) — branch review |
-| 6 | Khái quát dữ liệu (2/7) | Phân phối xác suất; quy tắc đếm; biến ngẫu nhiên rời rạc; nhị thức, siêu bội và hàm phân phối tích lũy | [`W6_PhanPhoiVaBienNgauNhien.ipynb`](./W6_PhanPhoiVaBienNgauNhien.ipynb) — branch review |
-| 7 | Khái quát dữ liệu (3/7) | Kỳ vọng; phương sai; độ lệch chuẩn; phân phối liên tục; tổng và trung bình; định lý giới hạn trung tâm | [`W7_KyVongPhuongSaiVaXapXiChuan.ipynb`](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) — branch review |
+| 5 | Khái quát dữ liệu (1/7) | Nền tảng và tiên đề xác suất; sơ đồ Venn; xác suất có điều kiện; độc lập; quy tắc cộng và nhân | [`W5_NenTangVaTinhToanXacSuat.ipynb`](./W5_NenTangVaTinhToanXacSuat.ipynb) |
+| 6 | Khái quát dữ liệu (2/7) | Phân phối xác suất; quy tắc đếm; biến ngẫu nhiên rời rạc; nhị thức, siêu bội và hàm phân phối tích lũy | [`W6_PhanPhoiVaBienNgauNhien.ipynb`](./W6_PhanPhoiVaBienNgauNhien.ipynb) |
+| 7 | Khái quát dữ liệu (3/7) | Kỳ vọng; phương sai; độ lệch chuẩn; phân phối liên tục; tổng và trung bình; định lý giới hạn trung tâm | [`W7_KyVongPhuongSaiVaXapXiChuan.ipynb`](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 | 8 | Kiểm tra giữa kỳ | Ôn tập và đánh giá thống kê mô tả, trực quan hóa, xác suất và các phân phối thông dụng | Chưa có trong repository |
 | 9 | Khái quát dữ liệu (5/7) | Mẫu và quần thể; nguồn sai số; phân phối mẫu; khoảng tin cậy cho trung bình và tỉ lệ | Chưa có trong repository |
 | 10 | Khái quát dữ liệu (6/7) | Bootstrap; mở đầu kiểm định giả thuyết; p-value và các thành phần của một kiểm định | Chưa có trong repository |
@@ -58,7 +60,7 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/matplotlib-plotly/W6_PhanPhoiVaBienNgauNhien.ipynb) |
 | [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/matplotlib-plotly/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 
-Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotly/Matplotlib nằm ở branch `matplotlib-plotly`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
+Cả 8 notebook có hướng dẫn Plot theo đúng thư viện của branch, kèm nội dung thống kê, ví dụ, thực hành và đáp án. Bắt đầu với [hướng dẫn Plot](./HUONG_DAN_PLOT.md), rồi mở bài theo thứ tự Tuần 1–7. Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
 Các notebook sử dụng `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly` và `statsmodels`. Đồ thị Plotly hỗ trợ interactive learning đối với các dữ liệu số/hình ảnh có thể thay đổi được, bộ điều khiển và hình 3D; trải nghiệm hiển thị tương tác tốt nhất khi máy có kết nối Internet.
 
@@ -75,7 +77,7 @@ git clone --branch matplotlib-plotly --single-branch https://github.com/h2bach/U
 cd UET.MAT1052-Labs-Materials
 ```
 
-Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/matplotlib-plotly), giải nén, sau đó mở thư mục vừa giải nén.
+Nếu chưa dùng Git, tải file ZIP của branch đã chọn từ [trang branch](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/matplotlib-plotly), giải nén, sau đó mở thư mục vừa giải nén.
 
 ### Tạo môi trường khuyến nghị
 

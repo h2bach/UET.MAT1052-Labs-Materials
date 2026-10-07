@@ -433,5 +433,7 @@
       "file": "figures/stat20_vong_doi_khoa_hoc_du_lieu.png",
       "sha256": "4aee3a02c753c89b15f66d669c884c261c3b50dde064e128895d20e728fbe849"
     }
-  ]
+  ],
+  "unchanged_code_cells_with_equal_outputs": 147,
+  "plot_guides_same_data_and_numerical_outputs": true
 }
