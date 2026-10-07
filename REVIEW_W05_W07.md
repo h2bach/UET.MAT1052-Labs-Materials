@@ -2,7 +2,7 @@
 
 ThS. Hoàng Hữu Bách — BM. Khoa học & Kỹ thuật tính toán - Khoa Công nghệ Thông tin, VNU-UET
 
-Branch cục bộ: `plotnine`. Đây là bản nội dung đầy đủ dùng Matplotlib/Plotly để review, song song với branch Plotnine.
+Branch cục bộ: `plotnine`. Đây là bản nội dung đầy đủ dùng Plotnine để review, song song với branch Matplotlib/Plotly.
 
 ## Mở bài học
 

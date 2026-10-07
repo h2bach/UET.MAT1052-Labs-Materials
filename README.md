@@ -58,7 +58,7 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W6_PhanPhoiVaBienNgauNhien.ipynb) |
 | [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 
-Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotly/Matplotlib nằm ở branch `plotnine`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
+Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotnine nằm ở branch `plotnine`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
 Các notebook sử dụng `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly` và `statsmodels`. Đồ thị Plotly hỗ trợ interactive learning đối với các dữ liệu số/hình ảnh có thể thay đổi được, bộ điều khiển và hình 3D; trải nghiệm hiển thị tương tác tốt nhất khi máy có kết nối Internet.
 
