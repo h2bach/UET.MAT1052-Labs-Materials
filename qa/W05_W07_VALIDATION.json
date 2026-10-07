@@ -1,81 +1,91 @@
 {
-  "notebooks": [
-    {
-      "week": 5,
-      "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
-      "cells": 91,
-      "code_cells": 19,
-      "png_outputs": 6,
-      "plotly_outputs": 2,
-      "illustrations": 20,
-      "slide_pages": 93,
-      "clean_execution": true,
-      "backend": "matplotlib-plotly",
-      "source_release_aligned": true,
-      "theory_exercises_preserved": null
-    },
-    {
-      "week": 6,
-      "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
-      "cells": 119,
-      "code_cells": 34,
-      "png_outputs": 17,
-      "plotly_outputs": 1,
-      "illustrations": 4,
-      "slide_pages": 80,
-      "clean_execution": true,
-      "backend": "matplotlib-plotly",
-      "source_release_aligned": true,
-      "theory_exercises_preserved": null
-    },
-    {
-      "week": 7,
-      "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
-      "cells": 79,
-      "code_cells": 32,
-      "png_outputs": 14,
-      "plotly_outputs": 2,
-      "illustrations": 5,
-      "slide_pages": 94,
-      "clean_execution": true,
-      "backend": "matplotlib-plotly",
-      "source_release_aligned": true,
-      "theory_exercises_preserved": null
-    }
-  ],
-  "existing_materials": {
-    "baseline_available": true,
-    "files_checked": [
-      "W1_CauHoiVaDuLieu.ipynb",
-      "W2_TomTatDuLieu.ipynb",
-      "W3_NguPhapDoHoaVaDieuKienHoa.ipynb",
-      "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb",
-      "W3_TFT_GiaiThichTungCell.md",
-      "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb"
-    ],
-    "execution_output_only_changes": [
-      "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb"
-    ]
-  },
-  "python": "3.14.6",
-  "versions": {
-    "numpy": "2.4.6",
-    "pandas": "3.0.3",
-    "matplotlib": "3.11.0",
-    "scipy": "1.18.0",
-    "plotly": "6.7.0",
-    "nbclient": "0.11.0",
-    "nbformat": "5.10.4"
-  },
+  "validated_on": "2026-10-08",
   "variant": {
     "backend": "matplotlib-plotly",
     "branch": "matplotlib-plotly",
-    "converted_weeks": [
+    "weeks": [
+      1,
+      2,
+      3,
+      4,
       5,
       6,
       7
     ],
+    "includes_tft_notebook": true,
+    "all_notebooks_use_branch_backend": true,
     "original_content_commit": "2937ae5"
   },
-  "kernel_execution": "Each W5-W7 notebook executed from a fresh kernel; outputs validated."
+  "notebooks": [
+    {
+      "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
+      "week": 5,
+      "backend": "matplotlib-plotly",
+      "cells": 91,
+      "code_cells": 19,
+      "png_outputs": 6,
+      "plotly_outputs": 2,
+      "source_illustrations": 20,
+      "answer_blocks": 18,
+      "slide_pages": 93,
+      "execution_outputs_valid": true,
+      "baseline_available": true,
+      "mathematical_expressions_preserved": true,
+      "source_ids_metadata_attachments_preserved": true,
+      "changed_markdown_ids": [],
+      "changed_code_ids": []
+    },
+    {
+      "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
+      "week": 6,
+      "backend": "matplotlib-plotly",
+      "cells": 119,
+      "code_cells": 34,
+      "png_outputs": 17,
+      "plotly_outputs": 1,
+      "source_illustrations": 4,
+      "answer_blocks": 14,
+      "slide_pages": 80,
+      "execution_outputs_valid": true,
+      "baseline_available": true,
+      "mathematical_expressions_preserved": true,
+      "source_ids_metadata_attachments_preserved": true,
+      "changed_markdown_ids": [],
+      "changed_code_ids": []
+    },
+    {
+      "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
+      "week": 7,
+      "backend": "matplotlib-plotly",
+      "cells": 79,
+      "code_cells": 32,
+      "png_outputs": 14,
+      "plotly_outputs": 2,
+      "source_illustrations": 5,
+      "answer_blocks": 18,
+      "slide_pages": 94,
+      "execution_outputs_valid": true,
+      "baseline_available": true,
+      "mathematical_expressions_preserved": true,
+      "source_ids_metadata_attachments_preserved": true,
+      "changed_markdown_ids": [],
+      "changed_code_ids": []
+    }
+  ],
+  "fresh_kernel_execution": true,
+  "execution_errors": 0,
+  "notebook_stderr": 0,
+  "tft_guide_cell_sections": 77,
+  "same_numeric_output_cells": 147,
+  "dataset_and_source_figure_files_identical": 57,
+  "rendering_correction": {
+    "file": "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb",
+    "cell": "0ed84bba",
+    "description": "Removed the stray <\\hat y> marker from the SSE formula on both branches."
+  },
+  "limits": {
+    "colab_execution_tested": false,
+    "plotnine_frontend_widget_drag_tested": false
+  },
+  "scope": "Weeks 5-7; the authoritative course-wide report is NOTEBOOKS_VALIDATION.json."
 }

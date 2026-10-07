@@ -1,10 +1,16 @@
 {
   "backend": "matplotlib-plotly",
   "branch": "matplotlib-plotly",
-  "converted_weeks": [
+  "weeks": [
+    1,
+    2,
+    3,
+    4,
     5,
     6,
     7
   ],
+  "includes_tft_notebook": true,
+  "all_notebooks_use_branch_backend": true,
   "original_content_commit": "2937ae5"
 }

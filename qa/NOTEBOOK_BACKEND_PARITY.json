@@ -1,0 +1,437 @@
+{
+  "notebooks": [
+    {
+      "file": "W1_CauHoiVaDuLieu.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "d19c838a",
+        "bd288128",
+        "bac3ffbb",
+        "5435a5cb",
+        "4515913f",
+        "5e3cf463",
+        "1aec79e3",
+        "b89fdf8c",
+        "df753baf",
+        "52573436",
+        "7815e771",
+        "ef024fed",
+        "9777467c",
+        "45fdf5e9",
+        "ed94f6f6",
+        "f11f00a9-8ff1-48b8-8067-76b374a64aef",
+        "44bd23e6-116e-4cdf-bd65-4cc7dd5d67b2",
+        "0cb6fd0b-c0e4-4e68-bc28-c89f17b52984",
+        "0941aedd",
+        "ff59888f",
+        "8047edaa",
+        "286d99af",
+        "98569502",
+        "b73e0e65"
+      ],
+      "count": 24,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W2_TomTatDuLieu.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "1eab9612",
+        "f22ba21c",
+        "829d792f",
+        "20a81007",
+        "9d630025",
+        "05122564",
+        "65ca1b25",
+        "bee0617e",
+        "fb6325f9-aa50-4a0e-b122-d0474b3cd7d6",
+        "b0522584",
+        "0fdd9b6a",
+        "c4f6f55b",
+        "e3975d73",
+        "20697978",
+        "f46cfeff-8669-4078-aa44-d6ef4d4b138b",
+        "f4d64844",
+        "6c13f8e6",
+        "4a2c658d",
+        "14bf97e9",
+        "30dfe917",
+        "1759e60d",
+        "af682234",
+        "1ed2f4a8",
+        "f069ee56",
+        "d6de3c07",
+        "dfc1a335",
+        "7ddc71f1",
+        "5d568c42",
+        "3cf31279"
+      ],
+      "count": 29,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W3_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "f6f1f84b",
+        "153f800c",
+        "e38240be-4b32-4a72-a42a-19c56c337b4d",
+        "e1eab086",
+        "782d82fa-d8f6-4690-b4b6-58cdc3fdc3a7",
+        "ff439da3",
+        "5311e13b",
+        "121222ba",
+        "f6c0a799",
+        "a38395f9",
+        "35f507ac",
+        "90eec337",
+        "b37133c1",
+        "f45f98f2",
+        "60cc8810",
+        "fc3efdde",
+        "e047fa38",
+        "ab298ba9",
+        "77fcac65"
+      ],
+      "count": 19,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "tft-003-generate-data",
+        "tft-005-data-checks",
+        "tft-020-history-head",
+        "tft-038-filter-one",
+        "tft-040-filter-multiple",
+        "tft-042-boolean-vars",
+        "tft-043-boolean-mean",
+        "tft-049-pipeline",
+        "tft-051-filter-vs-group",
+        "tft-053-order-matters",
+        "tft-055-group-table",
+        "tft-058-group-two-vars",
+        "tft-060-simpson-table",
+        "tft-069-challenge-pooled",
+        "tft-070-challenge-conditioned",
+        "tft-074-case-table"
+      ],
+      "count": 16,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "3fd6da64",
+        "b8ac63db-bf67-44ac-a3ca-653bad13fa59",
+        "ad301de9-d07d-4692-9ba2-63e4eb8d6704",
+        "0530f311-0788-485e-936b-fb735aac4382",
+        "56c458ec",
+        "2479998e",
+        "af9d9931-f35b-4f99-b07e-d5327346afcb",
+        "60304de3",
+        "a701b5ad",
+        "1b11ade4",
+        "0e57ebf0",
+        "510a1bd7",
+        "503f0479",
+        "19126803",
+        "e6f1c282",
+        "8c7c72a6",
+        "4b46c8c2"
+      ],
+      "count": 17,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "w05-004",
+        "w05-008",
+        "w05-017",
+        "w05-019",
+        "w05-023",
+        "w05-027",
+        "w05-029",
+        "w05-033",
+        "w05-064",
+        "w05-087"
+      ],
+      "count": 10,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "a1de3f2a",
+        "065809db",
+        "0e1ee0d8",
+        "83ce9719",
+        "502f507f",
+        "b042b34b",
+        "bdf9d57e",
+        "2de0e54f",
+        "fab356db",
+        "cf418733",
+        "37a7273e",
+        "a54a2a77",
+        "80e3068b",
+        "990c995f",
+        "b6cc32ea"
+      ],
+      "count": 15,
+      "cell_ids_equal": true
+    },
+    {
+      "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
+      "unchanged_code_cells_with_identical_numeric_outputs": [
+        "2904dd23",
+        "fcd2e25d",
+        "be85c1df",
+        "cb9ee8a5",
+        "9d167b5d",
+        "625f13c3",
+        "ae49e475",
+        "96c4b5d5",
+        "e1fa5b9d",
+        "9075e73a",
+        "24b47e8a",
+        "cf46b1d9",
+        "ca9b2aaf",
+        "d7c40d09",
+        "c8f15f2a",
+        "559acd01",
+        "7f732f41"
+      ],
+      "count": 17,
+      "cell_ids_equal": true
+    }
+  ],
+  "resources": [
+    {
+      "file": "datasets/allbacks.csv",
+      "sha256": "77c1cac6b10e2c6cc5fa609a4be73df064bb90d07997bb0095ab32933b790217"
+    },
+    {
+      "file": "datasets/arbuthnot.csv",
+      "sha256": "800ede2c5b332f67e4dbd7397eaeb42737792fcf6c4a0b606a83b211c7932bad"
+    },
+    {
+      "file": "datasets/email50.csv",
+      "sha256": "2bf25823de98e942f7edcb90c83b505662516d97c13b8b82496c1c4e78dbbb1c"
+    },
+    {
+      "file": "datasets/gpa_study_hours.csv",
+      "sha256": "bad5493afbe0da04ae1e19c6709702454aaa39d41a088a61875a21fcb01adb1e"
+    },
+    {
+      "file": "datasets/loan50.csv",
+      "sha256": "11fc655213d6132149b643419d458994467cea29eb2db89044344226bd77ba49"
+    },
+    {
+      "file": "datasets/loans.csv",
+      "sha256": "cbd0f923bcb921289b519180c7c929f6f158a3a1e690411a986933fd57932945"
+    },
+    {
+      "file": "datasets/mcu_films.csv",
+      "sha256": "f81f2b115358258347c26b72e3cee4c13b1494ee498299edb05584f2c566bb0b"
+    },
+    {
+      "file": "datasets/msleep.csv",
+      "sha256": "3c69950794b4da2fcaecf4f469dbadbeb4e95e31c3e1bbae96c82c8d6b0628f1"
+    },
+    {
+      "file": "datasets/penguins.csv",
+      "sha256": "79995be0ba7a6df1e9309e399a23438c0854f959d29950885dafb94ab881be68"
+    },
+    {
+      "file": "datasets/poverty_mo_phong.csv",
+      "sha256": "02ed32e2f45d8d4eeb57e34504534e937ff3f25e0640f669009b50fc441b1138"
+    },
+    {
+      "file": "datasets/README.md",
+      "sha256": "5293ebc7420f190f5cd179f1eb2896fc6f07afb37550e073c6b6816fef9562b1"
+    },
+    {
+      "file": "datasets/seattlepets.csv",
+      "sha256": "e213276cd86f91c1948804d4216d2ef70a42fdd84a6b354fab1fbe9d828c115b"
+    },
+    {
+      "file": "datasets/zagat.csv",
+      "sha256": "8c3add6d94f1fcf1f8b6296ca39455965b7f636e255432cb6eb58ebbfd76872c"
+    },
+    {
+      "file": "figures/01_stat20_die_box.jpg",
+      "sha256": "d54469ca5f0c25ec7b085e121a7fc9894f6257f37ab41175a9282302b27fa7d0"
+    },
+    {
+      "file": "figures/01_stat20_generalization_map.jpg",
+      "sha256": "83f80e33ad4b871c325ad53f9aa0e9c95ee36c04d842e1d0873373b427071a3e"
+    },
+    {
+      "file": "figures/02_stat20_de_mere_gambling.jpg",
+      "sha256": "3f4506159d78182d0ed447e39d1cb7d0b5ea8ed671c8333294558a5c216be680"
+    },
+    {
+      "file": "figures/02_stat20_ten_ticket_box.png",
+      "sha256": "b11e150aaa5392d20fe9d1116596f4c6a2ca8434bc8fbc3885abd7ba7f147551"
+    },
+    {
+      "file": "figures/03_stat20_coin_photo.png",
+      "sha256": "3c45f56b72935c850152b2b5aee1acc97282863cea832f7b73d1f443af75e888"
+    },
+    {
+      "file": "figures/03_stat20_random_walk_scene.png",
+      "sha256": "f8cf084871d5ad3dd293ead349ebfa69f32e26dde60f9cb537f0d2cfb2f5c3cb"
+    },
+    {
+      "file": "figures/04_stat20_roulette_photo.jpg",
+      "sha256": "ea5e0f518f95f06ee9d14413fa070f85ae08b86b87265c4de2f68a6e28218f5c"
+    },
+    {
+      "file": "figures/04_stat20_venn_union_intersection.png",
+      "sha256": "6306d0b099a992f2c3713c27d4b3257d05b6e6b0f30b0782eef5b8b3ab5f5ef0"
+    },
+    {
+      "file": "figures/05_stat20_roulette_gain_box.jpg",
+      "sha256": "6f7ae94788c492c771e99255febc88fac7f3ead60c2c56248772b4e7a3e743b8"
+    },
+    {
+      "file": "figures/05_stat20_venn_disjoint.png",
+      "sha256": "6766dad99cb27637dadce7744097db800bff48c922d850dc3bb7d1d2fdab99f7"
+    },
+    {
+      "file": "figures/06_stat20_number_tickets_box.jpg",
+      "sha256": "29fa6bb2b6152c5f230f56c2cbba6101a051e76d2416a6f299eb932ab6d175a6"
+    },
+    {
+      "file": "figures/07_stat20_biased_coin_tree.png",
+      "sha256": "ba43ae16f2711a65776f8f39d247ad4976bfa5ab2e4cdea8101d8690b5412ac9"
+    },
+    {
+      "file": "figures/08_stat20_roulette_wheel.jpg",
+      "sha256": "ea5e0f518f95f06ee9d14413fa070f85ae08b86b87265c4de2f68a6e28218f5c"
+    },
+    {
+      "file": "figures/09_stat20_sally_clark_photo.png",
+      "sha256": "f710e2c4575898c56099f3d56304a1501b83df689c840cef32d7db961ae00a77"
+    },
+    {
+      "file": "figures/10_stat20_red_blue_box.jpg",
+      "sha256": "9cd8ee5f50b37e9e7b6c0ec83421d1902eb288258dcf513e9612b67cf62436f1"
+    },
+    {
+      "file": "figures/11_stat20_replacement_three_draws.jpg",
+      "sha256": "d22b41f2848dd82bb92a31bacaf67f6ab5c31e850398eb23a70f90d5dedc0d36"
+    },
+    {
+      "file": "figures/12_stat20_without_replacement_three_draws.jpg",
+      "sha256": "b33be886bd816d547e258ef02f9466c6c63101347fa2c6bd9a46e057ffbbc8ec"
+    },
+    {
+      "file": "figures/13_stat20_without_replacement_tree.jpg",
+      "sha256": "e0adf991f56948377ad3e462b09499d9514b91e6efb158a2bd2e02413a2e3a77"
+    },
+    {
+      "file": "figures/14_stat20_venn_intersection.png",
+      "sha256": "c3ae57c8647d812edfe3a8655a4c8a673e6f27806da9a68fdcf84091922c11c9"
+    },
+    {
+      "file": "figures/15_stat20_conditional_probability_direction.png",
+      "sha256": "c375f51440d25ae639e4a0bc1e0839e48ec4fff8b4464a807bd167a78eba6f76"
+    },
+    {
+      "file": "figures/16_stat20_committee_five_people.jpg",
+      "sha256": "a0ccfaaef1b034d04de551a7c12fb892c82947e1a0a5164e07b4a4b2a68cd40c"
+    },
+    {
+      "file": "figures/17_stat20_color_number_independence.jpg",
+      "sha256": "993415656b79f55e8171acec5429e067d00dfd4163defa4d834151b63d7a4a31"
+    },
+    {
+      "file": "figures/18_stat20_two_numbers_boxes.jpg",
+      "sha256": "d6613f1536c5adef564505250eb1c4916a9a5493a424a57071c465948d635fec"
+    },
+    {
+      "file": "figures/19_stat20_conditioning_two_numbers.jpg",
+      "sha256": "bad3784023ee3e9b2167b33df3ae47073af995c1200667f07e3dce601ecaf25e"
+    },
+    {
+      "file": "figures/20_stat20_inclusion_exclusion_venn.png",
+      "sha256": "cfc6d51a29006e3ad61b4db95bf59b6cb4f633cfd076ac9d9b61e8668ade485a"
+    },
+    {
+      "file": "figures/stat20_anh_xa_bien_ngau_nhien.png",
+      "sha256": "a91f2815ffce297e2d7a07ad31e79b6e024b193a98e4fadeb7e7f1e084353f45"
+    },
+    {
+      "file": "figures/stat20_anh_xa_thuoc_tinh.png",
+      "sha256": "933deb665bd680a23b8d4298562d7f57c5229e51f3dec0d549558ea097004818"
+    },
+    {
+      "file": "figures/stat20_ba_loai_chim_canh_cut.png",
+      "sha256": "0dd04c82905ecb69d58e19d0f0f228ef7d3855711c4acaebe113492324c38233"
+    },
+    {
+      "file": "figures/stat20_bang_nguoi_ngoai_hanh_tinh.png",
+      "sha256": "9c39f5a9971abf21c83f87c18e145c3159ad50f5b69993b8475be0c5fcadb02c"
+    },
+    {
+      "file": "figures/stat20_bon_loai_khang_dinh.png",
+      "sha256": "c812cba8a963ea29c7b5bdcc9abdbc283be1b5cab7a182698ff8e6337fd648ab"
+    },
+    {
+      "file": "figures/stat20_chieu_dai_mo.png",
+      "sha256": "f0d536556b40951853a3962b5f363c4a02b9a74c345156b82cd511e27dd97811"
+    },
+    {
+      "file": "figures/stat20_do_xien.png",
+      "sha256": "c8f038bd2eb970bdbebf55fd79949e8cc641b8f3adc61a9e32e1efa5b0b10530"
+    },
+    {
+      "file": "figures/stat20_geni_quy_tac_dem.png",
+      "sha256": "9ec2333e85b96969f1fe231f1decc76f815939c5c61627eb6b2f337b0b80a39a"
+    },
+    {
+      "file": "figures/stat20_hop_nam_la.jpg",
+      "sha256": "18f6601354df90a8af5c66232233678da8a99995f24bcd51498ee94798b6dfff"
+    },
+    {
+      "file": "figures/stat20_khung_du_lieu_bang_bieu_do.png",
+      "sha256": "3c2efbcbba55092f14b3d8bce231ea543b20048e36712d847374e9ce4e653036"
+    },
+    {
+      "file": "figures/stat20_mo_chim_canh_cut.png",
+      "sha256": "f8e2bff02ad8d4d1b1dbe580a409f0beba0b64a60407a9a9f02b50bdeaa744a4"
+    },
+    {
+      "file": "figures/stat20_ngu_phap_do_hoa.png",
+      "sha256": "c299507e4bc1701b58dc0f9414d53634f66c2482f4972c6e202d8d67b4ee9456"
+    },
+    {
+      "file": "figures/stat20_nhom_roi_tom_tat.png",
+      "sha256": "859ba6d1d189e15bbcc10fdeb6d7261aaa8f91af8db10ffa75cc64346cda74e1"
+    },
+    {
+      "file": "figures/stat20_roulette.jpg",
+      "sha256": "ea5e0f518f95f06ee9d14413fa070f85ae08b86b87265c4de2f68a6e28218f5c"
+    },
+    {
+      "file": "figures/stat20_so_dinh.png",
+      "sha256": "289de886c8bc6b8ba2092dc5499e4fb469d1f48c8a4fbde66acdf8df8e7bfcc9"
+    },
+    {
+      "file": "figures/stat20_thong_ke_la_ham.png",
+      "sha256": "28ba84546390f6523629314d50fd1110f75bf3f2a747339338a125c8154d057a"
+    },
+    {
+      "file": "figures/stat20_thu_nhap_ho_gia_dinh_2014.png",
+      "sha256": "ee346f2ee7d41cb2ec0dedaa21e5ce938f43b322fd2856b6aaf8ac9425717442"
+    },
+    {
+      "file": "figures/stat20_tram_palmer.jpg",
+      "sha256": "11899f859a67880986a53147ca1dfdb876f8ca5a33432feaddbaed05784a921f"
+    },
+    {
+      "file": "figures/stat20_vong_doi_khoa_hoc_du_lieu.png",
+      "sha256": "4aee3a02c753c89b15f66d669c884c261c3b50dde064e128895d20e728fbe849"
+    }
+  ]
+}

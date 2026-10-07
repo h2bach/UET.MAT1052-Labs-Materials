@@ -66,7 +66,7 @@ python -X utf8 tools/verify_w05_w07.py
 python -X utf8 tools/verify_w05_w07.py --execute
 ```
 
-Script kiểm tra cấu trúc notebook, ID ô duy nhất, mọi ô code đã chạy, lỗi/cảnh báo trong output, ảnh/attachment, nội dung khối đáp án thực sự nằm trong `<details>`, đủ bài tập/ví dụ, source–release thống nhất và file Buổi 1–4 được giữ nguyên so với snapshot cục bộ.
+Script kiểm tra cấu trúc notebook, ID ô duy nhất, mọi ô code đã chạy, lỗi/cảnh báo trong output, ảnh/attachment, nội dung khối đáp án thực sự nằm trong `<details>`, đủ bài tập/ví dụ, source–release thống nhất và phần lý thuyết/bài tập được đối chiếu với commit nguồn. Code Buổi 1–4/TFT hiện theo backend riêng; xem REVIEW_NOTEBOOKS.md.
 
 Hai thư mục phát hành là hai Git worktree của repository học liệu: `Notebooks-Matplotlib-Plotly/` và `Notebooks-Plotnine/`. Các thay đổi cũ chưa commit được lưu tại commit `2b48b01`, là tổ tiên của cả hai branch hiện tại. So sánh bản mới với snapshot này:
 
@@ -74,9 +74,9 @@ Hai thư mục phát hành là hai Git worktree của repository học liệu: `
 git diff --stat 2b48b01...matplotlib-plotly
 ```
 
-Thư mục project gốc trước đó chưa có Git; đã tạo mốc `main` chứa nguồn hiện có và branch cùng tên để quản lý module 05–07 cùng cập nhật trạng thái trong `course_map.md`. Hai repository có lịch sử riêng. Bản phát hành được commit và push lên GitHub theo yêu cầu ngày 07/10/2026. Hai branch review được giữ riêng; chưa merge vào main. Snapshot cũ được giữ trong lịch sử commit, không dùng branch phụ. Việc chuyển backend chỉ áp dụng cho Buổi 5–7.
+Thư mục project gốc trước đó chưa có Git; đã tạo mốc `main` chứa nguồn hiện có và branch cùng tên để quản lý module 05–07 cùng cập nhật trạng thái trong `course_map.md`. Hai repository có lịch sử riêng. Bản phát hành được commit và push lên GitHub theo yêu cầu ngày 07/10/2026. Hai branch review được giữ riêng; chưa merge vào main. Snapshot cũ được giữ trong lịch sử commit, không dùng branch phụ. Phạm vi đã mở rộng sang toàn bộ notebook theo yêu cầu tiếp theo; xem REVIEW_NOTEBOOKS.md.
 
-Nội dung Markdown, code và metadata của notebook Buổi 1–4, bản TFT, guide TFT, slide, HTML nguồn và CSV giữ nguyên. File W4 được lưu lại output/execution count trong lúc làm việc; bản lưu này được giữ và đưa vào Git theo yêu cầu push all. QA xác nhận chỉ hai trường execution count/output thay đổi, không thay đổi nội dung bài giảng. Vì thế nội dung Ngữ pháp đồ họa hiện có không bị thay đổi. Bản Plotnine dùng cùng dữ liệu, ánh xạ thuộc tính hình ảnh và dạng hình học đã ghi trong bài; giữ phần lý thuyết, giả định và diễn giải.
+Tại đợt xây Buổi 5–7, nội dung Buổi 1–4/TFT được giữ. Theo yêu cầu mở rộng sau đó, code vẽ và hướng dẫn được chuyển theo từng backend; lý thuyết và dữ liệu giữ nguyên. Slide, HTML nguồn và CSV giữ nguyên. File W4 được lưu lại output/execution count trong lúc làm việc; bản lưu này được giữ và đưa vào Git theo yêu cầu push all. Đối chiếu ở đợt đầu xác nhận W4 chỉ đổi execution count/output. Ở đợt chuyển backend toàn bộ, W4 có code vẽ riêng và sửa ký hiệu thừa trong công thức SSE; xem báo cáo hiện tại. Vì thế nội dung Ngữ pháp đồ họa hiện có không bị thay đổi. Bản Plotnine dùng cùng dữ liệu, ánh xạ thuộc tính hình ảnh và dạng hình học đã ghi trong bài; giữ phần lý thuyết, giả định và diễn giải.
 
 ## Hai phiên bản và giới hạn chuyển đổi
 
@@ -85,6 +85,6 @@ Nội dung Markdown, code và metadata của notebook Buổi 1–4, bản TFT, g
 | `Notebooks-Matplotlib-Plotly` | [matplotlib-plotly](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/matplotlib-plotly) | Matplotlib + Plotly |
 | `Notebooks-Plotnine` | [plotnine](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/plotnine) | Plotnine; ipywidgets ở Buổi 5–6 |
 
-Chỉ chuyển code vẽ Buổi 5–7. Lý thuyết, công thức, đề bài, đáp án và metadata nguồn giữ nguyên; bảy ô Markdown chỉ thay lời hướng dẫn backend/thao tác. Xem [báo cáo đối chiếu hai backend](./qa/W05_W07_BACKEND_PARITY.json). Notebook Buổi 1–4/TFT có cùng nội dung ở hai folder và giữ backend hiện có. Hai branch đều chứa notebook cùng `datasets/`, `figures/`, README và QA để tải/chạy độc lập.
+Báo cáo này ghi nhận đợt xây nội dung Buổi 5–7. Đợt tiếp theo đã chuyển code vẽ toàn bộ notebook theo đúng backend từng branch; xem [báo cáo hiện tại](./REVIEW_NOTEBOOKS.md). Lý thuyết, công thức, đề bài, đáp án và metadata nguồn giữ nguyên; bảy ô Markdown chỉ thay lời hướng dẫn backend/thao tác. Xem [báo cáo đối chiếu hai backend](./qa/W05_W07_BACKEND_PARITY.json). Notebook Buổi 1–4/TFT giữ nội dung thống kê, có code và hướng dẫn riêng theo backend của từng folder. Hai branch đều chứa notebook cùng `datasets/`, `figures/`, README và QA để tải/chạy độc lập.
 
 Các báo cáo QA độc lập ban đầu trong `qa/` đối chiếu nội dung gốc Matplotlib/Plotly. Kết quả cuối từng backend nằm ở `W05_W07_VALIDATION.json`. Plotnine không còn output hoặc import trực tiếp Plotly/Matplotlib trong ba notebook mới; Plotnine sử dụng Matplotlib ở bên trong thư viện.

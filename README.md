@@ -7,11 +7,11 @@
 
 ## Bản notebook trong thư mục này
 
-Thư mục `Notebooks-Matplotlib-Plotly` dùng branch [`matplotlib-plotly`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/matplotlib-plotly). Hai phiên bản Buổi 5–7 giữ cùng nội dung, lý thuyết, ví dụ và bài tập. Phạm vi chuyển backend là **Buổi 5–7**; các notebook Buổi 1–4 và TFT được giữ nguyên ở cả hai branch, kể cả phần Grammar of Graphics.
+Thư mục `Notebooks-Matplotlib-Plotly` dùng branch [`matplotlib-plotly`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/matplotlib-plotly). Toàn bộ **8 notebook** của Tuần 1–7 và bản TFT dùng backend của branch này. Hai phiên bản giữ cùng nội dung thống kê, lý thuyết, ví dụ và bài tập, kể cả phần Grammar of Graphics.
 
-Buổi 5–7 dùng Matplotlib cho hình tĩnh và Plotly cho các hoạt động thay tham số.
+Notebook dùng Matplotlib cho hình tĩnh và Plotly cho các hoạt động thay tham số, đọc thông tin bằng rê chuột hoặc xem đồ thị 3D.
 
-Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [bản review](./REVIEW_W05_W07.md) và [kết quả QA](./qa/W05_W07_VALIDATION.json).
+Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [báo cáo toàn bộ notebook](./REVIEW_NOTEBOOKS.md) và [kết quả QA](./qa/NOTEBOOKS_VALIDATION.json).
 
 ## 1. Giới thiệu học phần
 
@@ -82,14 +82,14 @@ Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](ht
 Sau khi cài Anaconda, mở **Anaconda Prompt** trên Windows hoặc **Terminal** trên macOS và chạy một lần:
 
 ```bash
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
-conda activate uet-mat1052
+conda create -n uet-mat1052-matplotlib-plotly -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
+conda activate uet-mat1052-matplotlib-plotly
 ```
 
 Mỗi lần học, kích hoạt môi trường, chuyển đến thư mục repository rồi mở JupyterLab:
 
 ```bash
-conda activate uet-mat1052
+conda activate uet-mat1052-matplotlib-plotly
 cd "duong-dan-den/UET.MAT1052-Labs-Materials"
 jupyter lab
 ```
@@ -160,8 +160,8 @@ Nếu xuất hiện danh sách gói, Anaconda đã hoạt động.
 Trong Anaconda Prompt, chạy:
 
 ```bat
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
-conda activate uet-mat1052
+conda create -n uet-mat1052-matplotlib-plotly -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
+conda activate uet-mat1052-matplotlib-plotly
 ```
 
 Khi được hỏi `Proceed ([y]/n)?`, nhập `y` rồi nhấn Enter.
@@ -180,12 +180,12 @@ Trình duyệt sẽ mở JupyterLab. Trong cột file bên trái, mở notebook 
 Từ lần học sau, chỉ cần:
 
 ```bat
-conda activate uet-mat1052
+conda activate uet-mat1052-matplotlib-plotly
 cd /d "duong-dan-den\UET.MAT1052-Labs-Materials"
 jupyter lab
 ```
 
-Bạn cũng có thể mở **Anaconda Navigator**, chọn môi trường `uet-mat1052` và chọn **Launch** tại JupyterLab.
+Bạn cũng có thể mở **Anaconda Navigator**, chọn môi trường `uet-mat1052-matplotlib-plotly` và chọn **Launch** tại JupyterLab.
 
 ## Phụ lục B - Cài Anaconda và JupyterLab trên macOS
 
@@ -214,8 +214,8 @@ Mở Terminal rồi chạy:
 
 ```bash
 conda list
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
-conda activate uet-mat1052
+conda create -n uet-mat1052-matplotlib-plotly -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels
+conda activate uet-mat1052-matplotlib-plotly
 ```
 
 Nếu Terminal báo `conda: command not found`, thử đóng/mở lại Terminal. Với vị trí cài mặc định, có thể chạy:
@@ -238,7 +238,7 @@ jupyter lab
 
 JupyterLab sẽ mở trong trình duyệt. Giữ Terminal đang chạy; khi muốn dừng, quay lại Terminal và nhấn `Control + C`.
 
-Bạn cũng có thể mở **Launchpad > Anaconda-Navigator**, chọn môi trường `uet-mat1052` và chọn **Launch** tại JupyterLab.
+Bạn cũng có thể mở **Launchpad > Anaconda-Navigator**, chọn môi trường `uet-mat1052-matplotlib-plotly` và chọn **Launch** tại JupyterLab.
 
 ## Phụ lục C - Dùng Google Colab khi không cài được JupyterLab
 
@@ -291,7 +291,7 @@ Tài liệu chính thức: [Google Colab FAQ](https://research.google.com/colabo
 Kiểm tra đã kích hoạt đúng môi trường rồi cài lại các thư viện:
 
 ```bash
-conda activate uet-mat1052
+conda activate uet-mat1052-matplotlib-plotly
 conda install -c conda-forge numpy pandas matplotlib scipy plotly statsmodels
 ```
 
@@ -306,7 +306,7 @@ Notebook đang được chạy từ sai thư mục hoặc đã bị tách khỏi
 
 ### Notebook dùng sai Python kernel
 
-Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc môi trường `uet-mat1052`, sau đó chọn **Restart Kernel and Run All Cells**.
+Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc môi trường `uet-mat1052-matplotlib-plotly`, sau đó chọn **Restart Kernel and Run All Cells**.
 
 ### Đồ thị Plotly không hiển thị hoặc mất tương tác
 
@@ -319,3 +319,19 @@ Chạy lại ô thiết lập Plotly ở đầu notebook và thử làm mới tr
 - [Anaconda - System requirements](https://www.anaconda.com/docs/getting-started/anaconda/system-requirements)
 - [JupyterLab - Installation](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 - [Google Colab - Frequently Asked Questions](https://research.google.com/colaboratory/faq.html)
+
+## Kiểm tra toàn bộ notebook
+
+Sau khi cài thư viện của branch, kiểm tra output và backend đã lưu:
+
+```bash
+python -X utf8 tools/verify_notebooks.py
+```
+
+Để chạy lại tất cả từ kernel sạch rồi kiểm tra:
+
+```bash
+python -X utf8 tools/verify_notebooks.py --execute
+```
+
+Script dùng đúng Python đang gọi lệnh, kiểm tra cả 8 notebook, backend trong code, output, công thức, mã bài tập và tài nguyên đi kèm. Bản clone nông hoặc ZIP có thể không chứa commit gốc để so sánh lịch sử; kết quả kiểm chứng đã chốt nằm trong `qa/NOTEBOOKS_VALIDATION.json`.
