@@ -5,36 +5,42 @@
       "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
       "cells": 91,
       "code_cells": 19,
-      "png_outputs": 6,
-      "plotly_outputs": 2,
+      "png_outputs": 8,
+      "plotly_outputs": 0,
       "illustrations": 20,
       "slide_pages": 93,
       "clean_execution": true,
-      "source_release_aligned": true
+      "backend": "plotnine",
+      "source_release_aligned": null,
+      "theory_exercises_preserved": true
     },
     {
       "week": 6,
       "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
       "cells": 119,
       "code_cells": 34,
-      "png_outputs": 17,
-      "plotly_outputs": 1,
+      "png_outputs": 18,
+      "plotly_outputs": 0,
       "illustrations": 4,
       "slide_pages": 80,
       "clean_execution": true,
-      "source_release_aligned": true
+      "backend": "plotnine",
+      "source_release_aligned": null,
+      "theory_exercises_preserved": true
     },
     {
       "week": 7,
       "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
       "cells": 79,
       "code_cells": 32,
-      "png_outputs": 14,
-      "plotly_outputs": 2,
+      "png_outputs": 16,
+      "plotly_outputs": 0,
       "illustrations": 5,
       "slide_pages": 94,
       "clean_execution": true,
-      "source_release_aligned": true
+      "backend": "plotnine",
+      "source_release_aligned": null,
+      "theory_exercises_preserved": true
     }
   ],
   "existing_materials": {
@@ -60,5 +66,30 @@
     "plotly": "6.7.0",
     "nbclient": "0.11.0",
     "nbformat": "5.10.4"
+  },
+  "variant": {
+    "backend": "plotnine",
+    "branch": "notebooks/w05-w07-plotnine",
+    "converted_weeks": [
+      5,
+      6,
+      7
+    ],
+    "original_content_commit": "2937ae5"
+  },
+  "kernel_execution": "Each W5-W7 notebook executed from a fresh kernel; outputs validated.",
+  "plotnine_runtime": {
+    "plotnine": "0.15.8",
+    "mizani": "0.14.6",
+    "ipywidgets": "8.1.7"
+  },
+  "plotnine_qa": {
+    "png_figures_reviewed": 42,
+    "widget_callbacks_tested_weeks": [
+      5,
+      6
+    ],
+    "frontend_widget_drag_tested": false,
+    "colab_execution_tested": false
   }
 }
