@@ -7,7 +7,7 @@
 
 ## Bản notebook trong thư mục này
 
-Thư mục `Notebooks-Plotnine` dùng branch [`notebooks/w05-w07-plotnine`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-plotnine). Hai phiên bản Buổi 5–7 giữ cùng nội dung, lý thuyết, ví dụ và bài tập. Phạm vi chuyển backend là **Buổi 5–7**; các notebook Buổi 1–4 và TFT được giữ nguyên ở cả hai branch, kể cả phần Grammar of Graphics.
+Thư mục `Notebooks-Plotnine` dùng branch [`plotnine`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/plotnine). Hai phiên bản Buổi 5–7 giữ cùng nội dung, lý thuyết, ví dụ và bài tập. Phạm vi chuyển backend là **Buổi 5–7**; các notebook Buổi 1–4 và TFT được giữ nguyên ở cả hai branch, kể cả phần Grammar of Graphics.
 
 Buổi 5–7 dùng `plotnine` để dựng tất cả đồ thị mới; ảnh nguồn vẫn giữ nguyên. Buổi 5–6 có slider `ipywidgets`; Buổi 7 sửa tham số rồi chạy lại ô code. GitHub và bản HTML tĩnh hiển thị PNG đã lưu; thao tác slider cần kernel Jupyter đang chạy. Nếu widget không hiện, sửa tham số và chạy lại theo hướng dẫn trong ô.
 
@@ -50,15 +50,15 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 
 | Tuần | Trọng tâm thực hành | Dữ liệu tiêu biểu | Mở trên Colab |
 |---|---|---|---|
-| [Tuần 1 - Câu hỏi và dữ liệu](./W1_CauHoiVaDuLieu.ipynb) | Bốn loại khẳng định; đơn vị quan sát, biến, giá trị; dữ liệu số và phân loại; cấu trúc data frame; giới hạn của dữ liệu | `seattlepets`, `email50`, `loan50`, `mcu_films`, `penguins` | [Mở W1 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W1_CauHoiVaDuLieu.ipynb) |
-| [Tuần 2 - Tóm tắt dữ liệu](./W2_TomTatDuLieu.ipynb) | Bảng đếm và bảng liên hợp; tỉ lệ có điều kiện; histogram, density, violin, boxplot; trung bình, trung vị, mốt, phương sai, độ lệch chuẩn và IQR | `penguins`, `loans`, `loan50`, `gpa_study_hours` | [Mở W2 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W2_TomTatDuLieu.ipynb) |
-| [Tuần 3 - Ngữ pháp đồ họa và điều kiện hóa](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) | Dữ liệu - ánh xạ - hình học; lọc; pipeline; `groupby`; tóm tắt theo nhóm; phân phối biên và có điều kiện; nghịch lý Simpson | `penguins`, `arbuthnot`, `msleep` | [Mở W3 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
-| [Tuần 4 - Tương quan và hồi quy tuyến tính](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) | Biểu đồ phân tán; tương quan Pearson; hồi quy đơn và đa biến; phần dư; bình phương tối thiểu; ngoại suy; biến chỉ báo; nhiễu và giới hạn của diễn giải nhân quả | `poverty_mo_phong`, `allbacks`, `zagat` | [Mở W4 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
-| [Tuần 5 - Nền tảng và tính toán xác suất](./W5_NenTangVaTinhToanXacSuat.ipynb) | Biến cố; tiên đề; có điều kiện; độc lập; toàn phần và Bayes; đủ 18 bài tập gốc | Bảng số đếm của slide; phép liệt kê; mô phỏng xúc xắc | [Mở W5 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W5_NenTangVaTinhToanXacSuat.ipynb) |
-| [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W6_PhanPhoiVaBienNgauNhien.ipynb) |
-| [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-plotnine/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
+| [Tuần 1 - Câu hỏi và dữ liệu](./W1_CauHoiVaDuLieu.ipynb) | Bốn loại khẳng định; đơn vị quan sát, biến, giá trị; dữ liệu số và phân loại; cấu trúc data frame; giới hạn của dữ liệu | `seattlepets`, `email50`, `loan50`, `mcu_films`, `penguins` | [Mở W1 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W1_CauHoiVaDuLieu.ipynb) |
+| [Tuần 2 - Tóm tắt dữ liệu](./W2_TomTatDuLieu.ipynb) | Bảng đếm và bảng liên hợp; tỉ lệ có điều kiện; histogram, density, violin, boxplot; trung bình, trung vị, mốt, phương sai, độ lệch chuẩn và IQR | `penguins`, `loans`, `loan50`, `gpa_study_hours` | [Mở W2 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W2_TomTatDuLieu.ipynb) |
+| [Tuần 3 - Ngữ pháp đồ họa và điều kiện hóa](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) | Dữ liệu - ánh xạ - hình học; lọc; pipeline; `groupby`; tóm tắt theo nhóm; phân phối biên và có điều kiện; nghịch lý Simpson | `penguins`, `arbuthnot`, `msleep` | [Mở W3 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
+| [Tuần 4 - Tương quan và hồi quy tuyến tính](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) | Biểu đồ phân tán; tương quan Pearson; hồi quy đơn và đa biến; phần dư; bình phương tối thiểu; ngoại suy; biến chỉ báo; nhiễu và giới hạn của diễn giải nhân quả | `poverty_mo_phong`, `allbacks`, `zagat` | [Mở W4 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
+| [Tuần 5 - Nền tảng và tính toán xác suất](./W5_NenTangVaTinhToanXacSuat.ipynb) | Biến cố; tiên đề; có điều kiện; độc lập; toàn phần và Bayes; đủ 18 bài tập gốc | Bảng số đếm của slide; phép liệt kê; mô phỏng xúc xắc | [Mở W5 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W5_NenTangVaTinhToanXacSuat.ipynb) |
+| [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W6_PhanPhoiVaBienNgauNhien.ipynb) |
+| [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/plotnine/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 
-Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotly/Matplotlib nằm ở branch `notebooks/w05-w07-plotnine`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
+Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotly/Matplotlib nằm ở branch `plotnine`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
 Các notebook sử dụng `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly` và `statsmodels`. Đồ thị Plotly hỗ trợ interactive learning đối với các dữ liệu số/hình ảnh có thể thay đổi được, bộ điều khiển và hình 3D; trải nghiệm hiển thị tương tác tốt nhất khi máy có kết nối Internet.
 
@@ -71,11 +71,11 @@ Các notebook đọc dữ liệu bằng đường dẫn tương đối `datasets
 Nếu đã cài Git:
 
 ```bash
-git clone --branch notebooks/w05-w07-plotnine --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
+git clone --branch plotnine --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
 cd UET.MAT1052-Labs-Materials
 ```
 
-Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-plotnine), giải nén, sau đó mở thư mục vừa giải nén.
+Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/plotnine), giải nén, sau đó mở thư mục vừa giải nén.
 
 ### Tạo môi trường khuyến nghị
 
@@ -261,7 +261,7 @@ Mở notebook riêng lẻ trên Colab không tự động tải thư mục `data
 
 ```python
 %cd /content
-!git clone --depth 1 --branch notebooks/w05-w07-plotnine --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
+!git clone --depth 1 --branch plotnine --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
 %cd /content/UET.MAT1052-Labs-Materials
 ```
 

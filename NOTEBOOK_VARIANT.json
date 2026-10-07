@@ -1,6 +1,6 @@
 {
   "backend": "plotnine",
-  "branch": "notebooks/w05-w07-plotnine",
+  "branch": "plotnine",
   "converted_weeks": [
     5,
     6,

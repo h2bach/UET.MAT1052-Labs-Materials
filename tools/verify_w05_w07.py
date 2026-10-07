@@ -148,7 +148,7 @@ def validate(path, week):
             'theory_exercises_preserved':parity}
 
 def check_preserved():
-    baseline = 'snapshots/xstk-before-w05-w07-20261006'
+    baseline = '2b48b0175d1d94915a5c42f62437af7ad116d9ad'
     preserved = []
     output_only_changes = []
     old_files = ['W1_CauHoiVaDuLieu.ipynb','W2_TomTatDuLieu.ipynb',
@@ -158,7 +158,7 @@ def check_preserved():
         original = subprocess.run(['git','show',f'{baseline}:{name}'], cwd=BASE,
                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         if original.returncode != 0:
-            # Standalone download/clone may not have the local snapshot branch.
+            # A shallow download/clone may not include the preserved baseline commit.
             return {'baseline_available':False, 'files_checked':[]}
         current = (BASE/name).read_bytes().replace(b'\r\n',b'\n')
         if original.stdout.replace(b'\r\n',b'\n') != current:
