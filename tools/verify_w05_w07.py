@@ -9,10 +9,19 @@ import ast
 import json
 import re
 import subprocess
+import sys
+import tempfile
 
 import nbformat
 
 BASE = Path(__file__).resolve().parents[1]
+VARIANT = json.loads((BASE / 'NOTEBOOK_VARIANT.json').read_text(encoding='utf-8'))
+BACKEND = VARIANT['backend']
+BACKEND_MARKDOWN = {
+    5: {'w05-001', 'w05-090'},
+    6: {'473db095', '66f65aea'},
+    7: {'4f43d6de', 'e3619f5f', 'b257227b'},
+}
 FILES = {
     5: 'W5_NenTangVaTinhToanXacSuat.ipynb',
     6: 'W6_PhanPhoiVaBienNgauNhien.ipynb',
@@ -63,7 +72,13 @@ def validate(path, week):
                         f'{path.name}: empty collapsible answer at {cell.id}')
     code_cells = [cell for cell in notebook.cells if cell.cell_type == 'code' and cell.source.strip()]
     for cell in code_cells:
-        require('plotnine' not in cell.source.lower(), f'{path.name}: Plotnine on review branch')
+        if BACKEND == 'matplotlib-plotly':
+            require('plotnine' not in cell.source.lower(), f'{path.name}: wrong graphics backend')
+        else:
+            require(not re.search(r'(?:import|from)\s+(?:matplotlib|plotly|seaborn)\b', cell.source),
+                    f'{path.name}: non-Plotnine graphics import at {cell.id}')
+            require(not re.search(r'\b(?:plt|pio|go|px)\.', cell.source),
+                    f'{path.name}: non-Plotnine graphics call at {cell.id}')
         require(cell.execution_count is not None, f'{path.name}: unexecuted code cell {cell.id}')
         # Ignore notebook magics while checking ordinary Python syntax.
         syntax_source = '\n'.join(line for line in cell.source.splitlines()
@@ -97,7 +112,7 @@ def validate(path, week):
         require(set(range(1,16)) <= examples, f'{path.name}: missing examples {set(range(1,16))-examples}')
         require(set(range(1,11)) <= exercises, f'{path.name}: missing exercises {set(range(1,11))-exercises}')
     module = BASE.parent / MODULES[week] / 'notebook.ipynb'
-    if module.is_file():
+    if module.is_file() and BACKEND == 'matplotlib-plotly':
         source = nbformat.read(module, as_version=4)
         require(len(source.cells) == len(notebook.cells), f'{path.name}: source/release cell count differs')
         for left, right in zip(source.cells, notebook.cells):
@@ -106,11 +121,31 @@ def validate(path, week):
     outputs = [o for cell in code_cells for o in cell.outputs]
     pngs = sum('image/png' in o.get('data', {}) for o in outputs)
     plotly = sum('application/vnd.plotly.v1+json' in o.get('data', {}) for o in outputs)
-    require(pngs > 0 and plotly > 0, f'{path.name}: missing rendered figures')
+    require(pngs > 0, f'{path.name}: missing PNG figures')
+    parity = None
+    if BACKEND == 'matplotlib-plotly':
+        require(plotly > 0, f'{path.name}: missing Plotly figures')
+    else:
+        code = '\n'.join(c.source for c in code_cells)
+        require('import plotnine as p9' in code, f'{path.name}: missing Plotnine setup')
+        require(plotly == 0, f'{path.name}: stale Plotly output')
+        original = subprocess.run(['git','show',f"{VARIANT['original_content_commit']}:{path.name}"],
+                                  cwd=BASE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if original.returncode == 0:
+            baseline = nbformat.reads(original.stdout.decode('utf-8'), as_version=4)
+            require([c.id for c in baseline.cells] == ids, f'{path.name}: cell IDs changed')
+            for left, right in zip(baseline.cells, notebook.cells):
+                require(left.cell_type == right.cell_type and {k:v for k,v in left.metadata.items() if k != 'execution'} == {k:v for k,v in right.metadata.items() if k != 'execution'},
+                        f'{path.name}: source metadata changed at {right.id}')
+                if right.cell_type == 'markdown' and right.id not in BACKEND_MARKDOWN[week]:
+                    require(left.source == right.source, f'{path.name}: theory/exercise changed at {right.id}')
+            parity = True
     return {'week': week, 'file':path.name, 'cells':len(notebook.cells),
             'code_cells':len(code_cells), 'png_outputs':pngs, 'plotly_outputs':plotly,
             'illustrations':len(images), 'slide_pages':page_count,
-            'clean_execution': True, 'source_release_aligned':module.is_file()}
+            'clean_execution': True, 'backend':BACKEND,
+            'source_release_aligned':module.is_file() if BACKEND == 'matplotlib-plotly' else None,
+            'theory_exercises_preserved':parity}
 
 def check_preserved():
     baseline = 'snapshots/xstk-before-w05-w07-20261006'
@@ -152,8 +187,23 @@ def main():
         if args.execute:
             from nbclient import NotebookClient
             notebook = nbformat.read(path, as_version=4)
-            NotebookClient(notebook, timeout=240, kernel_name='python3',
-                           resources={'metadata':{'path':str(BASE)}}).execute()
+            from jupyter_client import KernelManager
+            from jupyter_client.kernelspec import KernelSpecManager
+            with tempfile.TemporaryDirectory(prefix='xstk-kernel-') as kernel_dir:
+                spec = Path(kernel_dir)/'xstk-active-python'
+                spec.mkdir()
+                (spec/'kernel.json').write_text(json.dumps({
+                    'argv':[sys.executable,'-m','ipykernel_launcher','-f','{connection_file}'],
+                    'display_name':'XSTK active Python','language':'python',
+                }), encoding='utf-8')
+                manager = KernelManager(kernel_name='xstk-active-python',
+                    kernel_spec_manager=KernelSpecManager(kernel_dirs=[kernel_dir]))
+                try:
+                    NotebookClient(notebook, km=manager, timeout=240,
+                                   resources={'metadata':{'path':str(BASE)}}).execute()
+                finally:
+                    if manager.has_kernel:
+                        manager.shutdown_kernel(now=True)
             nbformat.write(notebook, path)
         results.append(validate(path, week))
     print(json.dumps({'notebooks':results, 'existing_materials':check_preserved()}, ensure_ascii=False, indent=2))

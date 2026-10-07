@@ -5,6 +5,14 @@
 **ThS. Hoàng Hữu Bách**<br>
 **BM. Khoa học & Kỹ thuật tính toán - Khoa Công nghệ Thông tin, VNU-UET**
 
+## Bản notebook trong thư mục này
+
+Thư mục `Notebooks-Matplotlib-Plotly` dùng branch [`notebooks/w05-w07-matplotlib-plotly`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-matplotlib-plotly). Hai phiên bản Buổi 5–7 giữ cùng nội dung, lý thuyết, ví dụ và bài tập. Phạm vi chuyển backend là **Buổi 5–7**; các notebook Buổi 1–4 và TFT được giữ nguyên ở cả hai branch, kể cả phần Grammar of Graphics.
+
+Buổi 5–7 dùng Matplotlib cho hình tĩnh và Plotly cho các hoạt động thay tham số.
+
+Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [bản review](./REVIEW_W05_W07.md) và [kết quả QA](./qa/W05_W07_VALIDATION.json).
+
 ## 1. Giới thiệu học phần
 
 UET.MAT1052 - Xác suất thống kê giúp sinh viên hình thành một quy trình làm việc có căn cứ với dữ liệu: đặt câu hỏi, nhận diện cấu trúc dữ liệu, mô tả và trực quan hóa, xây dựng mô hình, đánh giá mức độ chắc chắn, rồi diễn giải kết quả trong đúng bối cảnh.

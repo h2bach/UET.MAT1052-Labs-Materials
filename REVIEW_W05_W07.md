@@ -2,7 +2,7 @@
 
 ThS. Hoàng Hữu Bách — BM. Khoa học & Kỹ thuật tính toán - Khoa Công nghệ Thông tin, VNU-UET
 
-Branch cục bộ: `notebooks/w05-w07-matplotlib-plotly`. Đây là bản nội dung đầy đủ để review trước khi đổi code biểu đồ sang Plotnine.
+Branch cục bộ: `notebooks/w05-w07-matplotlib-plotly`. Đây là bản nội dung đầy đủ dùng Matplotlib/Plotly để review, song song với branch Plotnine.
 
 ## Mở bài học
 
@@ -14,7 +14,7 @@ Branch cục bộ: `notebooks/w05-w07-matplotlib-plotly`. Đây là bản nội 
 
 Mỗi notebook đồng thời là bài giảng và môi trường thực hành: tình huống, giải thích ký hiệu/giả định, ví dụ tính tay, code, kết quả, diễn giải và lời giải thu gọn. Matplotlib dựng hình tĩnh; Plotly dùng cho hoạt động thay tham số. Các ô mô phỏng nêu cơ chế sinh dữ liệu và seed 42.
 
-Mở JupyterLab từ thư mục `Notebooks`, chọn notebook, rồi **Restart Kernel and Run All Cells**. Cần `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly`; kiểm tra tự động cần thêm `nbformat`, `nbclient`, `nbconvert`. Ba notebook mới dùng renderer `plotly_mimetype` cho JupyterLab. Nếu dùng Colab, chọn `pio.renderers.default = "colab"` trong ô thiết lập; tải cả notebook và tài nguyên kèm theo khi cần. Notebook Buổi 6–7 có ảnh nguồn nhúng sẵn, Buổi 5 đọc ảnh tương đối trong `figures/`.
+Mở JupyterLab từ thư mục `Notebooks-Matplotlib-Plotly`, chọn notebook, rồi **Restart Kernel and Run All Cells**. Cần `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly`; kiểm tra tự động cần thêm `nbformat`, `nbclient`, `nbconvert`. Ba notebook mới dùng renderer `plotly_mimetype` cho JupyterLab. Nếu dùng Colab, chọn `pio.renderers.default = "colab"` trong ô thiết lập; tải cả notebook và tài nguyên kèm theo khi cần. Notebook Buổi 6–7 có ảnh nguồn nhúng sẵn, Buổi 5 đọc ảnh tương đối trong `figures/`.
 
 ## Căn cứ nội dung
 
@@ -44,7 +44,7 @@ Khi kiểm tra trực quan đã sửa tiêu đề Plotly sau khi đổi tham s�
 
 ## Kiểm chứng và phạm vi Git
 
-Kết quả chốt ngày 07/10/2026 trên bản trong `Notebooks/`:
+Kết quả chốt ngày 07/10/2026 trên bản trong `Notebooks-Matplotlib-Plotly/`:
 
 | Buổi | Tổng ô | Ô code đã chạy | Hình Matplotlib | Hình Plotly | Ảnh nguồn | Độ phủ slide |
 |---|---:|---:|---:|---:|---:|---:|
@@ -68,12 +68,23 @@ python -X utf8 tools/verify_w05_w07.py --execute
 
 Script kiểm tra cấu trúc notebook, ID ô duy nhất, mọi ô code đã chạy, lỗi/cảnh báo trong output, ảnh/attachment, nội dung khối đáp án thực sự nằm trong `<details>`, đủ bài tập/ví dụ, source–release thống nhất và file Buổi 1–4 được giữ nguyên so với snapshot cục bộ.
 
-Repository phát hành nằm trong `Notebooks/`. Các thay đổi cũ chưa commit được lưu ở branch `snapshots/xstk-before-w05-w07-20261006`, commit `2b48b01`. So sánh bản mới với snapshot này:
+Hai thư mục phát hành là hai Git worktree của repository học liệu: `Notebooks-Matplotlib-Plotly/` và `Notebooks-Plotnine/`. Các thay đổi cũ chưa commit được lưu ở branch `snapshots/xstk-before-w05-w07-20261006`, commit `2b48b01`. So sánh bản mới với snapshot này:
 
 ```powershell
 git diff --stat snapshots/xstk-before-w05-w07-20261006...notebooks/w05-w07-matplotlib-plotly
 ```
 
-Thư mục project gốc trước đó chưa có Git; đã tạo mốc `main` chứa nguồn hiện có và branch cùng tên để quản lý module 05–07 cùng cập nhật trạng thái trong `course_map.md`. Hai repository có lịch sử riêng. Bản phát hành được commit và push lên GitHub theo yêu cầu ngày 07/10/2026. Branch review và snapshot được giữ riêng để kiểm tra trước khi chuyển biểu đồ sang Plotnine.
+Thư mục project gốc trước đó chưa có Git; đã tạo mốc `main` chứa nguồn hiện có và branch cùng tên để quản lý module 05–07 cùng cập nhật trạng thái trong `course_map.md`. Hai repository có lịch sử riêng. Bản phát hành được commit và push lên GitHub theo yêu cầu ngày 07/10/2026. Hai branch review và snapshot được giữ riêng; chưa merge vào main. Việc chuyển backend chỉ áp dụng cho Buổi 5–7.
 
-Nội dung Markdown, code và metadata của notebook Buổi 1–4, bản TFT, guide TFT, slide, HTML nguồn và CSV giữ nguyên. File W4 được lưu lại output/execution count trong lúc làm việc; bản lưu này được giữ và đưa vào Git theo yêu cầu push all. QA xác nhận chỉ hai trường execution count/output thay đổi, không thay đổi nội dung bài giảng. Vì thế nội dung Ngữ pháp đồ họa hiện có không bị thay đổi. Khi đổi backend sau review, dùng dữ liệu, ánh xạ thuộc tính hình ảnh và dạng hình học đã ghi trong bài; giữ phần lý thuyết, giả định và diễn giải.
+Nội dung Markdown, code và metadata của notebook Buổi 1–4, bản TFT, guide TFT, slide, HTML nguồn và CSV giữ nguyên. File W4 được lưu lại output/execution count trong lúc làm việc; bản lưu này được giữ và đưa vào Git theo yêu cầu push all. QA xác nhận chỉ hai trường execution count/output thay đổi, không thay đổi nội dung bài giảng. Vì thế nội dung Ngữ pháp đồ họa hiện có không bị thay đổi. Bản Plotnine dùng cùng dữ liệu, ánh xạ thuộc tính hình ảnh và dạng hình học đã ghi trong bài; giữ phần lý thuyết, giả định và diễn giải.
+
+## Hai phiên bản và giới hạn chuyển đổi
+
+| Thư mục | Branch GitHub | Backend Buổi 5–7 |
+|---|---|---|
+| `Notebooks-Matplotlib-Plotly` | [notebooks/w05-w07-matplotlib-plotly](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-matplotlib-plotly) | Matplotlib + Plotly |
+| `Notebooks-Plotnine` | [notebooks/w05-w07-plotnine](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-plotnine) | Plotnine; ipywidgets ở Buổi 5–6 |
+
+Chỉ chuyển code vẽ Buổi 5–7. Lý thuyết, công thức, đề bài, đáp án và metadata nguồn giữ nguyên; bảy ô Markdown chỉ thay lời hướng dẫn backend/thao tác. Xem [báo cáo đối chiếu hai backend](./qa/W05_W07_BACKEND_PARITY.json). Notebook Buổi 1–4/TFT có cùng nội dung ở hai folder và giữ backend hiện có. Hai branch đều chứa notebook cùng `datasets/`, `figures/`, README và QA để tải/chạy độc lập.
+
+Các báo cáo QA độc lập ban đầu trong `qa/` đối chiếu nội dung gốc Matplotlib/Plotly. Kết quả cuối từng backend nằm ở `W05_W07_VALIDATION.json`. Plotnine không còn output hoặc import trực tiếp Plotly/Matplotlib trong ba notebook mới; Plotnine sử dụng Matplotlib ở bên trong thư viện.

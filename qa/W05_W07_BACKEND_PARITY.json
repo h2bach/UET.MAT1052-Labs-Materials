@@ -1,0 +1,36 @@
+[
+  {
+    "notebook": "W5_NenTangVaTinhToanXacSuat.ipynb",
+    "cell_ids_source_pages_attachments_preserved": true,
+    "backend_instruction_markdown_changed": [
+      "w05-001",
+      "w05-090"
+    ],
+    "unchanged_markdown_cells": 70,
+    "unchanged_code_cells": 10,
+    "all_math_expressions_preserved": true
+  },
+  {
+    "notebook": "W6_PhanPhoiVaBienNgauNhien.ipynb",
+    "cell_ids_source_pages_attachments_preserved": true,
+    "backend_instruction_markdown_changed": [
+      "473db095",
+      "66f65aea"
+    ],
+    "unchanged_markdown_cells": 83,
+    "unchanged_code_cells": 15,
+    "all_math_expressions_preserved": true
+  },
+  {
+    "notebook": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
+    "cell_ids_source_pages_attachments_preserved": true,
+    "backend_instruction_markdown_changed": [
+      "4f43d6de",
+      "e3619f5f",
+      "b257227b"
+    ],
+    "unchanged_markdown_cells": 44,
+    "unchanged_code_cells": 17,
+    "all_math_expressions_preserved": true
+  }
+]
