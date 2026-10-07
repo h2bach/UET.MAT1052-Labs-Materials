@@ -1,0 +1,91 @@
+{
+  "W2_TomTatDuLieu.ipynb": {
+    "3fd27fc4": {
+      "original_sha256": "0b263f65fbb4566d91536c66179b08ca930ea9dea349f37ce8e231ca3c1f21ed",
+      "current_sha256": "a848a5bf501193accfc9ce1db96f52dd96db4830ca5613d61382a618f5f68aeb",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  },
+  "W3_NguPhapDoHoaVaDieuKienHoa.ipynb": {
+    "97422d7f": {
+      "original_sha256": "ee92cbece3c39ed7150e3f20651e3be2b94c8a346b3b41ef7e1f2fac506be492",
+      "current_sha256": "8d0ce87169ac7e2e8ad409dc805cbf1eb82c58f80932aaa3f817f4697dea29df",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "b82bc694": {
+      "original_sha256": "059bfe88f42ae2213726795efc7d25ab2e6a5ac3167aed2af663ae87547eb9b9",
+      "current_sha256": "c95fb6a8f6a8dd41f40abf2b236917bcf7d527c79bc7fab495d841fe7b28eddd",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "5d70ca4a": {
+      "original_sha256": "63c2213e3acc4d9abe24787be6a83a9a1c2005c214c52612757faf959a6f27f9",
+      "current_sha256": "eef7f12d91e81f140c278e77e7add158831b30771153f24aa561ec50839bde89",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "420cfd41": {
+      "original_sha256": "79564460b877f38218572c0e38fb72b3d5b84e01915feedb4f20ed8f3bfcaf00",
+      "current_sha256": "4c9558e3437a115bf4da6e3c03ea2b9092235dffcce230435a7b4987b6f87a3e",
+      "reason": "Reviewed explanation of color mapping versus fixed color using Plotnine syntax."
+    }
+  },
+  "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb": {
+    "tft-030-python-question": {
+      "original_sha256": "1b14cab613e07e2a0ee255d5269566c2ccfc0e832b390f93dbe048b2611baa8f",
+      "current_sha256": "3a5ab4d67ff1c6316f0353fb07cfc75c13d075972bc4f7b0e45b4cf603dde988",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  },
+  "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb": {
+    "d649326b": {
+      "original_sha256": "e912f4d15e057a379e979d3186857e3c4a3faf4ab99a7696fac8027f3e81d85e",
+      "current_sha256": "2a43d7a8b3b09bac91df94af6482ff84dab09ad45e4b13e1e247415b2471a929",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "793ff48b": {
+      "original_sha256": "8ae3351aa306ce13cf9b91484eeef552a8a330f716bf7f1ba77e9db98f9d0492",
+      "current_sha256": "158502c11b7e4ad02c6d94b7d54aacbccdc18f91c8d99f3f367ae05b693b9879",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  },
+  "W5_NenTangVaTinhToanXacSuat.ipynb": {
+    "w05-001": {
+      "original_sha256": "d1bb5b4d9a8985c4fac83e3747d3f007d7e7e2855108c60da3156fbf99e99aab",
+      "current_sha256": "19b95df2839875e1c9c2cc42432cb17bb50bdd13bcdc4d42342b553d09bebc38",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "w05-090": {
+      "original_sha256": "c431492c246b52dd7bb81591c5307b6ad346b9e0592b2b871fee9ed3bdd0d4a7",
+      "current_sha256": "39caafc2affc9b9b0ec4a4d99b7f30da6652824a7bad504df8fc19231cc93f7d",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  },
+  "W6_PhanPhoiVaBienNgauNhien.ipynb": {
+    "473db095": {
+      "original_sha256": "5545c38eedb9bd6ea0326806536a6726b30556b3c4346c40918b57293bf64608",
+      "current_sha256": "1fb0708dfbb2970d27fbd558476766689b395f00c79ce2145a05e2640f51dd9b",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "66f65aea": {
+      "original_sha256": "85fc215a5006689892d0c5a98dcbd9221e59ca681a4faa370e77caab429fc20d",
+      "current_sha256": "405b84c45e21cd534814818c1d06ec5529b043d5cd802c102b8f68a628d9d756",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  },
+  "W7_KyVongPhuongSaiVaXapXiChuan.ipynb": {
+    "4f43d6de": {
+      "original_sha256": "d5c70e91fe350adb21a65792f5d71b8564dacd158813fd32225fa81f5d5d6ecd",
+      "current_sha256": "541671f11f586032fa690ffb6591b082218b0bb6f1b66de2da8e3f1fc6e1f4b0",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "e3619f5f": {
+      "original_sha256": "3bc4fae57ea3876afeaa225a9a74674d1baa81a4ee09c799756ac55656a14178",
+      "current_sha256": "65879c3aa8ff65898ac9b148a1b2bf3bf120cd1ae9f529ef207d65ae58937987",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    },
+    "b257227b": {
+      "original_sha256": "6ad74e0516c9bc0c3ca80127f4de5e733e08d7f78461e24210243b2cae0566d6",
+      "current_sha256": "f39480651d1f3b6101ac52b1d9042d5adebc168a8670ae6ecabd584e5d10c91d",
+      "reason": "Reviewed plotting syntax and backend action instructions; theory and mathematics preserved."
+    }
+  }
+}

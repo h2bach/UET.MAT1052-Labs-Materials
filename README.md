@@ -7,11 +7,11 @@
 
 ## Bản notebook trong thư mục này
 
-Thư mục `Notebooks-Plotnine` dùng branch [`plotnine`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/plotnine). Hai phiên bản Buổi 5–7 giữ cùng nội dung, lý thuyết, ví dụ và bài tập. Phạm vi chuyển backend là **Buổi 5–7**; các notebook Buổi 1–4 và TFT được giữ nguyên ở cả hai branch, kể cả phần Grammar of Graphics.
+Thư mục `Notebooks-Plotnine` dùng branch [`plotnine`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/plotnine). Toàn bộ **8 notebook** của Tuần 1–7 và bản TFT dùng backend của branch này. Hai phiên bản giữ cùng nội dung thống kê, lý thuyết, ví dụ và bài tập, kể cả phần Grammar of Graphics.
 
-Buổi 5–7 dùng `plotnine` để dựng tất cả đồ thị mới; ảnh nguồn vẫn giữ nguyên. Buổi 5–6 có slider `ipywidgets`; Buổi 7 sửa tham số rồi chạy lại ô code. GitHub và bản HTML tĩnh hiển thị PNG đã lưu; thao tác slider cần kernel Jupyter đang chạy. Nếu widget không hiện, sửa tham số và chạy lại theo hướng dẫn trong ô.
+Mọi hình được dựng bằng `plotnine`, từ bảng dữ liệu, ánh xạ `aes` và các lớp `geom_*`; ảnh nguồn giữ nguyên. Các hoạt động dùng `ipywidgets` hoặc tham số sửa rồi chạy lại theo hướng dẫn trong ô. GitHub và HTML tĩnh hiển thị PNG đã lưu; slider cần kernel Jupyter đang chạy. Mặt phẳng hồi quy được biểu diễn bằng lát cắt 2D và đồ thị quan sát–dự đoán.
 
-Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [bản review](./REVIEW_W05_W07.md) và [kết quả QA](./qa/W05_W07_VALIDATION.json).
+Cài thư viện từ thư mục này: `python -m pip install -r requirements.txt`. Xem [báo cáo toàn bộ notebook](./REVIEW_NOTEBOOKS.md) và [kết quả QA](./qa/NOTEBOOKS_VALIDATION.json).
 
 ## 1. Giới thiệu học phần
 
@@ -60,7 +60,7 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 
 Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotnine nằm ở branch `plotnine`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
-Các notebook sử dụng `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly` và `statsmodels`. Đồ thị Plotly hỗ trợ interactive learning đối với các dữ liệu số/hình ảnh có thể thay đổi được, bộ điều khiển và hình 3D; trải nghiệm hiển thị tương tác tốt nhất khi máy có kết nối Internet.
+Các notebook sử dụng `numpy`, `pandas`, `scipy`, `statsmodels` và `plotnine`. Hình được dựng từ dữ liệu, `aes` và các lớp `geom_*`. Các hoạt động thay tham số dùng `ipywidgets` hoặc sửa giá trị rồi chạy lại theo hướng dẫn trong ô; mặt phẳng hồi quy được trình bày bằng các lát cắt 2D.
 
 Các notebook đọc dữ liệu bằng đường dẫn tương đối `datasets/<tên-file>`. Vì vậy, hãy giữ nguyên cấu trúc thư mục và khởi động JupyterLab từ thư mục gốc của repository. Không nên chép riêng notebook sang một thư mục khác nếu chưa điều chỉnh đường dẫn dữ liệu và hình ảnh.
 
@@ -82,14 +82,14 @@ Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](ht
 Sau khi cài Anaconda, mở **Anaconda Prompt** trên Windows hoặc **Terminal** trên macOS và chạy một lần:
 
 ```bash
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels plotnine ipywidgets
-conda activate uet-mat1052
+conda create -n uet-mat1052-plotnine -c conda-forge python=3.12 jupyterlab numpy pandas scipy statsmodels plotnine contourpy ipywidgets
+conda activate uet-mat1052-plotnine
 ```
 
 Mỗi lần học, kích hoạt môi trường, chuyển đến thư mục repository rồi mở JupyterLab:
 
 ```bash
-conda activate uet-mat1052
+conda activate uet-mat1052-plotnine
 cd "duong-dan-den/UET.MAT1052-Labs-Materials"
 jupyter lab
 ```
@@ -160,8 +160,8 @@ Nếu xuất hiện danh sách gói, Anaconda đã hoạt động.
 Trong Anaconda Prompt, chạy:
 
 ```bat
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels plotnine ipywidgets
-conda activate uet-mat1052
+conda create -n uet-mat1052-plotnine -c conda-forge python=3.12 jupyterlab numpy pandas scipy statsmodels plotnine contourpy ipywidgets
+conda activate uet-mat1052-plotnine
 ```
 
 Khi được hỏi `Proceed ([y]/n)?`, nhập `y` rồi nhấn Enter.
@@ -180,12 +180,12 @@ Trình duyệt sẽ mở JupyterLab. Trong cột file bên trái, mở notebook 
 Từ lần học sau, chỉ cần:
 
 ```bat
-conda activate uet-mat1052
+conda activate uet-mat1052-plotnine
 cd /d "duong-dan-den\UET.MAT1052-Labs-Materials"
 jupyter lab
 ```
 
-Bạn cũng có thể mở **Anaconda Navigator**, chọn môi trường `uet-mat1052` và chọn **Launch** tại JupyterLab.
+Bạn cũng có thể mở **Anaconda Navigator**, chọn môi trường `uet-mat1052-plotnine` và chọn **Launch** tại JupyterLab.
 
 ## Phụ lục B - Cài Anaconda và JupyterLab trên macOS
 
@@ -214,8 +214,8 @@ Mở Terminal rồi chạy:
 
 ```bash
 conda list
-conda create -n uet-mat1052 -c conda-forge python=3.12 jupyterlab numpy pandas matplotlib scipy plotly statsmodels plotnine ipywidgets
-conda activate uet-mat1052
+conda create -n uet-mat1052-plotnine -c conda-forge python=3.12 jupyterlab numpy pandas scipy statsmodels plotnine contourpy ipywidgets
+conda activate uet-mat1052-plotnine
 ```
 
 Nếu Terminal báo `conda: command not found`, thử đóng/mở lại Terminal. Với vị trí cài mặc định, có thể chạy:
@@ -238,7 +238,7 @@ jupyter lab
 
 JupyterLab sẽ mở trong trình duyệt. Giữ Terminal đang chạy; khi muốn dừng, quay lại Terminal và nhấn `Control + C`.
 
-Bạn cũng có thể mở **Launchpad > Anaconda-Navigator**, chọn môi trường `uet-mat1052` và chọn **Launch** tại JupyterLab.
+Bạn cũng có thể mở **Launchpad > Anaconda-Navigator**, chọn môi trường `uet-mat1052-plotnine` và chọn **Launch** tại JupyterLab.
 
 ## Phụ lục C - Dùng Google Colab khi không cài được JupyterLab
 
@@ -270,7 +270,7 @@ Sau bước này, các đường dẫn như `datasets/penguins.csv` sẽ hoạt 
 Nếu Colab báo thiếu thư viện, chạy:
 
 ```python
-%pip install -q numpy pandas matplotlib scipy plotly statsmodels plotnine ipywidgets
+%pip install -q numpy pandas scipy statsmodels plotnine contourpy ipywidgets
 ```
 
 ### C.3. Chạy và lưu kết quả
@@ -291,8 +291,8 @@ Tài liệu chính thức: [Google Colab FAQ](https://research.google.com/colabo
 Kiểm tra đã kích hoạt đúng môi trường rồi cài lại các thư viện:
 
 ```bash
-conda activate uet-mat1052
-conda install -c conda-forge numpy pandas matplotlib scipy plotly statsmodels plotnine ipywidgets
+conda activate uet-mat1052-plotnine
+conda install -c conda-forge numpy pandas scipy statsmodels plotnine contourpy ipywidgets
 ```
 
 ### `FileNotFoundError` với file trong `datasets/` hoặc `figures/`
@@ -306,11 +306,11 @@ Notebook đang được chạy từ sai thư mục hoặc đã bị tách khỏi
 
 ### Notebook dùng sai Python kernel
 
-Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc môi trường `uet-mat1052`, sau đó chọn **Restart Kernel and Run All Cells**.
+Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc môi trường `uet-mat1052-plotnine`, sau đó chọn **Restart Kernel and Run All Cells**.
 
 ### Hình hoặc slider chưa cập nhật
 
-Buổi 5–7 dùng Plotnine và lưu PNG ban đầu trong notebook. Slider Buổi 5–6 cần `ipywidgets` và kernel đang chạy; nếu viewer không hỗ trợ, sửa tham số trong ô và chạy lại. Buổi 7 dùng thao tác sửa tham số rồi chạy lại. Notebook Buổi 1–4 giữ backend cũ; khi dùng Plotly trên Colab, chọn renderer `"colab"` trong ô thiết lập của notebook đó.
+Cả 8 notebook dùng Plotnine và lưu PNG ban đầu. Slider `ipywidgets` cần kernel đang chạy; nếu viewer không hỗ trợ, sửa tham số trong ô và chạy lại theo hướng dẫn. Các hoạt động khác cũng dùng thao tác sửa tham số rồi chạy lại. Phần hồi quy đa biến dùng lát cắt 2D thay thao tác xoay 3D.
 
 ## Nguồn hướng dẫn kỹ thuật
 
@@ -319,3 +319,21 @@ Buổi 5–7 dùng Plotnine và lưu PNG ban đầu trong notebook. Slider Buổ
 - [Anaconda - System requirements](https://www.anaconda.com/docs/getting-started/anaconda/system-requirements)
 - [JupyterLab - Installation](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 - [Google Colab - Frequently Asked Questions](https://research.google.com/colaboratory/faq.html)
+
+Tài liệu backend: [Plotnine — Reference](https://plotnine.org/reference/) và [Facets](https://plotnine.org/guide/facets.html).
+
+## Kiểm tra toàn bộ notebook
+
+Sau khi cài thư viện của branch, kiểm tra output và backend đã lưu:
+
+```bash
+python -X utf8 tools/verify_notebooks.py
+```
+
+Để chạy lại tất cả từ kernel sạch rồi kiểm tra:
+
+```bash
+python -X utf8 tools/verify_notebooks.py --execute
+```
+
+Script dùng đúng Python đang gọi lệnh, kiểm tra cả 8 notebook, backend trong code, output, công thức, mã bài tập và tài nguyên đi kèm. Bản clone nông hoặc ZIP có thể không chứa commit gốc để so sánh lịch sử; kết quả kiểm chứng đã chốt nằm trong `qa/NOTEBOOKS_VALIDATION.json`.

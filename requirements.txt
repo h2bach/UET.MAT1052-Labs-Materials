@@ -1,8 +1,6 @@
 numpy
 pandas
-matplotlib
 scipy
-plotly
 statsmodels
 jupyterlab
 ipykernel
@@ -10,4 +8,5 @@ nbformat
 nbclient
 nbconvert
 plotnine==0.15.8
+contourpy
 ipywidgets

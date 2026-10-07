@@ -20,11 +20,11 @@ Notebook có 77 cell, được đánh số từ **Cell 00** đến **Cell 76** t
 | **Series** | Một cột dữ liệu một chiều của pandas. |
 | **np** | Tên viết tắt của thư viện NumPy, dùng cho tính toán số và sinh số ngẫu nhiên. |
 | **pd** | Tên viết tắt của pandas, dùng để tạo, lọc, nhóm và tóm tắt bảng dữ liệu. |
-| **plt** | Tên viết tắt của matplotlib.pyplot, dùng để vẽ biểu đồ. |
+| **p9** | Tên viết tắt của Plotnine, dùng ggplot + aes + các lớp geom để vẽ biểu đồ. |
 | **rng** | Bộ sinh số ngẫu nhiên. Vì có hạt giống cố định nên kết quả mô phỏng có thể tái lập. |
-| **fig** | Toàn bộ khung hình; có thể chứa một hoặc nhiều biểu đồ con. |
-| **ax**, **axes** | Một trục biểu đồ hoặc tập hợp các trục biểu đồ con. |
-| **d**, **g** | Tên biến ngắn cho một bảng con trong lúc lọc hoặc lặp. Đây chỉ là biến tạm. |
+| **g**, **g_...** | Đối tượng ggplot; thêm lớp bằng +, gọi show() để hiển thị. |
+| **aes** | Ánh xạ tên cột dữ liệu vào x, y, color, fill, shape, size. |
+| **d** | Bảng đi qua lambda trong một pipeline; đọc ý nghĩa theo từng cell. |
 | **groupby** | Chia dữ liệu thành các nhóm theo một hoặc nhiều biến. |
 | **agg** | Tính các đại lượng tóm tắt cho từng nhóm. |
 | **assign** | Tạo thêm cột mới mà không sửa trực tiếp bảng ban đầu. |
@@ -62,24 +62,28 @@ Chuẩn bị các công cụ cần dùng, đặt kiểu hiển thị biểu đ�
 
 | Tên | Giải thích |
 |---|---|
-| **np** | NumPy; hỗ trợ mảng số, logarit, xác suất và số ngẫu nhiên. |
-| **pd** | pandas; hỗ trợ bảng dữ liệu. |
-| **plt** | pyplot; giao diện vẽ biểu đồ. |
-| **PercentFormatter** | Bộ định dạng giúp trục tung hiển thị 0.5 thành 50%. |
-| **display** | Hàm hiển thị DataFrame đẹp trong Jupyter. |
-| **rng** | Bộ sinh số ngẫu nhiên được tạo với hạt giống 202503. |
-| **BAC** | Danh sách bậc xếp hạng: Silver, Gold, Platinum, Diamond. Viết hoa để nhấn mạnh đây là một hằng số dùng chung. |
-| **CHIEN_THUAT** | Ba nhóm chiến thuật: Reroll, Tempo, Fast 8. |
-| **LOI** | Ba lối chơi: Chuỗi thắng, Cân bằng, Chuỗi thua. |
-| **MAU_CHIEN_THUAT** | Từ điển ánh xạ mỗi chiến thuật sang một màu cố định. |
+| `np` | NumPy: mảng số, logarit và mô phỏng số ngẫu nhiên. |
+| `pd` | pandas: tạo, chọn, lọc, nhóm và tóm tắt bảng. |
+| `p9` | Plotnine: xây biểu đồ bằng dữ liệu + aes + các lớp geom. |
+| `display` | Hiển thị bảng trong Jupyter. |
+| `bang_histogram(values, bins, density)` | Hàm tạo bảng khoảng histogram; values là giá trị nguồn, bins là số khoảng hoặc các mốc, density chọn tần số hay mật độ. |
+| `height, edges` | Chiều cao và biên khoảng do np.histogram trả về; bảng kết quả có xmin, xmax, height. |
+| `phan_tram(values), value` | Hàm đổi từng tỷ lệ 0–1 thành nhãn phần trăm, như 0.5 thành 50%. |
+| `rng` | Bộ sinh số ngẫu nhiên với hạt giống 202503; giữ nguyên chuỗi mô phỏng của bản gốc. |
+| `BAC` | Bốn bậc theo thứ tự: Bạc, Vàng, Bạch Kim, Kim Cương. |
+| `CHIEN_THUAT` | Ba chiến thuật: Reroll cấp 6, Tempo cấp 7, Fast 8. |
+| `LOI` | Ba loại lõi: Kinh tế, Giao tranh, Linh hoạt. |
+| `MAU_CHIEN_THUAT` | Từ điển gán màu cố định cho từng chiến thuật. |
 
 #### Các hành động trong cell
 
-1. **import ... as ...** nạp thư viện và đặt bí danh ngắn để mã phía sau dễ đọc.
-2. **plt.style.use** chọn bộ định dạng seaborn-v0_8-whitegrid, tạo nền lưới nhẹ cho biểu đồ.
-3. **pd.set_option** quy định số cột tối đa và định dạng số thực khi pandas hiển thị bảng.
-4. **np.random.default_rng(202503)** tạo bộ sinh số ngẫu nhiên hiện đại của NumPy. Số 202503 là hạt giống; chạy lại notebook vẫn nhận cùng dữ liệu.
-5. Các danh sách và từ điển cuối cell đóng vai trò như “bảng mã” chung, tránh gõ lại tên nhóm hoặc màu ở nhiều nơi.
+1. Nạp NumPy, pandas, Plotnine và display. Không cần API pyplot trong notebook này.
+
+2. Đặt figure_format="png" để notebook lưu sẵn hình tĩnh; theme_bw, figure_size, dpi, legend_position và element_text đặt nền/nhãn chung.
+
+3. bang_histogram dùng np.histogram rồi pd.DataFrame; giữ nguyên các biên và số đếm khi đổi backend. phan_tram chỉ đổi nhãn hiển thị.
+
+4. pd.set_option đặt cách hiển thị bảng. Tạo rng với đúng seed 202503 và khai báo danh sách/màu dùng chung.
 
 #### Điều cần nhớ
 
@@ -94,105 +98,61 @@ Chuẩn bị các công cụ cần dùng, đặt kiểu hiển thị biểu đ�
 
 Đây là cell xây dựng toàn bộ dữ liệu dùng trong bài. Có thể coi nó là một **quy trình sinh dữ liệu**: từ bậc xếp hạng và đặc điểm người chơi, notebook tạo lobby, hành vi trong trận, điểm hiệu suất ẩn, thứ hạng cuối trận và một chuỗi lịch sử của một người chơi.
 
-#### Nhóm biến 1: quy mô và hồ sơ người chơi
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **so_lobby** | Số lobby cần mô phỏng, bằng 120. |
-| **so_nguoi_choi** | Số người chơi khác nhau trong danh sách mô phỏng, bằng 96. |
-| **player_pools** | Từ điển chứa danh sách ID người chơi của từng bậc. |
-| **player_skill** | Từ điển lưu mức kỹ năng ẩn của từng người chơi. |
-| **bac_skill** | Mức kỹ năng cơ sở gắn với từng bậc xếp hạng. |
-| **i** | Chỉ số tạm khi lặp qua các bậc. |
-| **bac** | Bậc xếp hạng hiện tại trong vòng lặp. |
-| **player_id** | Mã định danh người chơi, ví dụ P001. |
-| **rows** | Danh sách rỗng dùng để tích lũy từng hàng dữ liệu trước khi tạo DataFrame. |
+| `rows, so_lobby` | Danh sách tích lũy các bản ghi và quy mô 120 lobby. |
+| `bac_skill, scout_base` | Kỹ năng nền và mức scout nền theo bậc; đây là lựa chọn của cơ chế mô phỏng. |
+| `player_pools, player_skill` | Danh sách người chơi thuộc mỗi bậc và kỹ năng ổn định của mỗi người. |
+| `player_no, bac_roster, ids, player_id` | Bộ đếm mã người; bậc đang tạo roster; 60 mã của bậc đó; mã một người chơi. |
+| `lobby_no, bac, lobby_id` | Số lobby đang tạo, bậc của lobby và mã L001…L120. |
+| `p_nhanh, nhip_lobby` | Xác suất lobby nhanh theo bậc và nhịp Chậm/Nhanh được lấy ngẫu nhiên. |
+| `nguoi_choi_lobby, lobby_rows` | Tám người khác nhau được chọn và tám bản ghi tạm của lobby. |
+| `p_chien_thuat, chien_thuat` | Xác suất ba chiến thuật theo nhịp và chiến thuật của người đang tạo. |
+| `loi, ky_nang` | Loại lõi và kỹ năng ẩn gồm thành phần ổn định cộng dao động trong trận. |
+| `cap_co_so, cap_4_1` | Cấp cơ sở của chiến thuật và cấp tại stage 4-1, được giới hạn trong 5–9. |
+| `roll_base, so_lan_roll` | Mức roll nền theo chiến thuật và số lần roll có nhiễu, giới hạn 0–55. |
+| `vang_base, vang_4_1` | Vàng nền và vàng ở stage 4-1, giới hạn 0–80. |
+| `mau_bonus, mau_4_1` | Phần cộng/trừ máu do chiến thuật/nhịp và máu ở 4-1, giới hạn 1–100. |
+| `so_tuong_3_sao, so_lan_scout` | Số tướng ba sao và số lần scout, sinh theo phân phối Poisson. |
+| `gia_tri_doi_hinh` | Giá trị đội hình kết hợp cấp, số lần roll, tướng ba sao và nhiễu. |
+| `hieu_qua` | Phần cộng/trừ hiệu suất theo tổ hợp nhịp lobby × chiến thuật. |
+| `diem_hieu_suat, _diem_hieu_suat` | Điểm hiệu suất ẩn trong tính toán và khóa tạm lưu điểm trong bản ghi. |
+| `thu_tu, placement, idx` | Chỉ số người chơi sau khi xếp điểm giảm dần, hạng 1–8 và chỉ số bản ghi cần gán hạng. |
+| `top4, win` | True nếu placement ≤ 4 hoặc placement = 1. |
+| `sat_thuong_nguoi_choi` | Sát thương lên người chơi được mô phỏng theo placement và nhiễu, giới hạn 15–150. |
+| `tran_tft` | Bảng chính 960 hàng: mỗi hàng là một người chơi trong một lobby. |
+| `tong_sat_thuong` | Biến sát thương có đuôi phải dài, sinh bằng exp của biến chuẩn và làm tròn về số nguyên. |
+| `chi_so_thieu` | 38 chỉ số hàng được chọn để đặt so_lan_scout thành NaN, xấp xỉ 4% của 960 hàng. |
+| `so_tran, xu_huong, placement_lich_su` | 30 trận; xu hướng từ 0.15 đến −0.55; chuỗi placement mô phỏng có nhiễu, giới hạn 1–8. |
+| `lich_su, tran_thu` | Bảng lịch sử một người chơi giả định và số thứ tự trận 1–30. |
+| `placement_tb_5_tran` | Trung bình placement trong tối đa 5 trận gần nhất. |
+| `r` | Một bản ghi trong biểu thức lấy điểm hiệu suất để xếp hạng; các nhãn phân loại được gắn bằng pd.Categorical. |
 
-**player_pools** bảo đảm mỗi người chơi thuộc ổn định một bậc. **player_skill** thêm khác biệt cá nhân trong cùng một bậc bằng nhiễu chuẩn nhỏ. Kỹ năng này là biến ẩn dùng để tạo kết quả, không được đưa vào bảng cuối cùng như một thông tin quan sát trực tiếp.
+#### Các hành động trong cell
 
-#### Nhóm biến 2: tạo từng lobby
+1. Tạo roster 60 người/bậc; rng.normal tạo kỹ năng ổn định theo người. rng.choice lấy một bậc và nhịp cho từng lobby, rồi lấy 8 người không hoàn lại.
 
-| Tên | Giải thích |
-|---|---|
-| **lobby_no** | Số thứ tự lobby trong vòng lặp, chạy từ 1 đến 120. |
-| **lobby_id** | Mã lobby dạng L001, L002, ... |
-| **bac** | Bậc chung của lobby đang được tạo. |
-| **p_nhanh** | Xác suất lobby có nhịp nhanh, phụ thuộc vào bậc. |
-| **nhip_lobby** | Nhãn Nhanh hoặc Chậm của lobby. |
-| **nguoi_choi_lobby** | Tám người chơi được lấy không hoàn lại cho lobby. |
-| **lobby_rows** | Tám bản ghi tạm của lobby hiện tại. |
+2. Trong mỗi lobby, lấy chiến thuật và lõi theo các xác suất đã nêu trong code. np.clip giới hạn các đại lượng tại đúng cận; rng.poisson, rng.normal tạo nhiễu và các biến đếm.
 
-**rng.choice(..., replace=False)** lấy 8 người chơi khác nhau trong cùng một lobby. Tham số **replace=False** có nghĩa là không hoàn lại, nên một người không thể xuất hiện hai lần trong cùng trận.
+3. Tính gia_tri_doi_hinh, hieu_qua và diem_hieu_suat theo đúng công thức trong notebook. Lưu điểm ẩn tạm để xếp hạng, không dùng nó như dữ liệu quan sát.
 
-Xác suất lobby nhanh tăng theo bậc. Đây là một lựa chọn của mô hình mô phỏng, được dùng về sau để minh họa điều kiện hóa và nghịch lý Simpson.
+4. np.argsort trên dấu âm của điểm xếp từ cao xuống thấp. enumerate(start=1) gán placement 1–8, tạo top4/win và sát thương lên người chơi; xóa khóa điểm ẩn trước khi append vào rows.
 
-#### Nhóm biến 3: hành vi và trạng thái của từng người chơi
+5. pd.DataFrame và pd.Categorical tạo bảng với thứ tự nhóm cố định. exp tạo tong_sat_thuong có đuôi phải dài. Chọn 38 hàng scout và đặt NaN.
 
-| Tên | Giải thích |
-|---|---|
-| **p_chien_thuat** | Vector xác suất chọn Reroll, Tempo hoặc Fast 8 ở lobby hiện tại. |
-| **chien_thuat** | Chiến thuật được lấy ngẫu nhiên cho một người chơi. |
-| **loi** | Lối chơi được lấy ngẫu nhiên. |
-| **ky_nang** | Kỹ năng ẩn của người chơi hiện tại. |
-| **cap_do** | Cấp độ cuối trận, chịu ảnh hưởng của chiến thuật và nhiễu. |
-| **vang** | Lượng vàng còn lại cuối trận. |
-| **mau_linh_thu** | Máu linh thú ở thời điểm quan sát. |
-| **gia_tri_doi_hinh** | Tổng giá trị đội hình, được giới hạn trong khoảng hợp lý. |
-| **so_lan_scout** | Số lần người chơi quan sát bàn đối thủ. |
-| **sat_thuong** | Tổng sát thương gây ra. |
-| **loi_bo_tro** | Nhóm lõi bổ trợ: Kinh tế, Giao tranh hoặc Linh hoạt. |
+6. np.linspace, np.arange, np.clip và np.rint tạo lịch sử 30 trận. rolling(5,min_periods=1).mean() tính trung bình trượt; ở đầu chuỗi chỉ dùng các trận đã có.
 
-Các phép **np.clip** cắt giá trị tại cận dưới và cận trên. Ví dụ máu không được âm hoặc vượt quá 100; cấp độ được giữ trong khoảng 5–10. **round** làm tròn đại lượng về đơn vị phù hợp.
-
-Các biểu thức xác suất không nhằm tái tạo chính xác trò chơi. Chúng cố ý tạo ra những mối liên hệ có thể nhìn thấy: Fast 8 thường có cấp cao và nhiều vàng hơn; Reroll có cấu trúc tài nguyên khác; nhịp lobby và kỹ năng cũng tác động đến kết quả.
-
-#### Nhóm biến 4: tạo kết quả cuối trận
-
-| Tên | Giải thích |
-|---|---|
-| **score** | Điểm hiệu suất ẩn; điểm càng cao thì kết quả dự kiến càng tốt. |
-| **strategy_bonus** | Phần cộng/trừ điểm do chiến thuật và nhịp lobby tương tác. |
-| **style_bonus** | Phần cộng/trừ do lối chơi. |
-| **perf** | Mảng gồm 8 điểm hiệu suất của người chơi trong lobby. |
-| **order** | Thứ tự chỉ số sau khi sắp xếp điểm từ cao xuống thấp. |
-| **placements** | Mảng chứa thứ hạng 1–8 được gán lại đúng vị trí từng người chơi. |
-| **row** | Một từ điển đại diện cho một người chơi trong lobby. |
-| **idx**, **place** | Chỉ số người chơi và thứ hạng tương ứng trong vòng lặp gán kết quả. |
-
-**score** kết hợp kỹ năng, máu, giá trị đội hình, cấp độ, scouting, chiến thuật, lối chơi và nhiễu. Sau đó **np.argsort(-perf)** sắp điểm từ lớn xuống nhỏ; dấu trừ đảo chiều vì argsort mặc định xếp tăng dần. Người có điểm cao nhất nhận hạng 1.
-
-Mỗi lobby luôn có đúng một hạng 1, một hạng 2, ..., một hạng 8. Điều này mô phỏng ràng buộc quan trọng của TFT tốt hơn việc sinh hạng độc lập cho từng hàng.
-
-#### Nhóm biến 5: tạo bảng chính
-
-| Tên | Giải thích |
-|---|---|
-| **tran_tft** | DataFrame chính, mỗi hàng là một người chơi trong một lobby. |
-| **top4** | Biến Boolean, True nếu xếp hạng từ 1 đến 4. |
-| **sat_thuong_log10** | Logarit cơ số 10 của tổng sát thương. |
-
-**pd.DataFrame(rows)** chuyển danh sách từ điển thành bảng. **pd.Categorical** gắn thứ tự có ý nghĩa cho bậc, chiến thuật, lối chơi và lõi; nhờ đó bảng và biểu đồ không bị sắp theo alphabet ngoài ý muốn.
-
-Khoảng 4% giá trị **so_lan_scout** được đặt thành thiếu bằng **np.nan**. Việc này tạo tình huống thực hành xử lý dữ liệu thiếu ở Cell 33.
-
-#### Nhóm biến 6: tạo lịch sử một người chơi
-
-| Tên | Giải thích |
-|---|---|
-| **ngay** | 20 ngày liên tiếp, tạo bằng pd.date_range. |
-| **trend** | Xu hướng kỹ năng tăng dần theo thời gian. |
-| **placement_history** | Chuỗi thứ hạng mô phỏng, có xu hướng cải thiện nhưng vẫn có nhiễu. |
-| **lich_su** | DataFrame lịch sử của người chơi P007. |
-
-Lịch sử này là dữ liệu theo thời gian của **cùng một người chơi**, nên nối các điểm bằng đường có ý nghĩa. Nó được dùng để đối chiếu với việc nối những người chơi không liên quan ở Cell 16.
+7. In số lobby và số quan sát; biểu thức cuối chọn các lượt của người P044. Không gọi mạng hoặc lấy dữ liệu Riot Games.
 
 #### Đầu ra
 
-Cell in số lobby, số hàng và 5 hàng đầu. Kết quả mong đợi là **120 lobby** và **960 hàng**, vì 120 × 8 = 960.
+Cell in số lobby, số hàng và các lượt của người chơi P044. Kết quả mong đợi là **120 lobby** và **960 hàng**, vì 120 × 8 = 960.
 
 #### Lưu ý thống kê
 
-Cell này cho thấy dữ liệu quan sát không tự xuất hiện: chúng được tạo bởi một cơ chế. Nếu nhiều biến cùng đi vào **score**, mối liên hệ giữa một biến và thứ hạng có thể bị trộn với ảnh hưởng của những biến khác. Đây là lý do các phần sau dùng lọc, nhóm và điều kiện hóa.
+Cell này cho thấy dữ liệu quan sát không tự xuất hiện: chúng được tạo bởi một cơ chế. Nếu nhiều biến cùng đi vào **diem_hieu_suat**, mối liên hệ giữa một biến và thứ hạng có thể bị trộn với ảnh hưởng của những biến khác. Đây là lý do các phần sau dùng lọc, nhóm và điều kiện hóa.
 
 ### Cell 03 — Từ điển dữ liệu và đơn vị quan sát
 
@@ -201,7 +161,7 @@ Cell này cho thấy dữ liệu quan sát không tự xuất hiện: chúng đ�
 
 Cell định nghĩa ý nghĩa của các cột quan trọng. Đây là bước nên làm trước mọi phân tích: xác định một hàng là gì, mỗi cột đo gì và thang đo có hướng như thế nào.
 
-Đặc biệt, **xep_hang càng nhỏ càng tốt**. Đây là chiều ngược với nhiều đại lượng quen thuộc như điểm số. Khi đọc tương quan hoặc biểu đồ, phải luôn nhớ hạng 1 tốt hơn hạng 8.
+Đặc biệt, **placement càng nhỏ càng tốt**. Đây là chiều ngược với nhiều đại lượng quen thuộc như điểm số. Khi đọc tương quan hoặc biểu đồ, phải luôn nhớ hạng 1 tốt hơn hạng 8.
 
 Câu Q00 kiểm tra mẫu số: tỷ lệ top 4 theo chiến thuật được tính trên **tất cả lượt người chơi-trận thuộc chiến thuật đó**, không phải trên số người chơi duy nhất hay số lobby.
 
@@ -214,28 +174,26 @@ Câu Q00 kiểm tra mẫu số: tỷ lệ top 4 theo chiến thuật được t�
 
 Xác nhận dữ liệu mô phỏng tuân thủ các ràng buộc cơ bản trước khi dùng để phân tích.
 
-#### Tên biến và biểu thức
+#### Tên biến và đối tượng
 
-| Tên/biểu thức | Giải thích |
+| Tên | Giải thích |
 |---|---|
-| **groupby("lobby_id")** | Chia bảng theo từng lobby. |
-| **sorted(s) == list(range(1, 9))** | Kiểm tra mỗi lobby có đúng bộ thứ hạng 1–8. |
-| **top4.mean()** | Tính tỷ lệ top 4; Boolean True/False được coi là 1/0. |
-| **duplicated(["lobby_id", "nguoi_choi"])** | Tìm trường hợp cùng người chơi xuất hiện lặp trong một lobby. |
-| **groupby("nguoi_choi")["bac"].nunique()** | Đếm số bậc khác nhau của mỗi người chơi. |
-| **kiem_tra** | Bảng mô tả phân phối của một số biến số. |
+| `kiem_tra_placement` | min, max và số placement khác nhau trong mỗi lobby. |
+| `tran_tft` | Bảng cần kiểm tra các ràng buộc cấu trúc trước khi phân tích. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **assert** yêu cầu một điều kiện phải đúng. Nếu sai, Python dừng cell và báo lỗi, ngăn phân tích tiếp trên dữ liệu hỏng.
-2. **apply(lambda s: ...)** chạy cùng một phép kiểm tra trên Series thứ hạng của từng lobby.
-3. Tỷ lệ top 4 toàn bảng phải đúng 0.5 vì mỗi lobby có 4 vị trí top 4 trên 8 người.
-4. Hai kiểm tra sau loại trừ trùng người trong lobby và thay đổi bậc bất hợp lý của cùng một người.
-5. **describe().T** tính thống kê mô tả rồi chuyển hàng thành cột để dễ đọc.
+1. groupby("lobby_id")["placement"].agg(["min","max","nunique"]) kiểm tra mỗi lobby có đúng min=1, max=8 và tám hạng khác nhau.
+
+2. assert kiểm tra các ràng buộc; lỗi sẽ dừng notebook. top4.mean()==0.5 vì mỗi lobby có đúng 4 top4/8 người.
+
+3. duplicated(["lobby_id","player_id"]) kiểm tra trùng người trong một lobby. groupby("player_id").nunique() kiểm tra bậc ổn định theo người.
+
+4. describe(include="all").T lấy mô tả số và phân loại; chỉ giữ count, unique, mean, min, max và fillna("") để ô không áp dụng hiển thị trống.
 
 #### Cách đọc đầu ra
 
-Bảng hiển thị count, mean, std, min, các tứ phân vị và max cho xếp hạng, cấp độ, vàng, máu, giá trị đội hình, scouting và sát thương. **count** của scouting nhỏ hơn 960 vì cell tạo dữ liệu đã cố ý cài một số giá trị thiếu.
+Bảng hiển thị count, unique, mean, min và max cho các cột; ô không áp dụng để trống. **count** của so_lan_scout nhỏ hơn 960 vì cell tạo dữ liệu đã cố ý cài một số giá trị thiếu.
 
 ### Cell 05 — Mở đầu phần ngữ pháp đồ họa
 
@@ -253,23 +211,27 @@ Cell nêu tư tưởng cốt lõi: một biểu đồ không chỉ là một “
 
 Đặt bốn biểu đồ cạnh nhau để cho thấy loại câu hỏi quyết định hình học cần dùng.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **fig** | Khung hình chung. |
-| **axes** | Mảng 2 × 2 chứa bốn trục con. |
-| **so_nguoi_theo_bac** | Số lượt người chơi-trận ở mỗi bậc. |
-| **ax** | Biến tạm đại diện cho từng trục khi lặp. |
+| `dem` | Số lượt người-chơi–trận theo từng chiến thuật, giữ thứ tự CHIEN_THUAT. |
+| `dem_hinh` | Bảng số đếm với hai cột chien_thuat và n để đưa vào ggplot. |
+| `hist_placement` | Biên và tần số histogram, với các biên 0.5, 1.5, …, 8.5. |
+| `nhom_vang, c` | Ba Series vàng, lấy từng chiến thuật c; giữ nguyên dữ liệu dùng cho hộp. |
+| `g_cot, g_hist, g_diem, g_hop` | Bốn đối tượng Plotnine: cột, histogram, điểm và hộp. |
 
-#### Bốn hành động vẽ
+#### Các hành động trong cell
 
-1. **value_counts().reindex(BAC)** đếm số hàng theo bậc rồi sắp lại đúng thứ tự Silver → Diamond; **bar** vẽ biểu đồ cột.
-2. **hist** chia giá trị sát thương thành các khoảng và đếm tần số, thích hợp để xem phân phối một biến số.
-3. **scatter** đặt máu trên trục x và thứ hạng trên trục y, thích hợp để xem mối liên hệ giữa hai biến số.
-4. **boxplot(column=..., by=...)** so sánh phân phối xếp hạng giữa ba chiến thuật.
+1. value_counts(sort=False), rename_axis và reset_index tạo bảng đếm cho geom_col.
 
-**invert_yaxis** đảo trục hạng để hạng 1 xuất hiện phía trên, phù hợp trực giác “cao hơn là tốt hơn”. **alpha** điều chỉnh độ trong suốt; các điểm chồng nhau vẫn có thể nhìn thấy mật độ. **tight_layout** tự điều chỉnh khoảng cách để nhãn không đè lên nhau.
+2. bang_histogram dùng các biên np.arange(0.5,9.5,1); geom_rect vẽ đúng số đếm trong mỗi khoảng placement.
+
+3. ggplot + aes + geom_point vẽ từng người-chơi–trận. scale_y_reverse giữ hạng 1 ở trên, 8 ở dưới.
+
+4. geom_boxplot tóm tắt vang_4_1 theo chien_thuat. scale_fill_manual lấy đúng MAU_CHIEN_THUAT.
+
+5. Ghép bốn biểu đồ bằng | (cạnh nhau) và / (trên/dưới). & theme áp dụng cỡ hình, góc nhãn và tắt chú giải lặp cho cả khung; show() hiển thị PNG.
 
 #### Cách đọc đầu ra
 
@@ -296,24 +258,24 @@ Các khái niệm mapping, geometry và facet được giới thiệu trước k
 
 Minh họa cách một điểm dữ liệu có thể mang nhiều lớp thông tin: vị trí, màu và kích thước.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **mau** | Series màu, nhận màu tương ứng từ cột chien_thuat qua từ điển MAU_CHIEN_THUAT. |
-| **kich_thuoc** | Series kích thước điểm, được tính từ gia_tri_doi_hinh. |
-| **mau_chon** | Màu tương ứng với mẫu 260 hàng được vẽ. |
-| **kich_thuoc_chon** | Kích thước tương ứng với mẫu 260 hàng. |
-| **sample(260, random_state=7)** | Chọn 260 hàng cố định để biểu đồ đỡ dày. |
-| **d** | Bảng mẫu 260 hàng được dùng trong biểu đồ. |
+| `mau` | Mẫu 260 hàng được lấy với random_state=20, độc lập với rng mô phỏng. |
+| `mau_hinh` | Bảng mẫu thêm cột kích thước dành riêng cho lớp vẽ. |
+| `kich_thuoc_diem` | Căn bậc hai của (10 + 1.4 × gia_tri_doi_hinh)/π; đổi diện tích điểm của bản gốc sang đơn vị size của Plotnine. |
+| `g` | Biểu đồ ánh xạ máu vào x, placement vào y, chiến thuật vào màu và giá trị đội hình vào kích thước. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **map(MAU_CHIEN_THUAT)** chuyển nhãn chiến thuật thành mã màu.
-2. Công thức kích thước chuẩn hóa giá trị đội hình vào khoảng kích thước nhìn được. Việc trừ min và chia cho khoảng biến thiên đưa dữ liệu về gần 0–1; sau đó nhân và cộng tạo cỡ điểm cuối cùng.
-3. **sample(..., random_state=7)** lấy một mẫu có thể tái lập. Tham số này độc lập với rng ở Cell 01 vì đây là cơ chế ngẫu nhiên của pandas.
-4. **loc[d.index]** lấy màu và kích thước đúng cho các hàng đã được chọn. Nếu không căn theo index, thẩm mỹ có thể gắn nhầm người chơi.
-5. **scatter** ánh xạ máu vào x, hạng vào y, chiến thuật vào màu và giá trị đội hình vào kích thước.
+1. sample(260,random_state=20) giữ đúng mẫu cố định của bản gốc.
+
+2. assign tính kich_thuoc_diem từ công thức diện tích ban đầu; np.sqrt và π đổi sang đơn vị kích thước của Plotnine. stroke=0 tránh thêm viền làm thay đổi diện tích.
+
+3. aes ánh xạ máu, placement, màu và size. scale_size_identity dùng trực tiếp kích thước đã tính; scale_color_manual thống nhất màu chiến thuật.
+
+4. guides với override_aes chỉ làm điểm trong chú giải đủ rõ. scale_y_reverse và labs đặt hướng trục, đơn vị và nhãn; show() lưu hình trong output.
 
 #### Cách đọc
 
@@ -335,21 +297,25 @@ Cell giải mã chính xác biểu đồ trước: dữ liệu nào, biến nào
 
 So sánh trực tiếp hai cách biểu diễn xếp hạng theo chiến thuật.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **xpos** | Vị trí số 0, 1, 2 tương ứng với ba chiến thuật. |
-| **jitter** | Nhiễu ngang rất nhỏ để các điểm không chồng khít. |
-| **d** | Bảng con chỉ chứa các hàng của một chiến thuật. |
-| **i** | Chỉ số chiến thuật trong vòng lặp. |
-| **chien_thuat** | Nhãn chiến thuật đang được vẽ. |
+| `bang_diem` | Danh sách bảng con, rồi bảng dài chứa x đã jitter, placement và chien_thuat. |
+| `j, chien_thuat` | Chỉ số 0–2 và nhãn chiến thuật đang xử lý. |
+| `y, x` | Mảng placement và vị trí ngang lấy từ rng.normal(j + 1, 0.055, size=len(y)). |
+| `du_lieu_hop, c` | Ba Series placement theo chiến thuật c, giữ nguyên dữ liệu nguồn. |
+| `g_diem, g_hop` | Hai đối tượng Plotnine: từng quan sát và tóm tắt bằng hộp. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Biểu đồ trái lặp qua từng chiến thuật, tạo vị trí x cố định rồi cộng **jitter**. Jitter không thay đổi dữ liệu xếp hạng; nó chỉ dịch điểm theo chiều ngang để thấy mật độ. Biểu đồ phải giữ nhãn trục x bằng **set_xticks** và **set_xticklabels** vì vị trí thực tế là số 0–2.
+1. Lặp từng chiến thuật theo đúng thứ tự, giữ nguyên lời gọi rng.normal(j+1,0.055,size=len(y)). Jitter chỉ dịch vị trí ngang để nhìn được các điểm chồng nhau.
 
-Biểu đồ phải dùng **boxplot** để tóm tắt trung vị, tứ phân vị và phạm vi. **patch_artist=True** cho phép tô màu hộp; vòng lặp tiếp theo gán màu theo chiến thuật.
+2. pd.concat ghép bảng điểm. geom_point vẽ x đã jitter; scale_x_continuous gắn nhãn ba chiến thuật vào vị trí 1,2,3.
+
+3. geom_boxplot dùng dữ liệu placement gốc theo nhóm. Không áp dụng jitter lên giá trị placement.
+
+4. Hai hình đều scale_y_reverse với đầy đủ hạng 1–8. | ghép cạnh nhau; theme tắt chú giải lặp vì màu đã tương ứng nhãn x.
 
 #### Cách đọc
 
@@ -371,22 +337,22 @@ Cell tổng kết sự đánh đổi giữa điểm và boxplot, rồi giới th
 
 Quan sát mối liên hệ máu–thứ hạng riêng trong từng bậc, thay vì gộp toàn bộ người chơi.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **fig, axes** | Khung hình và bốn trục nằm trên một hàng. |
-| **markers** | Từ điển gán hình điểm o, s, ^ cho ba chiến thuật. |
-| **ax** | Trục ứng với một bậc. |
-| **bac** | Bậc đang được vẽ. |
-| **d** | Bảng con của một bậc. |
-| **g** | Bảng con nhỏ hơn, của một chiến thuật trong bậc đó. |
+| `KY_HIEU` | Từ điển ánh xạ chiến thuật sang hình điểm o, s, ^. |
+| `g` | Một đối tượng ggplot chia thành bốn facet theo bac_xep_hang. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Vòng lặp ngoài dùng **zip(axes, BAC)** để ghép từng trục với từng bậc. Vòng lặp trong chia tiếp theo chiến thuật. Màu và hình điểm cùng mã hóa chiến thuật, giúp biểu đồ vẫn phân biệt được khi in trắng đen hoặc với người khó nhận màu.
+1. aes(color="chien_thuat",shape="chien_thuat") mã hóa cùng chiến thuật bằng màu và hình điểm.
 
-**sharex=True, sharey=True** bắt buộc bốn ô dùng cùng thang đo; nhờ vậy so sánh trực tiếp là hợp lệ. Chú giải chỉ được đặt ở ô cuối để tránh lặp. Tham số **label** được đặt rỗng ở các ô trước.
+2. scale_color_manual và scale_shape_manual định nghĩa hai bảng mã; geom_point dùng alpha=0.34 để thấy chồng lấp.
+
+3. facet_wrap("bac_xep_hang",nrow=1) chia bốn ô theo bậc, mặc định chung thang x/y. Không phải tạo bốn trục thủ công.
+
+4. scale_y_reverse, labs và theme hoàn thiện hướng trục, nhãn và chú giải; show() xuất toàn bộ bốn facet.
 
 #### Cách đọc
 
@@ -413,20 +379,27 @@ Cell phân biệt:
 
 Đưa khái niệm ở Cell 13 vào hai biểu đồ cụ thể.
 
-#### Tên biến và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **d** | Mẫu 220 hàng để hình không quá dày. |
-| **color="steelblue"** | Setting: mọi điểm cùng màu xanh. |
-| **g** | Bảng con của một chiến thuật. |
-| **MAU_CHIEN_THUAT[...]** | Mapping được thực hiện thủ công bằng cách vẽ từng nhóm với màu tương ứng. |
+| `mau_nho` | Mẫu 240 lượt người-chơi–trận với random_state=3. |
+| `g_thiet_lap` | Biểu đồ có color cố định bên ngoài aes: mọi điểm màu tím. |
+| `g_anh_xa` | Biểu đồ có color="chien_thuat" trong aes: màu mã hóa chiến thuật. |
 
-Biểu đồ trái gọi **scatter** một lần. Biểu đồ phải gọi scatter ba lần trong vòng lặp, mỗi lần cho một chiến thuật và gắn **label** để tạo legend.
+#### Các hành động trong cell
+
+1. sample(240,random_state=3) tạo cùng một tập quan sát cho hai hình.
+
+2. Hình trái đặt color="#7E57C2" trong geom_point, bên ngoài aes: đây là thiết lập cố định.
+
+3. Hình phải đặt color="chien_thuat" trong aes và chọn màu bằng scale_color_manual: đây là ánh xạ theo biến.
+
+4. Cả hai đặt cùng trục placement đảo chiều rồi ghép bằng |; không thay dữ liệu hoặc biến trên x/y.
 
 #### Cách đọc
 
-Biểu đồ trái chỉ cho thấy quan hệ máu–hạng. Biểu đồ phải cho phép hỏi thêm liệu ba chiến thuật có chiếm các vùng khác nhau hay không. Đổi màu cố định không làm xuất hiện thông tin mới; ánh xạ màu theo biến thì có.
+Biểu đồ trái chỉ cho thấy quan hệ vàng–placement. Biểu đồ phải cho phép hỏi thêm liệu ba chiến thuật có chiếm các vùng khác nhau hay không. Đổi màu cố định không làm xuất hiện thông tin mới; ánh xạ màu theo biến thì có.
 
 ### Cell 15 — Chọn geometry theo ngữ nghĩa
 
@@ -444,19 +417,22 @@ Q02 đặt câu hỏi về việc dùng đường nối. Một đường ngầm 
 
 Đặt cạnh nhau một đường nối sai ngữ nghĩa và một đường nối đúng ngữ nghĩa.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **d_sai** | 18 hàng được lấy ngẫu nhiên từ nhiều người chơi khác nhau. |
-| **sort_values("mau_linh_thu")** | Sắp theo máu để đường trông có vẻ liên tục, dù các điểm không phải một chuỗi thực. |
-| **lich_su** | Dữ liệu theo ngày của cùng người chơi P007. |
+| `ngang` | 24 hàng lấy với random_state=12, sắp theo player_id; chúng thuộc những người khác nhau. |
+| `bang_ngang, thu_tu_hang` | Bảng thêm chỉ số 1–24 theo thứ tự hàng, chỉ phục vụ ví dụ nối sai ngữ nghĩa. |
+| `g_sai` | Đường nối các hàng của những người khác nhau. |
+| `g_dung` | Đường nối lịch sử 30 trận của cùng một người, dùng tran_thu. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Biểu đồ trái dùng **plot** để nối các người chơi độc lập theo thứ tự máu. Đường này là một cấu trúc do người vẽ áp đặt, không phản ánh quá trình theo thời gian hay cùng một cá thể.
+1. sample và sort_values tạo 24 quan sát của những người khác nhau. assign thêm thứ tự hàng 1–24; geom_line + geom_point nối chúng trong hình minh họa sai ngữ nghĩa.
 
-Biểu đồ phải nối các quan sát của P007 theo ngày. **marker="o"** vừa hiển thị điểm, vừa hiển thị đường giữa các ngày liên tiếp. **tick_params(rotation=45)** xoay nhãn ngày để dễ đọc.
+2. Biểu đồ đúng dùng lich_su với tran_thu, thứ tự thực của 30 trận của một người.
+
+3. scale_y_reverse đặt chiều hạng giống nhau. | và theme đưa hai cách dùng cùng geometry cạnh nhau để so sánh ý nghĩa.
 
 #### Ý nghĩa
 
@@ -485,13 +461,22 @@ Cell chuyển từ ngữ pháp chung sang một tình huống dữ liệu theo t
 
 Kiểm tra cấu trúc dữ liệu gốc trước khi trực quan hóa.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
-**lich_su.head(10)** lấy 10 hàng đầu của bảng lịch sử. Các cột gồm ngày, người chơi, hạng và chiến thuật. **display** trình bày bảng ở định dạng HTML trong notebook.
+| Tên | Giải thích |
+|---|---|
+| `lich_su` | Lịch sử 30 trận của một người chơi giả định. |
+| `head(10)` | Chọn 10 hàng đầu để xem tran_thu, placement, chiến thuật, top4 và trung bình trượt. |
+
+#### Các hành động trong cell
+
+1. head(10) hiển thị 10 trận đầu, không lọc hay sửa bảng lich_su.
+
+2. Đọc tran_thu theo thời gian và đối chiếu placement với placement_tb_5_tran trước khi xem đường.
 
 #### Cách đọc
 
-Mỗi ngày có một kết quả của cùng P007. Trước khi nối đường, cần xác nhận cột ngày có thứ tự thời gian và các hàng thực sự thuộc cùng một đối tượng.
+Mỗi trận có một kết quả của cùng một người chơi giả định. Trước khi nối đường, cần xác nhận cột tran_thu có thứ tự thời gian và các hàng thực sự thuộc cùng một đối tượng.
 
 ### Cell 20 — Điểm rời rạc và đường xu hướng
 
@@ -502,20 +487,22 @@ Mỗi ngày có một kết quả của cùng P007. Trước khi nối đường
 
 So sánh hai mức độ xử lý cùng một chuỗi lịch sử: chỉ hiển thị quan sát và thêm đường giúp nhìn xu hướng.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **lich_su["ngay"]** | Trục thời gian. |
-| **lich_su["xep_hang"]** | Kết quả từng ngày. |
-| **rolling(5).mean()** | Trung bình trượt của 5 trận gần nhất. |
-| **min_periods=1** | Cho phép tính trung bình ngay ở đầu chuỗi dù chưa đủ 5 quan sát. |
+| `lich_su_dai` | Bảng dài được melt từ placement và placement_tb_5_tran. |
+| `duong, hang` | Tên chuỗi và giá trị placement/trung bình của chuỗi đó; mỗi trận có hai hàng trong bảng dài. |
+| `g_diem` | Biểu đồ từng trận bằng điểm riêng. |
+| `g_duong` | Biểu đồ chồng đường placement và trung bình trượt 5 trận. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Biểu đồ trái dùng **scatter** để giữ các trận độc lập. Biểu đồ phải dùng **plot** cho kết quả từng trận và thêm một đường rolling mean. Trung bình trượt tại ngày hiện tại lấy ngày đó cùng tối đa bốn ngày trước, giúp làm giảm dao động ngắn hạn.
+1. melt giữ tran_thu làm biến nhận diện, chuyển hai chuỗi thành cột duong/hang; dữ liệu dài thuận tiện để ánh xạ màu và nhóm đường.
 
-**invert_yaxis** được dùng ở cả hai ô vì hạng nhỏ hơn là tốt hơn. **legend** phân biệt đường từng trận và đường trung bình.
+2. Hình trái chỉ geom_point. Hình phải geom_line theo duong, thêm geom_point cho placement bằng lớp dữ liệu riêng với inherit_aes=False.
+
+3. scale_color_manual đặt màu và tên hai chuỗi; scale_y_reverse giữ đủ hạng 1–8. | ghép hai hình và show() hiển thị.
 
 #### Cách đọc
 
@@ -537,22 +524,25 @@ Q03 yêu cầu so sánh ưu, nhược điểm của điểm rời rạc và đư
 
 Minh họa cách thêm chú thích dựa trên dữ liệu thay vì ghi cứng một vị trí.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **best_idx** | Nhãn index của hàng có xếp hạng nhỏ nhất. |
-| **best_row** | Toàn bộ hàng dữ liệu của trận tốt nhất. |
-| **idxmin()** | Trả lại index tại giá trị nhỏ nhất. |
-| **annotate** | Hàm đặt văn bản và mũi tên trên biểu đồ. |
+| `placement_tot` | Placement nhỏ nhất trong lịch sử, tức hạng tốt nhất. |
+| `tran_tot` | Trận đầu tiên đạt placement_tot; iloc[0] chọn lần xuất hiện đầu. |
+| `lich_su_chu_thich` | Bảng dài chứa cả placement và trung bình trượt. |
+| `duong, hang` | Tên chuỗi và giá trị trên trục placement. |
+| `g` | Biểu đồ đường, điểm, đoạn mũi tên và lời chú thích. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **idxmin** tìm trận có hạng thấp nhất về số, tức kết quả tốt nhất.
-2. **loc[best_idx]** lấy đúng hàng đó.
-3. **xy** là điểm mũi tên hướng tới; **xytext** là vị trí tương đối của hộp chữ.
-4. **textcoords="offset points"** diễn giải xytext theo đơn vị điểm ảnh tương đối, giúp chú thích không đè lên dữ liệu.
-5. **arrowprops** quy định kiểu mũi tên.
+1. min lấy placement tốt nhất; lọc theo giá trị đó, chọn tran_thu rồi iloc[0] lấy trận đầu đạt hạng tốt nhất.
+
+2. melt đưa lịch sử vào dạng dài; geom_line và geom_point thể hiện chuỗi gốc và trung bình trượt.
+
+3. annotate("segment",arrow=p9.arrow(...)) vẽ mũi tên tới trận được chọn; annotate("text") ghi lời cảnh báo. Vị trí chữ chỉ phục vụ trình bày.
+
+4. scale_y_reverse, scale_color_manual và labs tạo trục, chú giải và tiêu đề có thể đọc độc lập.
 
 #### Cách đọc
 
@@ -581,16 +571,25 @@ Cell mở một hoạt động “sửa và quan sát”. Người học không 
 
 Cho người học chủ động đổi độ mượt của đường xu hướng.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **CUA_SO** | Số trận trong cửa sổ trung bình trượt; viết hoa vì được xem như tham số người học chủ động cấu hình. |
-| **trung_binh_truot** | Series chứa giá trị trung bình của CUA_SO trận gần nhất. |
+| `CUA_SO` | Số trận trong cửa sổ trung bình trượt; mặc định 5, thử 3 và 10. |
+| `duong_muot` | Series rolling(CUA_SO, min_periods=1).mean() trên placement. |
+| `bang_muot` | Bảng chứa placement và trung bình, sau đó melt thành dạng dài. |
+| `duong, hang` | Nhận diện hai đường và giá trị cần vẽ. |
+| `g` | Biểu đồ Plotnine có tiêu đề/chú giải dùng giá trị CUA_SO hiện tại. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**rolling(CUA_SO, min_periods=1).mean()** tạo đường làm mượt. Nhãn f-string **f"Trung bình trượt {CUA_SO} trận"** tự chèn giá trị hiện tại của biến vào chú giải. Nhờ vậy, nếu đổi 5 thành 3 hoặc 10, cả tính toán và nhãn đều cập nhật.
+1. Sửa CUA_SO thành 3, 5 hoặc 10 rồi chạy lại Cell 25. Không cần tạo lại dữ liệu.
+
+2. rolling(CUA_SO,min_periods=1).mean() dùng tối đa CUA_SO trận gần nhất; đầu chuỗi dùng ít trận hơn.
+
+3. Tạo bang_muot, melt hai chuỗi và vẽ geom_line. Lớp điểm của lich_su vẫn giữ từng placement.
+
+4. Chuỗi f trong labels/title đưa giá trị CUA_SO hiện tại vào nhãn. show() tạo PNG mới sau mỗi lần chạy lại.
 
 #### Cách đọc và thử nghiệm
 
@@ -626,20 +625,20 @@ Cell chuyển từ cấu trúc biểu đồ sang cấu trúc lệnh phân tích:
 
 Minh họa một quy trình ngắn: tạo bảng con, sau đó trực quan hóa theo nhóm.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **gold** | DataFrame chỉ chứa các hàng có bac bằng Gold. |
-| **g** | Bảng con của một chiến thuật trong dữ liệu Gold. |
-| **query("bac == 'Gold'")** | Điều kiện chọn các hàng Gold. |
+| `du_lieu_hinh` | Bản sao chỉ gồm các lượt ở bậc Vàng. |
+| `g` | Biểu đồ tạo từ đúng bảng con, aes và lớp điểm. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **query** tạo dữ liệu điều kiện. Dấu hai bằng trong biểu thức là phép so sánh, không phải gán.
-2. Vòng lặp đi qua danh sách CHIEN_THUAT để giữ thứ tự và màu nhất quán.
-3. Với mỗi nhóm, **gold[gold["chien_thuat"] == chien_thuat]** tạo bảng con.
-4. **scatter** vẽ máu và hạng; **label** cho phép tạo chú giải.
+1. query("bac_xep_hang == 'Vàng'").copy() quyết định quần thể con trước khi vẽ.
+
+2. ggplot nhận đúng du_lieu_hinh. aes("mau_4_1","placement",color="chien_thuat") là ánh xạ; geom_point là hình học.
+
+3. scale_color_manual chọn bảng màu; scale_y_reverse đưa hạng 1 lên trên. labs đặt giao tiếp với người đọc; show() hiển thị.
 
 #### Cách đọc
 
@@ -661,9 +660,20 @@ Cell yêu cầu người học nhận ra việc lọc diễn ra **trước** khi
 
 Giữ dữ liệu Gold nhưng đổi câu hỏi: từ liên hệ hai biến số sang so sánh phân phối hạng theo lõi bổ trợ.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
-**gold.boxplot(column="xep_hang", by="loi_bo_tro")** dùng DataFrame đã lọc ở Cell 28. **column** là biến số cần so sánh; **by** là biến phân nhóm. **grid=False** tắt lưới nội bộ của boxplot; **plt.suptitle("")** xóa tiêu đề phụ tự động mà pandas tạo.
+| Tên | Giải thích |
+|---|---|
+| `du_lieu_loi, loai` | Ba Series placement theo từng loại lõi trong LOI. |
+| `g` | Biểu đồ hộp dùng loai_loi làm x, placement làm y và fill theo lõi. |
+
+#### Các hành động trong cell
+
+1. Danh sách du_lieu_loi lấy placement của từng loại lõi trong cùng bậc Vàng; không đổi quần thể con.
+
+2. aes đặt nhóm lõi trên x, placement trên y và màu tô theo lõi. geom_boxplot tóm tắt trung vị/tứ phân vị.
+
+3. scale_fill_manual giữ màu của từng lõi; scale_y_reverse đảo chiều hạng. Không dùng vòng lặp tô patch.
 
 #### Cách đọc
 
@@ -692,20 +702,20 @@ Cell đặt vấn đề rằng một biểu đồ có thể âm thầm dùng ít
 
 Tạo dữ liệu hoàn chỉnh cho hai biến scouting và thứ hạng, đồng thời công khai số hàng bị loại.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **scout_day_du** | DataFrame chỉ gồm hàng có đủ so_lan_scout và xep_hang. |
-| **dropna(subset=[...])** | Loại hàng thiếu ở đúng các cột được chỉ định. |
-| **len(...)** | Đếm số hàng. |
+| `du_scout` | Bảng bỏ các hàng thiếu so_lan_scout; tran_tft vẫn giữ nguyên. |
+| `g` | Biểu đồ scout–placement chỉ trên hàng đủ telemetry. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. In số hàng ban đầu bằng **len(tran_tft)**.
-2. **dropna** tạo bảng mới; không thay đổi tran_tft.
-3. In số hàng hoàn chỉnh và hiệu số để người đọc biết cỡ mẫu thực tế.
-4. Vẽ scatter từ scout_day_du, không phải từ bảng gốc.
+1. dropna(subset=["so_lan_scout"]) chỉ loại hàng thiếu biến dùng trong phân tích này, không loại mọi hàng có thiếu ở cột khác.
+
+2. len, isna và sum báo tổng hàng, hàng đủ scout và hàng thiếu.
+
+3. ggplot dùng du_scout, aes ánh xạ scout/placement, geom_point dùng alpha=0.22 để thấy điểm chồng; scale_y_reverse giữ hạng 1–8.
 
 #### Đầu ra
 
@@ -754,16 +764,19 @@ Một bảng có thể đồng thời được lọc hàng rồi chọn một s�
 
 Tạo tập con chỉ gồm bậc Diamond và xem một số cột quan trọng.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **diamond** | DataFrame gồm các lượt người chơi-trận thuộc bậc Diamond. |
-| **query("bac == 'Diamond'")** | Lọc hàng theo điều kiện bậc. |
-| **[[...]]** | Chọn danh sách cột để hiển thị. |
-| **head()** | Lấy 5 hàng đầu sau lọc. |
+| `kim_cuong` | Bảng con thỏa bac_xep_hang == "Kim Cương". |
+| `len(kim_cuong)` | Số lượt người-chơi–trận ở bậc này, không phải số người duy nhất. |
+| `head()` | Xem 5 hàng đầu của các cột được chọn. |
 
-Cell in số hàng bằng **len(diamond)** rồi hiển thị một bản xem trước. Trong bộ dữ liệu này, Diamond có 120 hàng.
+#### Các hành động trong cell
+
+1. query giữ các hàng bậc Kim Cương; len in cỡ mẫu sau điều kiện hóa.
+
+2. Chọn sáu cột bằng danh sách trong [] rồi head() xem 5 hàng đầu. Không groupby nên một hàng vẫn là một người-chơi–trận.
 
 #### Lưu ý
 
@@ -785,20 +798,25 @@ Cell luyện cách chuyển mã thành câu: “giữ các lượt người chơ
 
 Phân biệt giao của hai điều kiện với hợp của hai điều kiện.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **fast8_mau_cao** | Hàng vừa dùng Fast 8 vừa có máu ít nhất 50. |
-| **reroll_hoac_fast8** | Hàng dùng Reroll hoặc Fast 8. |
-| **and** | Cả hai điều kiện phải đúng. |
-| **or** | Ít nhất một điều kiện đúng. |
+| `fast8_khoe` | Các hàng vừa Fast 8 vừa mau_4_1 ≥ 50. |
+| `reroll_hoac_fast8` | Các hàng có chiến thuật thuộc tập Reroll cấp 6 hoặc Fast 8. |
+| `isin` | Kiểm tra mỗi nhãn có nằm trong danh sách cho trước hay không. |
 
-#### Các hành động và đầu ra
+#### Các hành động trong cell
 
-Hai lệnh **query** dùng từ khóa and/or trong chuỗi biểu thức. Tập giao Fast 8 và máu ≥ 50 có 126 hàng; tập hợp Reroll hoặc Fast 8 có 573 hàng.
+1. query kết hợp and: một hàng phải vừa Fast 8 vừa đủ 50 máu.
 
-Tập and thường nhỏ hơn từng điều kiện riêng. Tập or thường lớn hơn vì nhận hàng từ cả hai nhóm. Với hai nhóm chiến thuật loại trừ nhau, số hàng or bằng tổng số hàng hai nhóm.
+2. isin trả về Boolean cho các chiến thuật trong danh sách; [] giữ các hàng True, thể hiện Reroll hoặc Fast 8.
+
+3. len báo số hàng của hai tập; fast8_khoe.head() hiển thị tập giao.
+
+#### Cách đọc đầu ra
+
+Đối chiếu bảng/giá trị hiển thị với các biến và thao tác vừa nêu; đơn vị quan sát vẫn là một người-chơi–trận cho tới bước nhóm.
 
 ### Cell 40 — Logic lọc và lựa chọn ngưỡng
 
@@ -816,17 +834,23 @@ Cell tổng kết cú pháp query, phép **isin** và toán tử so sánh. Cản
 
 Biến một điều kiện thành cột True/False để có thể hiển thị, nhóm hoặc tính tỷ lệ.
 
-#### Tên biến và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **mau_tu_50** | True nếu mau_linh_thu lớn hơn hoặc bằng 50. |
-| **top4** | True nếu xep_hang nhỏ hơn hoặc bằng 4. |
-| **assign(...)** | Trả về một DataFrame có thêm hoặc thay cột. |
+| `vi_du_logic` | Bảng thêm hai cột Boolean, không sửa tran_tft. |
+| `con_50_mau_o_4_1` | True nếu mau_4_1 ≥ 50. |
+| `ket_qua_top4` | True nếu placement ≤ 4. |
 
-**tran_tft = tran_tft.assign(...)** gán bảng mới trở lại cùng tên tran_tft. Biểu thức so sánh trên một Series được áp dụng theo từng hàng và tạo ra một Series Boolean tương ứng.
+#### Các hành động trong cell
 
-Cell hiển thị máu, biến mau_tu_50, hạng và top4 để người học kiểm tra logic. Ví dụ máu 50 phải được xếp vào nhóm True vì toán tử là **>=**, không phải **>**.
+1. assign tạo hai cột bằng các phép so sánh >= và <=, giữ nguyên bảng nguồn.
+
+2. Chọn bốn cột liên quan và head(8) để đối chiếu giá trị với True/False.
+
+#### Cách đọc đầu ra
+
+Đối chiếu bảng/giá trị hiển thị với các biến và thao tác vừa nêu; đơn vị quan sát vẫn là một người-chơi–trận cho tới bước nhóm.
 
 ### Cell 42 — Trung bình của Boolean là tỷ lệ
 
@@ -837,13 +861,22 @@ Cell hiển thị máu, biến mau_tu_50, hạng và top4 để người học k
 
 Cho thấy cách tính tỷ lệ trực tiếp từ một cột True/False.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
-- **tran_tft["mau_tu_50"].mean()** đổi True thành 1, False thành 0 rồi lấy trung bình.
-- **tran_tft["top4"].mean()** thực hiện tương tự cho kết quả top 4.
-- **:.1%** là định dạng f-string hiển thị số thập phân dưới dạng phần trăm với một chữ số sau dấu phẩy.
+| Tên | Giải thích |
+|---|---|
+| `vi_du_logic` | Bảng Boolean được tạo ở Cell 41. |
+| `mean()` | Trung bình True/False như 1/0; trả về tỷ lệ trên tất cả 960 hàng. |
 
-Đầu ra cho thấy khoảng 57.0% hàng có máu ít nhất 50 và đúng 50.0% hàng là top 4. Tỷ lệ top 4 toàn bảng luôn là một nửa do cấu trúc mỗi lobby.
+#### Các hành động trong cell
+
+1. mean trên từng cột Boolean tính tổng True chia tổng hàng.
+
+2. print báo tỷ lệ còn ít nhất 50 máu và tỷ lệ top4; các giá trị dùng thang 0–1.
+
+#### Cách đọc đầu ra
+
+Đối chiếu bảng/giá trị hiển thị với các biến và thao tác vừa nêu; đơn vị quan sát vẫn là một người-chơi–trận cho tới bước nhóm.
 
 ### Cell 43 — Vì sao phép tính Boolean hoạt động
 
@@ -868,15 +901,21 @@ Cell chuẩn bị cho tình huống biến số lệch phải. Logarit thường
 
 Quan sát cùng một biến sát thương trên hai thang đo.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **sat_thuong** | Tổng sát thương trên thang gốc. |
-| **sat_thuong_log10** | Logarit cơ số 10 của sát thương, đã tạo ở Cell 02. |
-| **bins=24** | Chia miền giá trị thành 24 khoảng trong histogram. |
+| `hist_goc` | Biên và tần số 28 khoảng của tong_sat_thuong. |
+| `hist_log` | Biên và tần số 28 khoảng của np.log10(tong_sat_thuong). |
+| `g_goc, g_log` | Hai biểu đồ hình chữ nhật tương ứng với hai thang đo. |
 
-Biểu đồ trái dùng thang gốc; biểu đồ phải dùng log10. Trên thang log, tăng 1 đơn vị nghĩa là sát thương gấp 10 lần. Ví dụ log10 bằng 4 tương ứng khoảng 10.000 sát thương.
+#### Các hành động trong cell
+
+1. bang_histogram giữ đúng 28 khoảng của từng thang, số đếm tính bằng np.histogram.
+
+2. np.log10 đổi tong_sat_thuong sang log cơ số 10; không thay giá trị gốc trong tran_tft.
+
+3. geom_rect vẽ hai histogram theo xmin/xmax/height. | ghép hai thang, labs ghi đúng đơn vị trục; show() lưu hình.
 
 #### Lưu ý
 
@@ -909,25 +948,26 @@ Cell trình bày chuỗi hành động phân tích: lọc → tạo biến → n
 
 So sánh ba chiến thuật trong riêng các lobby có nhịp nhanh và tạo một bảng tóm tắt có thể đọc trực tiếp.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **tom_tat_nhanh** | Bảng kết quả sau toàn bộ pipeline cho lobby nhanh. |
-| **n** | Số lượt người chơi-trận trong nhóm chiến thuật. |
-| **xep_hang_tb** | Xếp hạng trung bình. Giá trị nhỏ hơn là tốt hơn. |
-| **ty_le_top4** | Trung bình của cột top4, tức tỷ lệ top 4. |
-| **ty_le_mau_cao** | Trung bình của mau_tu_50 trong nhóm. |
+| `tom_tat_nhanh` | Bảng tóm tắt chiến thuật trong riêng lobby Nhanh, index là chien_thuat. |
+| `con_nhieu_mau, d` | Cột Boolean mau_4_1 ≥ 50; d trong lambda là bảng đã lọc đi qua assign. |
+| `so_tran` | Số lượt người-chơi–trận trong từng chiến thuật của lobby nhanh. |
+| `placement_tb` | Placement trung bình; nhỏ hơn là tốt hơn. |
+| `ti_le_top4` | Trung bình top4 trong từng nhóm, đúng mẫu số của nhóm. |
+| `ti_le_con_nhieu_mau` | Trung bình cột con_nhieu_mau trong từng nhóm. |
 
-#### Từng hành động
+#### Các hành động trong cell
 
-1. **query("nhip_lobby == 'Nhanh'")** chỉ giữ các hàng thuộc lobby nhanh. Từ đây, mọi kết quả đều có điều kiện “trong lobby nhanh”.
-2. **assign(mau_tu_50=lambda d: ...)** tạo cột Boolean trên bảng đang đi qua pipeline. Tên **d** trong lambda đại diện cho DataFrame ở đúng bước đó.
-3. **groupby("chien_thuat", observed=True)** chia dữ liệu đã lọc thành ba nhóm chiến thuật.
-4. **agg(...)** tạo các cột tóm tắt có tên rõ ràng. Cú pháp cặp **("cột", "hàm")** chỉ cột nguồn và phép tính.
-5. **reset_index()** biến chien_thuat từ nhãn index nhóm trở lại thành một cột thường.
-6. **sort_values("ty_le_top4", ascending=False)** xếp tỷ lệ top 4 từ cao xuống thấp.
-7. **round(3)** làm tròn bảng hiển thị đến ba chữ số; dữ liệu gốc không bị làm tròn.
+1. query lọc lobby Nhanh. assign với lambda d tạo con_nhieu_mau trên chính bảng đã lọc.
+
+2. groupby("chien_thuat",observed=True) chỉ giữ nhóm thực có dữ liệu.
+
+3. agg named aggregation tính size và mean, mỗi cặp chỉ rõ cột nguồn/hàm. Mẫu số ti_le_top4 là so_tran của nhóm trong lobby Nhanh.
+
+4. sort_values("ti_le_top4",ascending=False) xếp từ cao xuống thấp. Cell giữ chien_thuat ở index; không reset_index hay round riêng ở đây.
 
 #### Cách đọc đầu ra
 
@@ -938,7 +978,7 @@ Trong dữ liệu mô phỏng, Fast 8 có tỷ lệ top 4 cao nhất trong lobby
 - **Loại:** Markdown
 - **ID:** tft-050-pipeline-question
 
-Cell yêu cầu xác định một hàng trong bảng kết quả đại diện cho gì: một **nhóm chiến thuật trong các lobby nhanh**, không còn là một người chơi-trận. Mẫu số của ty_le_top4 là n của từng dòng.
+Cell yêu cầu xác định một hàng trong bảng kết quả đại diện cho gì: một **nhóm chiến thuật trong các lobby nhanh**, không còn là một người chơi-trận. Mẫu số của ti_le_top4 là so_tran của từng dòng.
 
 ### Cell 50 — Lọc và nhóm trả lời hai câu hỏi khác nhau
 
@@ -949,18 +989,21 @@ Cell yêu cầu xác định một hàng trong bảng kết quả đại diện 
 
 Đối chiếu “chỉ xem Fast 8” với “giữ tất cả và so sánh theo chiến thuật”.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **fast8_only** | Bảng chỉ gồm các hàng có chiến thuật Fast 8. |
-| **all_by_strategy** | Bảng tóm tắt ba chiến thuật trên toàn dữ liệu. |
+| `tran_tft` | Bảng nguồn của cả hai cách phân tích. |
+| `placement_tb, ti_le_top4` | Hai thống kê được đặt tên bằng named aggregation. |
+| `display` | Hiển thị kết quả lọc Fast 8 và kết quả nhóm tất cả chiến thuật; cell không gán hai bảng này vào tên biến riêng. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**fast8_only.agg(...)** tính một bản tóm tắt duy nhất cho tập Fast 8: số hàng, hạng trung bình và tỷ lệ top 4. Vì DataFrame.agg áp dụng các hàm theo cột, cách hiển thị có thể có một số ô trống; điều quan trọng là đọc đúng giao giữa đại lượng và cột nguồn.
+1. Pipeline đầu query Fast 8 rồi agg hai thống kê, chỉ trả lời về Fast 8.
 
-**groupby(...).agg(...)** tạo một hàng cho mỗi chiến thuật. Đây là cấu trúc phù hợp hơn khi mục tiêu là so sánh nhóm.
+2. Pipeline sau groupby chiến thuật rồi agg cùng hai thống kê, tạo một hàng mỗi chiến thuật.
+
+3. display hiển thị hai kết quả trực tiếp. Bảng lọc agg có ô không áp dụng; không coi ô trống là một giá trị thống kê.
 
 #### Cách đọc
 
@@ -982,21 +1025,25 @@ Cell nhấn mạnh rằng lọc trước khi nhóm và nhóm trước khi lọc 
 
 Minh họa một lỗi logic rất phổ biến: lọc chỉ các ca thành công rồi mới tính tỷ lệ thành công.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **dung** | Tỷ lệ top 4 của từng chiến thuật tính trên tất cả hàng của chiến thuật. |
-| **sai** | Tỷ lệ top 4 sau khi đã lọc chỉ các hàng top4. |
+| `so_sanh_thu_tu` | Bảng ghép hai Series tỷ lệ của cùng ba chiến thuật. |
+| `Nhóm trước, tính tỉ lệ trên mọi trận` | Cột đúng câu hỏi tỷ lệ top4: mẫu số chứa cả thành công và không thành công. |
+| `Lọc top 4 trước, rồi lấy mean` | Cột minh họa thay đổi mẫu số: tất cả hàng còn lại đều True nên mean bằng 1. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-- **dung:** nhóm toàn bộ dữ liệu rồi lấy mean của top4. Mẫu số gồm cả top 4 và không top 4.
-- **sai:** query top4 trước, nên mọi giá trị còn lại đều là True. Trung bình của toàn 1 luôn bằng 1 hay 100%.
+1. Series đầu nhóm toàn bộ rồi lấy mean top4.
+
+2. Series sau query("top4") trước khi nhóm nên mẫu số chỉ còn hàng thành công và mean luôn 1.
+
+3. pd.concat với từ điển đặt nhãn mô tả rõ hai cột; axis=1 ghép cột theo index chiến thuật. Code hợp lệ về Python nhưng cột thứ hai trả lời câu hỏi khác.
 
 #### Bài học
 
-Tên biến **sai** không nói Python đã báo lỗi; mã vẫn chạy chính xác. Sai ở đây là câu hỏi phân tích và mẫu số. Đây là lý do phải mô tả tập dữ liệu sau mỗi bước lọc.
+Nhãn cột “Lọc top 4 trước, rồi lấy mean” không nói Python đã báo lỗi; mã vẫn chạy chính xác. Sai ở đây là câu hỏi phân tích và mẫu số. Đây là lý do phải mô tả tập dữ liệu sau mỗi bước lọc.
 
 ### Cell 53 — Mở đầu tóm tắt theo nhóm
 
@@ -1014,27 +1061,27 @@ Cell chuẩn bị mở rộng từ một tỷ lệ sang nhiều đại lượng 
 
 Tạo một bảng mô tả đầy đủ hơn cho ba chiến thuật trên toàn bộ dữ liệu.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **tom_tat_chien_thuat** | Bảng một hàng cho mỗi chiến thuật. |
-| **n** | Số lượt người chơi-trận. |
-| **xep_hang_tb** | Hạng trung bình. |
-| **ty_le_top4** | Tỷ lệ hạng 1–4. |
-| **ty_le_thang** | Tỷ lệ hạng 1, được tính bằng lambda. |
-| **mau_tb** | Máu trung bình. |
-| **vang_tb** | Vàng trung bình. |
+| `tom_tat_chien_thuat` | Bảng một hàng cho mỗi chiến thuật trên toàn dữ liệu. |
+| `so_tran` | Số lượt người-chơi–trận. |
+| `placement_tb` | Placement trung bình. |
+| `ti_le_top4, ti_le_thang` | Trung bình các cột Boolean top4 và win. |
+| `mau_4_1_tb, vang_4_1_tb` | Trung bình máu và vàng tại stage 4-1. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**lambda s: (s == 1).mean()** nhận Series hạng của một nhóm, đổi điều kiện hạng bằng 1 thành Boolean rồi tính trung bình. Đây là cách tạo tỷ lệ chiến thắng mà không cần tạo cột riêng trước.
+1. groupby chiến thuật với observed=True chia toàn bảng thành ba nhóm.
 
-**reset_index** đưa nhãn chiến thuật vào cột; **round(3)** chỉ phục vụ hiển thị.
+2. agg lấy size của placement, mean của placement/top4/win/máu/vàng; win đã là Boolean nên không cần lambda tạo lại điều kiện thắng.
+
+3. reset_index đưa chien_thuat thành cột; không làm tròn số nguồn. Cách pandas hiển thị đã được đặt ở Cell 01.
 
 #### Cách đọc
 
-Không nên chỉ nhìn một cột. Ví dụ một chiến thuật có tỷ lệ top 4 tốt hơn có thể đồng thời có phân phối bậc hoặc nhịp lobby khác. **n** luôn cần được báo cáo cùng tỷ lệ để đánh giá độ ổn định.
+Không nên chỉ nhìn một cột. Ví dụ một chiến thuật có tỷ lệ top 4 tốt hơn có thể đồng thời có phân phối bậc hoặc nhịp lobby khác. **so_tran** luôn cần được báo cáo cùng tỷ lệ để đánh giá độ ổn định.
 
 ### Cell 55 — Vẽ tỷ lệ top 4 từ bảng đã tóm tắt
 
@@ -1043,13 +1090,22 @@ Không nên chỉ nhìn một cột. Ví dụ một chiến thuật có tỷ l�
 
 #### Mục đích
 
-Chuyển cột ty_le_top4 của bảng tóm tắt thành biểu đồ cột phần trăm.
+Chuyển cột ti_le_top4 của bảng tóm tắt thành biểu đồ cột phần trăm.
 
-#### Tên và hành động
+#### Tên biến và đối tượng
 
-**set_index("chien_thuat")["ty_le_top4"]** đặt nhãn chiến thuật trên trục x và chọn đúng Series cần vẽ. **plot(kind="bar")** vẽ cột. Danh sách **color=[...]** lấy màu theo thứ tự CHIEN_THUAT.
+| Tên | Giải thích |
+|---|---|
+| `tom_tat_chien_thuat` | Bảng đã tóm tắt, không phải dữ liệu từng trận. |
+| `g` | Biểu đồ cột của ti_le_top4, có đường tham chiếu 0.5. |
 
-**ax.yaxis.set_major_formatter(PercentFormatter(1.0))** cho biết dữ liệu tỷ lệ đang nằm trong thang 0–1; formatter đổi 0.5 thành 50%. **set_ylim(0, 0.7)** đặt gốc trục ở 0 và chừa khoảng phía trên.
+#### Các hành động trong cell
+
+1. ggplot nhận bảng tóm tắt; aes đặt chien_thuat lên x và ti_le_top4 lên y. geom_col dùng đúng chiều cao đã tính, không đếm hàng lần nữa.
+
+2. scale_fill_manual giữ màu. geom_hline(yintercept=0.5,linetype="dashed") tạo mốc chung toàn lobby; caption giải thích đường này.
+
+3. scale_y_continuous(labels=phan_tram,limits=(0,0.75)) đổi nhãn thành phần trăm và đặt gốc 0.
 
 #### Cách đọc
 
@@ -1071,16 +1127,19 @@ Cell đặt yêu cầu phân tầng kết quả theo cả nhịp lobby và chi�
 
 Tạo sáu nhóm từ tích của 2 mức nhịp lobby và 3 chiến thuật.
 
-#### Tên biến và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **tom_tat_nhip** | Bảng kết quả theo hai biến phân nhóm. |
-| **groupby(["nhip_lobby", "chien_thuat"])** | Chia dữ liệu theo mọi tổ hợp thực sự xuất hiện. |
-| **n** | Cỡ mẫu của từng tổ hợp. |
-| **ty_le_top4** | Tỷ lệ top 4 trong đúng tổ hợp đó. |
+| `top4_theo_nhip` | Bảng nhóm theo nhịp lobby × chiến thuật. |
+| `so_tran` | Số lượt trong đúng tổ hợp nhóm. |
+| `ti_le_top4` | Tỷ lệ top4 với mẫu số là số lượt của đúng tổ hợp đó. |
 
-**sort_values(["nhip_lobby", "chien_thuat"])** sắp bảng để các hàng cùng nhịp nằm gần nhau. Vì chien_thuat là categorical có thứ tự, thứ tự chiến thuật được giữ như đã khai báo.
+#### Các hành động trong cell
+
+1. groupby(["nhip_lobby","chien_thuat"],observed=True) tạo các tổ hợp thực xuất hiện.
+
+2. agg tính size của top4 và mean top4. reset_index đưa hai biến nhóm thành cột để đọc sáu hàng.
 
 #### Cách đọc
 
@@ -1102,23 +1161,25 @@ Cell chỉ ra rằng kết luận gộp có thể khác kết luận trong từn
 
 Xây dựng một bảng nhỏ trong đó Fast 8 có tỷ lệ top 4 cao hơn Reroll ở cả lobby chậm lẫn nhanh, nhưng thấp hơn khi gộp hai loại lobby.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **simpson** | DataFrame bốn hàng chứa số top 4 và tổng số trận theo nhịp × chiến thuật. |
-| **so_top4** | Số lượt đạt top 4. |
-| **so_tran** | Tổng lượt người chơi-trận, là mẫu số. |
-| **ty_le_top4** | so_top4 chia so_tran. |
-| **trong_nhom** | Bảng pivot tỷ lệ trong từng nhịp. |
-| **gop** | Tỷ lệ sau khi cộng tử số và mẫu số qua hai nhịp. |
+| `simpson_tft` | Bảng bốn hàng nhịp lobby × chiến thuật chứa top4 và tong. |
+| `top4, tong` | Số lượt đạt top4 và tổng lượt trong từng tổ hợp. |
+| `ti_le_top4` | top4/tong, tính riêng mỗi hàng. |
+| `theo_nhip` | Bảng pivot tỷ lệ, hàng theo Chậm/Nhanh và cột theo chiến thuật. |
+| `gop` | Bảng cộng top4, tong qua hai nhịp rồi mới chia để tính tỷ lệ gộp. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **pd.DataFrame({...})** tạo dữ liệu đếm, không tạo từng quan sát riêng.
-2. Tỷ lệ được tính trực tiếp bằng phép chia hai cột.
-3. **pivot** chuyển dữ liệu dài thành bảng có hàng là nhịp và cột là chiến thuật.
-4. **groupby("chien_thuat")[[...]].sum()** cộng số top 4 và số trận trước khi chia. Đây là cách gộp tỷ lệ đúng, có trọng số theo mẫu số.
+1. pd.DataFrame tạo đúng bốn hàng số đếm. Phép chia top4/tong tạo tỷ lệ từng hàng.
+
+2. pivot và loc[["Chậm","Nhanh"]] đặt thứ tự hàng trong bảng tỷ lệ có điều kiện.
+
+3. groupby(...)[["top4","tong"]].sum() cộng tử và mẫu trước khi chia; không lấy mean đơn giản của tỷ lệ nhóm.
+
+4. print/display trình bày hai bảng để đối chiếu tỷ lệ có điều kiện và tỷ lệ gộp.
 
 #### Cách đọc số liệu
 
@@ -1137,19 +1198,22 @@ Sự đảo chiều xảy ra vì Fast 8 có phần lớn quan sát ở lobby nha
 
 Đặt tỷ lệ có điều kiện và tỷ lệ gộp cạnh nhau để thấy sự đảo chiều.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **x** | Vị trí số của hai nhịp trên trục x. |
-| **width** | Độ rộng mỗi cột trong một cặp. |
-| **trong_nhom.loc[..., ...]** | Lấy tỷ lệ của một chiến thuật theo từng nhịp. |
+| `bang_simpson` | Bảng dài ghép tỷ lệ từng nhịp và tỷ lệ gộp, không tính lại tỷ lệ. |
+| `nhom, o` | Nhãn trục x và nhãn facet; categorical giữ ô từng nhịp ở trái, ô gộp ở phải. |
+| `d` | Bảng tạm trong lambda tạo nhom từ chien_thuat ở ô gộp. |
+| `g` | Một biểu đồ cột dodge, chia hai facet free_x và dùng cùng trục y 0–100%. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Biểu đồ trái dịch cột Reroll sang trái **x - width/2** và Fast 8 sang phải **x + width/2**, tạo các cặp có thể so sánh. Biểu đồ phải dùng Series **gop["ty_le_top4"]** để vẽ kết quả gộp.
+1. pd.concat ghép dữ liệu từng nhịp với bảng gộp. assign đặt nhãn nhom/o; không tính lại thống kê.
 
-Cả hai trục dùng **PercentFormatter(1.0)**. Trục trái giới hạn 0–1 để hiển thị đầy đủ xác suất; trục phải dùng cùng ngữ nghĩa phần trăm.
+2. pd.Categorical cho o giữ thứ tự trái là từng nhịp, phải là gộp. facet_wrap(...,scales="free_x") cho mỗi ô có nhãn x phù hợp.
+
+3. geom_col(position="dodge") đặt cột hai chiến thuật cạnh nhau; cả hai facet dùng cùng y 0–100%. scale_fill_manual giữ bảng mã màu.
 
 #### Bài học
 
@@ -1173,19 +1237,25 @@ Cell cũng nhắc rằng phân tầng là công cụ mô tả quan trọng nhưn
 
 So sánh bảng đếm với bảng tỷ lệ top 4 theo loại lõi bổ trợ.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **dem** | Bảng chéo số lượng tuyệt đối. |
-| **ty_le** | Bảng chéo tỷ lệ trong từng hàng. |
-| **pd.crosstab** | Hàm lập bảng chéo giữa hai biến phân loại. |
-| **margins=True** | Thêm hàng/cột tổng có nhãn Tổng. |
-| **normalize="index"** | Chia mỗi ô cho tổng của chính hàng đó. |
+| `bang_loi` | Bảng chéo số đếm loại lõi × top4, reindex theo LOI. |
+| `ti_le_loi` | Bảng chéo normalize="index": mỗi hàng được chia cho tổng chính hàng đó. |
+| `dem_dai, ti_le_dai` | Hai bảng dài dùng để vẽ, giữ lại cả Ngoài top 4 và Top 4. |
+| `ket_qua, n, rate` | Nhãn kết quả, số đếm và tỷ lệ; categorical giữ thứ tự loại lõi như LOI. |
+| `g_dem, g_ty_le` | Biểu đồ cột cạnh nhau của số đếm và cột chồng tỷ lệ. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**dem** đếm số quan sát trong từng tổ hợp lõi × top4. **ty_le** chuẩn hóa theo hàng, nên hai cột False và True của mỗi loại lõi cộng thành 1. Sau đó chỉ cột **True** được chọn để hiển thị tỷ lệ top 4.
+1. pd.crosstab đếm các tổ hợp; normalize="index" chia từng hàng cho tổng của chính loại lõi đó. reindex(LOI) giữ thứ tự Kinh tế, Giao tranh, Linh hoạt.
+
+2. rename đổi True/False thành nhãn có nghĩa; reset_index và melt tạo bảng dài. pd.Categorical giữ thứ tự nhóm sau biến đổi.
+
+3. Hình trái geom_col(position="dodge") so sánh số đếm. Hình phải position_stack(reverse=True) đặt Ngoài top 4 dưới, Top 4 trên theo bản gốc.
+
+4. labels=phan_tram chỉ đổi nhãn trục của tỷ lệ. Hai loại biểu đồ giữ mẫu số khác nhau và được ghép bằng |.
 
 #### Cách đọc
 
@@ -1214,21 +1284,28 @@ Cell chuyển từ xử lý dữ liệu sang quyết định trình bày. Cùng 
 
 Cho thấy tác động thị giác của giới hạn trục y.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **rate** | Series tỷ lệ top 4, lấy từ tom_tat_chien_thuat và đánh index bằng chiến thuật. |
-| **axes[0]** | Biểu đồ dùng trục đầy đủ từ 0 đến 1. |
-| **axes[1]** | Biểu đồ dùng trục hẹp từ 0.4 đến 0.6. |
+| `rates` | Series ti_le_top4 có index chien_thuat, reindex đúng CHIEN_THUAT. |
+| `bang_rates` | Bảng dùng cho cả hai hình; categorical giữ cùng thứ tự chiến thuật. |
+| `lo, hi` | Cận dưới max(0, min(rates) − 0.035) và cận trên min(1, max(rates) + 0.035). |
+| `g_day_du, g_cat` | Hai hình cùng dữ liệu, màu và geom; khác coord_cartesian với ylim=(0,1) hoặc (lo,hi). |
 
-#### Các hành động
+#### Các hành động trong cell
 
-Cả hai ô vẽ cùng dữ liệu, cùng màu, cùng loại cột. Chỉ **set_ylim** khác nhau. Vòng lặp cuối gắn định dạng phần trăm cho cả hai trục.
+1. set_index, chọn Series và reindex giữ tỷ lệ theo đúng thứ tự CHIEN_THUAT. reset_index tạo bang_rates; categorical giữ thứ tự trên x.
+
+2. Tính lo/hi đúng cận động ±0.035 quanh min/max, giới hạn trong 0–1.
+
+3. Cả hai hình dùng cùng ggplot, geom_col và bảng màu; chỉ coord_cartesian(ylim=...) khác nhau. coord_cartesian cắt khung nhìn, không loại hay tính lại dữ liệu.
+
+4. Định dạng phần trăm và ghép cạnh nhau giúp thấy tác động của phạm vi trục.
 
 #### Cách đọc
 
-Biểu đồ phải phóng đại chênh lệch vì bỏ phần 0–40% của trục. Với biểu đồ cột, chiều dài cột thường được so từ gốc 0, nên cắt trục đặc biệt dễ gây ấn tượng sai. Nếu cần phóng to khác biệt, nên báo rõ và cân nhắc dùng điểm với khoảng tin cậy.
+Biểu đồ phải phóng đại chênh lệch vì bỏ phần trục từ 0 tới cận **lo**. Với biểu đồ cột, chiều dài cột thường được so từ gốc 0, nên cắt trục đặc biệt dễ gây ấn tượng sai. Nếu cần phóng to khác biệt, nên báo rõ và cân nhắc dùng điểm với khoảng tin cậy.
 
 ### Cell 66 — Nguyên tắc chọn trục
 
@@ -1257,20 +1334,21 @@ Cell đặt bài toán theo hai tầng: trước hết so sánh gộp theo mức
 
 So sánh các quan sát có máu dưới 50 với các quan sát có máu từ 50 trở lên trên toàn bộ dữ liệu.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **nhom_mau** | Nhãn văn bản tạo từ điều kiện mau_tu_50. |
-| **pooled** | Bảng tóm tắt gộp theo nhóm máu. |
-| **np.where** | Chọn một trong hai nhãn cho mỗi hàng dựa trên điều kiện Boolean. |
-| **n** | Số lượt người chơi-trận trong nhóm. |
-| **ty_le_top4** | Tỷ lệ top 4 của nhóm. |
-| **xep_hang_tb** | Hạng trung bình của nhóm. |
+| `phan_tich_mau` | Bảng gộp theo hai nhóm máu, chưa điều kiện hóa theo bậc. |
+| `nhom_mau` | np.where tạo nhãn Ít nhất 50 hoặc Dưới 50 từ mau_4_1. |
+| `so_tran, ti_le_top4, placement_tb` | Cỡ mẫu, tỷ lệ top4 và placement trung bình trong mỗi nhóm. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**assign(nhom_mau=np.where(...))** thêm nhãn dễ đọc mà vẫn giữ cột Boolean gốc. Sau đó groupby và agg tính ba đại lượng cho hai nhóm.
+1. assign + np.where đặt nhãn hai nhóm máu theo ngưỡng 50.
+
+2. groupby("nhom_mau",observed=True) nhóm toàn bộ bậc. agg tính size top4, mean top4 và mean placement.
+
+3. sort_index xếp nhãn nhóm; một hàng đầu ra là một nhóm máu, không còn là một người chơi.
 
 #### Cách đọc
 
@@ -1285,15 +1363,21 @@ Trong dữ liệu mô phỏng, nhóm máu ≥ 50 có tỷ lệ top 4 cao hơn v�
 
 Kiểm tra mối liên hệ máu–top 4 riêng trong Silver, Gold, Platinum và Diamond.
 
-#### Tên biến và hành động
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **conditioned** | Bảng có một hàng cho mỗi tổ hợp bậc × nhóm máu. |
-| **groupby(["bac", "nhom_mau"])** | Phân tầng đồng thời theo hai biến. |
-| **observed=True** | Không tạo các tổ hợp phân loại không xuất hiện. |
+| `phan_tich_mau_theo_bac` | Bảng theo tổ hợp bac_xep_hang × nhom_mau. |
+| `nhom_mau` | Hai mức máu giữ cùng định nghĩa ≥ 50 với Cell 68. |
+| `so_tran, ti_le_top4` | Cỡ mẫu và tỷ lệ top4 trong đúng bậc và nhóm máu. |
 
-**agg** tính n, tỷ lệ top 4 và hạng trung bình trong mỗi tổ hợp. **reset_index** đưa cả hai biến phân nhóm về cột thường.
+#### Các hành động trong cell
+
+1. assign tạo cùng nhãn nhom_mau như Cell 68.
+
+2. groupby(["bac_xep_hang","nhom_mau"],observed=True) thêm điều kiện bậc trước khi tính tỷ lệ.
+
+3. agg size/mean top4 và reset_index tạo bảng có hai biến nhóm; một hàng là một tổ hợp bậc × nhóm máu.
 
 #### Cách đọc
 
@@ -1308,16 +1392,21 @@ So hai nhóm máu trong cùng một bậc. Nếu mối liên hệ vẫn cùng ch
 
 Biến bảng conditioned thành biểu đồ cột ghép để so sánh hai nhóm máu trong từng bậc.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **cond_plot** | Bảng pivot có hàng là bậc, cột là nhóm máu và ô là tỷ lệ top 4. |
-| **pivot** | Đổi dữ liệu từ dạng dài sang dạng rộng để vẽ cột ghép. |
+| `nhom` | Thứ tự Dưới 50, Ít nhất 50 của các cột trong mỗi bậc. |
+| `bang_mau` | Bản sao bảng tỷ lệ đã điều kiện hóa, thêm thứ tự categorical cho nhom_mau. |
+| `g` | Biểu đồ cột dodge theo bậc, tỷ lệ trên y, màu tô theo nhóm máu. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**pivot(index="bac", columns="nhom_mau", values="ty_le_top4")** tạo hai Series tỷ lệ đặt cạnh nhau cho mỗi bậc. **reindex(BAC)** giữ thứ tự bậc đã quy ước. **plot(kind="bar")** vẽ cột ghép; trục y được hiển thị dạng phần trăm và bắt đầu ở 0.
+1. copy giữ bảng tóm tắt gốc. pd.Categorical quy định thứ tự Dưới 50 rồi Ít nhất 50.
+
+2. aes đặt bậc lên x, tỷ lệ lên y, nhóm máu vào fill; geom_col(position="dodge",width=0.72) đặt hai cột cạnh nhau trong mỗi bậc.
+
+3. scale_fill_manual giữ màu hai nhóm; scale_y_continuous đặt 0–100% và phan_tram đổi nhãn. Không tính lại tỷ lệ trong lớp vẽ.
 
 #### Cách đọc
 
@@ -1348,25 +1437,22 @@ Cell đặt câu hỏi tổng hợp: số lần scout liên hệ thế nào vớ
 
 Chuyển số lần scout từ biến đếm sang ba mức dễ so sánh, rồi tính kết quả cho từng mức.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **case** | Bảng dùng cho case study, đã loại hàng thiếu scouting. |
-| **nhom_scout** | Nhóm số lần scout: 0–1, 2–3 hoặc ≥4. |
-| **bins** | Các mốc chia khoảng: từ âm vô cùng đến 1, 3 và dương vô cùng. |
-| **labels** | Nhãn tương ứng cho ba khoảng. |
-| **include_lowest=True** | Bảo đảm giá trị ở cận thấp nhất được đưa vào khoảng đầu. |
-| **right=True** | Mỗi khoảng đóng ở bên phải; ví dụ khoảng đầu nhận giá trị ≤1. |
-| **case_summary** | Bảng n, tỷ lệ top 4 và hạng trung bình theo nhóm scout. |
+| `case_scout` | Bảng thống kê sau bỏ scout thiếu, tạo nhóm scout, nhóm và tóm tắt. |
+| `d` | Bảng đã dropna đi qua lambda trong assign. |
+| `nhom_scout` | Các nhãn 0–1 lần, 2–3 lần, Từ 4 lần từ các biên −0.1, 1, 3, +∞. |
+| `n, ti_le_top4, placement_tb` | Số lượt, tỷ lệ top4 và placement trung bình trong từng nhóm scout. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-1. **dropna(subset=["so_lan_scout"])** chỉ loại hàng không quan sát được scouting.
-2. **copy()** tạo bản sao độc lập, tránh cảnh báo và tránh sửa một lát cắt của DataFrame gốc.
-3. **pd.cut** phân loại biến số theo các ngưỡng đã định trước.
-4. **groupby("nhom_scout", observed=True)** chia ba nhóm.
-5. **agg** tính cỡ mẫu và kết quả.
+1. dropna chỉ giữ hàng có scout. assign với lambda d gọi pd.cut trên bảng này.
+
+2. pd.cut mặc định đóng bên phải: (−0.1,1], (1,3], (3,+∞]. Với số đếm không âm, ba nhóm đúng 0–1, 2–3 và từ 4 lần.
+
+3. groupby nhom_scout với observed=True và agg tạo n, ti_le_top4, placement_tb; reset_index đưa nhãn nhóm thành cột.
 
 #### Cách đọc
 
@@ -1381,20 +1467,22 @@ Trong dữ liệu mô phỏng, nhóm scout ≥4 có tỷ lệ top 4 cao nhất. 
 
 Trình bày tỷ lệ top 4 theo ba nhóm scouting và ghi trực tiếp cỡ mẫu lên cột.
 
-#### Tên biến
+#### Tên biến và đối tượng
 
 | Tên | Giải thích |
 |---|---|
-| **bars** | Tập hợp ba hình chữ nhật do ax.bar trả lại. |
-| **bar** | Một cột riêng lẻ trong vòng lặp. |
-| **n** | Cỡ mẫu ứng với cột đang xét. |
-| **get_x(), get_width(), get_height()** | Lấy vị trí, độ rộng và chiều cao của cột để đặt nhãn. |
+| `bang_case` | Bản sao case_scout có thêm hai cột phục vụ nhãn. |
+| `d, nhan_n` | Bảng đi qua lambda và chuỗi nhãn "n = ..." của cỡ mẫu. |
+| `y_nhan` | ti_le_top4 + 0.025 để nhãn nằm trên đầu cột. |
+| `g` | Biểu đồ cột tỷ lệ có geom_text ghi cỡ mẫu. |
 
-#### Các hành động
+#### Các hành động trong cell
 
-**ax.bar** nhận nhãn nhóm ở trục x và tỷ lệ ở trục y. Vòng lặp **zip(bars, case_summary["n"])** ghép mỗi cột với đúng cỡ mẫu. **ax.text** đặt chuỗi “n=...” hơi cao hơn đỉnh cột.
+1. assign tạo nhan_n từ n.astype(str) và y_nhan cao hơn đầu cột 0.025.
 
-**ha="center"** căn ngang giữa; **va="bottom"** đặt đáy văn bản tại vị trí y. Trục y dùng định dạng phần trăm và bắt đầu từ 0.
+2. geom_col dùng ti_le_top4 đã tính; geom_text ánh xạ y_nhan/nhan_n để ghi cỡ mẫu.
+
+3. scale_fill_manual chọn màu nhóm; scale_y_continuous đặt 0–100%, phan_tram đổi nhãn; show() hiển thị PNG.
 
 #### Cách đọc
 
@@ -1427,7 +1515,7 @@ Câu hỏi kết thúc yêu cầu người học tự thiết kế một phân t
 
 ---
 
-## Bảng tra nhanh các hành động pandas/matplotlib trong notebook
+## Bảng tra nhanh các hành động pandas/Plotnine trong notebook
 
 | Hành động | Cách hiểu ngắn gọn | Cell tiêu biểu |
 |---|---|---|
@@ -1438,15 +1526,21 @@ Câu hỏi kết thúc yêu cầu người học tự thiết kế một phân t
 | **groupby** | Chia dữ liệu thành nhóm để tính riêng. | 48, 50, 54, 57, 69, 73 |
 | **agg** | Tạo một hay nhiều thống kê tóm tắt. | 48, 50, 54, 57, 68, 69, 73 |
 | **reset_index** | Đưa biến nhóm từ index trở lại cột. | 48, 54, 57, 69, 73 |
-| **pivot** | Chuyển bảng dài thành bảng rộng. | 59, 70 |
+| **pivot** | Chuyển bảng dài thành bảng rộng. | 59 |
 | **crosstab** | Lập bảng chéo đếm hoặc tỷ lệ. | 62 |
-| **rolling** | Tính thống kê trên cửa sổ các quan sát liên tiếp. | 20, 25 |
-| **scatter** | Vẽ từng quan sát của hai biến số. | 06, 08, 12, 14, 28, 33 |
-| **plot** | Vẽ đường khi các điểm có thứ tự có nghĩa. | 16, 20, 22, 25 |
-| **boxplot** | So sánh phân phối một biến số giữa các nhóm. | 06, 10, 30 |
-| **bar** | So sánh số lượng hoặc tỷ lệ đã tóm tắt. | 06, 55, 60, 65, 70, 74 |
-| **invert_yaxis** | Đưa hạng 1 lên phía trên. | Nhiều cell có trục xếp hạng |
-| **PercentFormatter** | Hiển thị tỷ lệ 0–1 thành phần trăm. | 55, 60, 65, 70, 74 |
+| **rolling** | Tính thống kê trên cửa sổ các quan sát liên tiếp. | 02, 25 |
+| **ggplot + aes + geom_point** | Chọn dữ liệu, ánh xạ và vẽ từng quan sát của hai biến số. | 06, 08, 12, 14, 28, 33 |
+| **geom_line** | Vẽ đường theo biến x có thứ tự; nhóm đường qua aes. | 16, 20, 22, 25 |
+| **geom_boxplot** | So sánh phân phối một biến số giữa các nhóm. | 06, 10, 30 |
+| **geom_col** | Vẽ chiều cao số lượng hoặc tỷ lệ đã tóm tắt. | 06, 55, 60, 65, 70, 74 |
+| **scale_y_reverse** | Đưa hạng 1 lên phía trên, giữ đầy đủ hạng 1–8. | Nhiều cell có trục placement |
+| **scale_y_continuous(labels=phan_tram)** | Giữ tỷ lệ 0–1, đổi nhãn trục thành phần trăm. | 55, 60, 65, 70, 74 |
+| **facet_wrap** | Chia một biểu đồ thành các ô theo biến nhóm. | 12, 60 |
+| **coord_cartesian** | Chỉ thay phạm vi nhìn, không loại dữ liệu. | 65 |
+| **show()** | Hiển thị và lưu output PNG của biểu đồ Plotnine. | Các cell vẽ |
+| **melt** | Chuyển nhiều cột giá trị thành bảng dài cho aes/geom. | 20, 22, 25, 62 |
+| **geom_rect + bang_histogram** | Vẽ histogram với đúng biên và tần số/mật độ đã tính. | 06, 45 |
+| **\|**, **/** | Ghép các biểu đồ khác nhau cạnh nhau hoặc trên/dưới. | 06, 10, 14, 16, 20, 45, 62, 65 |
 
 ## Cách tự kiểm tra sau khi học
 
