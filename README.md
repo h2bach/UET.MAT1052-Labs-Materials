@@ -26,9 +26,9 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | 2 | Tóm tắt dữ liệu (1/3) | Bảng liên hợp; số đếm và tỉ lệ; dữ liệu phân loại; dữ liệu số; biểu đồ và mô tả phân phối | [`W2_TomTatDuLieu.ipynb`](./W2_TomTatDuLieu.ipynb) |
 | 3 | Tóm tắt dữ liệu (2/3) | Ngữ pháp đồ họa; thuộc tính hình ảnh; hình học; điều kiện hóa; lọc; pipeline và phép toán theo nhóm | [`W3_NguPhapDoHoaVaDieuKienHoa.ipynb`](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
 | 4 | Tóm tắt dữ liệu (3/3) | Tương quan; hồi quy tuyến tính đơn; hồi quy đa biến; biến phân loại và diễn giải hệ số | [`W4_TuongQuanVaHoiQuyTuyenTinh.ipynb`](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
-| 5 | Khái quát dữ liệu (1/7) | Nền tảng và tiên đề xác suất; sơ đồ Venn; xác suất có điều kiện; độc lập; quy tắc cộng và nhân | Chưa có trong repository |
-| 6 | Khái quát dữ liệu (2/7) | Phân phối xác suất; quy tắc đếm; biến ngẫu nhiên rời rạc; nhị thức, siêu bội và hàm phân phối tích lũy | Chưa có trong repository |
-| 7 | Khái quát dữ liệu (3/7) | Kỳ vọng; phương sai; độ lệch chuẩn; phân phối liên tục; tổng và trung bình; định lý giới hạn trung tâm | Chưa có trong repository |
+| 5 | Khái quát dữ liệu (1/7) | Nền tảng và tiên đề xác suất; sơ đồ Venn; xác suất có điều kiện; độc lập; quy tắc cộng và nhân | [`W5_NenTangVaTinhToanXacSuat.ipynb`](./W5_NenTangVaTinhToanXacSuat.ipynb) — branch review |
+| 6 | Khái quát dữ liệu (2/7) | Phân phối xác suất; quy tắc đếm; biến ngẫu nhiên rời rạc; nhị thức, siêu bội và hàm phân phối tích lũy | [`W6_PhanPhoiVaBienNgauNhien.ipynb`](./W6_PhanPhoiVaBienNgauNhien.ipynb) — branch review |
+| 7 | Khái quát dữ liệu (3/7) | Kỳ vọng; phương sai; độ lệch chuẩn; phân phối liên tục; tổng và trung bình; định lý giới hạn trung tâm | [`W7_KyVongPhuongSaiVaXapXiChuan.ipynb`](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) — branch review |
 | 8 | Kiểm tra giữa kỳ | Ôn tập và đánh giá thống kê mô tả, trực quan hóa, xác suất và các phân phối thông dụng | Chưa có trong repository |
 | 9 | Khái quát dữ liệu (5/7) | Mẫu và quần thể; nguồn sai số; phân phối mẫu; khoảng tin cậy cho trung bình và tỉ lệ | Chưa có trong repository |
 | 10 | Khái quát dữ liệu (6/7) | Bootstrap; mở đầu kiểm định giả thuyết; p-value và các thành phần của một kiểm định | Chưa có trong repository |
@@ -42,10 +42,15 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 
 | Tuần | Trọng tâm thực hành | Dữ liệu tiêu biểu | Mở trên Colab |
 |---|---|---|---|
-| [Tuần 1 - Câu hỏi và dữ liệu](./W1_CauHoiVaDuLieu.ipynb) | Bốn loại khẳng định; đơn vị quan sát, biến, giá trị; dữ liệu số và phân loại; cấu trúc data frame; giới hạn của dữ liệu | `seattlepets`, `email50`, `loan50`, `mcu_films`, `penguins` | [Mở W1 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W1_CauHoiVaDuLieu.ipynb) |
-| [Tuần 2 - Tóm tắt dữ liệu](./W2_TomTatDuLieu.ipynb) | Bảng đếm và bảng liên hợp; tỉ lệ có điều kiện; histogram, density, violin, boxplot; trung bình, trung vị, mốt, phương sai, độ lệch chuẩn và IQR | `penguins`, `loans`, `loan50`, `gpa_study_hours` | [Mở W2 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W2_TomTatDuLieu.ipynb) |
-| [Tuần 3 - Ngữ pháp đồ họa và điều kiện hóa](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) | Dữ liệu - ánh xạ - hình học; lọc; pipeline; `groupby`; tóm tắt theo nhóm; phân phối biên và có điều kiện; nghịch lý Simpson | `penguins`, `arbuthnot`, `msleep` | [Mở W3 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
-| [Tuần 4 - Tương quan và hồi quy tuyến tính](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) | Biểu đồ phân tán; tương quan Pearson; hồi quy đơn và đa biến; phần dư; bình phương tối thiểu; ngoại suy; biến chỉ báo; nhiễu và giới hạn của diễn giải nhân quả | `poverty_mo_phong`, `allbacks`, `zagat` | [Mở W4 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
+| [Tuần 1 - Câu hỏi và dữ liệu](./W1_CauHoiVaDuLieu.ipynb) | Bốn loại khẳng định; đơn vị quan sát, biến, giá trị; dữ liệu số và phân loại; cấu trúc data frame; giới hạn của dữ liệu | `seattlepets`, `email50`, `loan50`, `mcu_films`, `penguins` | [Mở W1 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W1_CauHoiVaDuLieu.ipynb) |
+| [Tuần 2 - Tóm tắt dữ liệu](./W2_TomTatDuLieu.ipynb) | Bảng đếm và bảng liên hợp; tỉ lệ có điều kiện; histogram, density, violin, boxplot; trung bình, trung vị, mốt, phương sai, độ lệch chuẩn và IQR | `penguins`, `loans`, `loan50`, `gpa_study_hours` | [Mở W2 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W2_TomTatDuLieu.ipynb) |
+| [Tuần 3 - Ngữ pháp đồ họa và điều kiện hóa](./W3_NguPhapDoHoaVaDieuKienHoa.ipynb) | Dữ liệu - ánh xạ - hình học; lọc; pipeline; `groupby`; tóm tắt theo nhóm; phân phối biên và có điều kiện; nghịch lý Simpson | `penguins`, `arbuthnot`, `msleep` | [Mở W3 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W3_NguPhapDoHoaVaDieuKienHoa.ipynb) |
+| [Tuần 4 - Tương quan và hồi quy tuyến tính](./W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) | Biểu đồ phân tán; tương quan Pearson; hồi quy đơn và đa biến; phần dư; bình phương tối thiểu; ngoại suy; biến chỉ báo; nhiễu và giới hạn của diễn giải nhân quả | `poverty_mo_phong`, `allbacks`, `zagat` | [Mở W4 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W4_TuongQuanVaHoiQuyTuyenTinh.ipynb) |
+| [Tuần 5 - Nền tảng và tính toán xác suất](./W5_NenTangVaTinhToanXacSuat.ipynb) | Biến cố; tiên đề; có điều kiện; độc lập; toàn phần và Bayes; đủ 18 bài tập gốc | Bảng số đếm của slide; phép liệt kê; mô phỏng xúc xắc | [Mở W5 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W5_NenTangVaTinhToanXacSuat.ipynb) |
+| [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W6_PhanPhoiVaBienNgauNhien.ipynb) |
+| [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/notebooks/w05-w07-matplotlib-plotly/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
+
+Ba notebook Tuần 5–7 có đầy đủ bài giảng, tính tay, thực hành và đáp án thu gọn. Bản Plotly/Matplotlib nằm ở branch `notebooks/w05-w07-matplotlib-plotly`; xem [báo cáo review và kiểm chứng](./REVIEW_W05_W07.md). Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
 Các notebook sử dụng `numpy`, `pandas`, `matplotlib`, `scipy`, `plotly` và `statsmodels`. Đồ thị Plotly hỗ trợ interactive learning đối với các dữ liệu số/hình ảnh có thể thay đổi được, bộ điều khiển và hình 3D; trải nghiệm hiển thị tương tác tốt nhất khi máy có kết nối Internet.
 
@@ -58,11 +63,11 @@ Các notebook đọc dữ liệu bằng đường dẫn tương đối `datasets
 Nếu đã cài Git:
 
 ```bash
-git clone https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
+git clone --branch notebooks/w05-w07-matplotlib-plotly --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
 cd UET.MAT1052-Labs-Materials
 ```
 
-Nếu chưa dùng Git, tải file ZIP từ [trang repository](https://github.com/h2bach/UET.MAT1052-Labs-Materials), giải nén, sau đó mở thư mục vừa giải nén.
+Nếu chưa dùng Git, tải file ZIP của branch review từ [trang branch](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/notebooks/w05-w07-matplotlib-plotly), giải nén, sau đó mở thư mục vừa giải nén.
 
 ### Tạo môi trường khuyến nghị
 
@@ -162,7 +167,7 @@ cd /d "C:\Users\<ten-cua-ban>\Downloads\UET.MAT1052-Labs-Materials"
 jupyter lab
 ```
 
-Trình duyệt sẽ mở JupyterLab. Trong cột file bên trái, mở notebook theo thứ tự W1, W2, W3, W4. Giữ cửa sổ Anaconda Prompt đang chạy; khi muốn dừng JupyterLab, quay lại cửa sổ đó và nhấn `Ctrl + C`.
+Trình duyệt sẽ mở JupyterLab. Trong cột file bên trái, mở notebook theo thứ tự W1 đến W7. Giữ cửa sổ Anaconda Prompt đang chạy; khi muốn dừng JupyterLab, quay lại cửa sổ đó và nhấn `Ctrl + C`.
 
 Từ lần học sau, chỉ cần:
 
@@ -248,7 +253,7 @@ Mở notebook riêng lẻ trên Colab không tự động tải thư mục `data
 
 ```python
 %cd /content
-!git clone --depth 1 https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
+!git clone --depth 1 --branch notebooks/w05-w07-matplotlib-plotly --single-branch https://github.com/h2bach/UET.MAT1052-Labs-Materials.git
 %cd /content/UET.MAT1052-Labs-Materials
 ```
 
@@ -297,7 +302,7 @@ Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc m�
 
 ### Đồ thị Plotly không hiển thị hoặc mất tương tác
 
-Kiểm tra kết nối Internet, chạy lại ô thiết lập Plotly ở đầu notebook và thử làm mới trang JupyterLab. Nếu đang xem bản tĩnh trên GitHub, hãy mở notebook bằng JupyterLab hoặc Colab để sử dụng đầy đủ tương tác.
+Chạy lại ô thiết lập Plotly ở đầu notebook và thử làm mới trang JupyterLab. Ba notebook W5–W7 dùng `pio.renderers.default = "plotly_mimetype"` cho JupyterLab; khi chạy trên Colab, đổi giá trị này thành `"colab"`. Nếu đang xem bản tĩnh trên GitHub, hãy mở notebook bằng JupyterLab hoặc Colab để sử dụng đầy đủ tương tác.
 
 ## Nguồn hướng dẫn kỹ thuật
 

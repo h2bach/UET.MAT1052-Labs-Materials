@@ -1,0 +1,81 @@
+{
+  "numbers": {
+    "VD1_E": 1.6,
+    "VD2_Ecost": 82.0,
+    "VD3_Var": 0.32,
+    "VD3_SD": 0.565685424949238,
+    "VD5_E": 1.9,
+    "VD5_E2": 5.7,
+    "VD5_Var": 2.09,
+    "VD6_sum25_SD": 7.22841614740048,
+    "VD6_sum100_SD": 14.45683229480096,
+    "VD6_mean25_SD": 0.2891366458960192,
+    "VD6_mean100_SD": 0.1445683229480096,
+    "VD7_probability": 0.31999999999999995,
+    "VD8_E": 0.6666666666666666,
+    "VD8_Var": 0.05555555555555558,
+    "VD9_probability": 0.3,
+    "VD9_E": 5,
+    "VD10_z": 2.0,
+    "VD11_1SD": 0.6826894921370856,
+    "VD11_2SD": 0.9544997361036418,
+    "VD11_3SD": 0.9973002039367398,
+    "VD11_above504": 0.022750131948179098,
+    "VD12_CDF503": 0.9331927987311419,
+    "VD12_SF503": 0.06680720126885809,
+    "VD12_interval": 0.6826894921370856,
+    "VD12_quantile95": 503.2897072539029,
+    "VD13_SF3": 0.22313016014842982,
+    "VD15_probability": 0.022750131948179098,
+    "BT1_Efraction": 0.5833333333333334,
+    "BT2_Efahrenheit": 77.0,
+    "BT2_VarF": 29.160000000000004,
+    "BT2_SDF": 5.4,
+    "BT3_n_sufficient": 2500,
+    "BT4_Pheads11": 0.5,
+    "BT5_area": 1.0,
+    "BT6_E": 6.45,
+    "BT6_E2": 57.25,
+    "BT6_Var": 15.6475,
+    "BT6_SD": 3.955692101263697,
+    "BT7_b": 3,
+    "BT8_probability": 0.9992172988709987,
+    "BT9_1": 0.1353352832366127,
+    "BT9_2_CLT": 3.167124183311998e-05,
+    "BT9_3": 0.23468145104942723,
+    "BT9_4": 0.021856416892619357,
+    "BT9_5": 0.14259329771837964,
+    "BT10_n22": 0.922390755157658,
+    "BT10_n23": 0.9814718907179405,
+    "random_walk30_P4": 0.11153505183756351,
+    "roulette_E": -0.05263157894736842,
+    "roulette_Var": 0.997229916897507
+  },
+  "images": [
+    {
+      "filename": "01_stat20_die_box.jpg",
+      "original_image_index": 124,
+      "sha256": "d54469ca5f0c25ec7b085e121a7fc9894f6257f37ab41175a9282302b27fa7d0"
+    },
+    {
+      "filename": "02_stat20_ten_ticket_box.png",
+      "original_image_index": 123,
+      "sha256": "b11e150aaa5392d20fe9d1116596f4c6a2ca8434bc8fbc3885abd7ba7f147551"
+    },
+    {
+      "filename": "03_stat20_random_walk_scene.png",
+      "original_image_index": 120,
+      "sha256": "f8cf084871d5ad3dd293ead349ebfa69f32e26dde60f9cb537f0d2cfb2f5c3cb"
+    },
+    {
+      "filename": "04_stat20_roulette_photo.jpg",
+      "original_image_index": 125,
+      "sha256": "ea5e0f518f95f06ee9d14413fa070f85ae08b86b87265c4de2f68a6e28218f5c"
+    },
+    {
+      "filename": "05_stat20_roulette_gain_box.jpg",
+      "original_image_index": 126,
+      "sha256": "6f7ae94788c492c771e99255febc88fac7f3ead60c2c56248772b4e7a3e743b8"
+    }
+  ]
+}

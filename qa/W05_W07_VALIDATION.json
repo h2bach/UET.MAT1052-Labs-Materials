@@ -1,0 +1,64 @@
+{
+  "notebooks": [
+    {
+      "week": 5,
+      "file": "W5_NenTangVaTinhToanXacSuat.ipynb",
+      "cells": 91,
+      "code_cells": 19,
+      "png_outputs": 6,
+      "plotly_outputs": 2,
+      "illustrations": 20,
+      "slide_pages": 93,
+      "clean_execution": true,
+      "source_release_aligned": true
+    },
+    {
+      "week": 6,
+      "file": "W6_PhanPhoiVaBienNgauNhien.ipynb",
+      "cells": 119,
+      "code_cells": 34,
+      "png_outputs": 17,
+      "plotly_outputs": 1,
+      "illustrations": 4,
+      "slide_pages": 80,
+      "clean_execution": true,
+      "source_release_aligned": true
+    },
+    {
+      "week": 7,
+      "file": "W7_KyVongPhuongSaiVaXapXiChuan.ipynb",
+      "cells": 79,
+      "code_cells": 32,
+      "png_outputs": 14,
+      "plotly_outputs": 2,
+      "illustrations": 5,
+      "slide_pages": 94,
+      "clean_execution": true,
+      "source_release_aligned": true
+    }
+  ],
+  "existing_materials": {
+    "baseline_available": true,
+    "files_checked": [
+      "W1_CauHoiVaDuLieu.ipynb",
+      "W2_TomTatDuLieu.ipynb",
+      "W3_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "W3_TFT_NguPhapDoHoaVaDieuKienHoa.ipynb",
+      "W3_TFT_GiaiThichTungCell.md",
+      "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb"
+    ],
+    "execution_output_only_changes": [
+      "W4_TuongQuanVaHoiQuyTuyenTinh.ipynb"
+    ]
+  },
+  "python": "3.14.6",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0",
+    "scipy": "1.18.0",
+    "plotly": "6.7.0",
+    "nbclient": "0.11.0",
+    "nbformat": "5.10.4"
+  }
+}
