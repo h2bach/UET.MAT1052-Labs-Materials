@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+statsmodels
+jupyterlab
+ipykernel
+nbformat
+plotnine==0.15.8
+contourpy
+ipywidgets
