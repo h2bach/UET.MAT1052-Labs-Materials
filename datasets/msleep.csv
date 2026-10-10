@@ -1,0 +1,84 @@
+name,sleep_total,bodywt,log_bodywt,vore,conservation
+Cheetah,12.1,50.0,10.819778284410283,carni,lc
+Owl monkey,17.0,0.48,6.173786103901937,omni,
+Mountain beaver,14.4,1.35,7.2078598714324755,herbi,nt
+Greater short-tailed shrew,14.9,0.019,2.9444389791664403,omni,lc
+Cow,4.0,600.0,13.304684934198283,herbi,domesticated
+Three-toed sloth,14.4,3.85,8.25582842728183,herbi,
+Northern fur seal,8.7,20.49,9.927692241232945,carni,vu
+Vesper mouse,7.0,0.045,3.8066624897703196,,
+Dog,10.1,14.0,9.546812608597396,carni,domesticated
+Roe deer,3.0,14.8,9.602382459752207,herbi,lc
+Goat,5.3,33.5,10.419300717813158,herbi,lc
+Guinea pig,9.4,0.728,6.590301048196686,herbi,domesticated
+Grivet,10.0,4.75,8.465899897028686,omni,lc
+Chinchilla,12.5,0.42,6.040254711277414,herbi,domesticated
+Star-nosed mole,10.3,0.06,4.0943445622221,omni,lc
+African giant pouched rat,8.3,1.0,6.907755278982137,omni,
+Lesser short-tailed shrew,9.1,0.005,1.6094379124341003,omni,lc
+Long-nosed armadillo,17.4,3.5,8.160518247477505,carni,lc
+Tree hyrax,5.3,2.95,7.989560449333865,herbi,lc
+North American Opossum,18.0,1.7,7.438383530044307,omni,lc
+Asian elephant,3.9,2547.0,14.750426753961595,herbi,en
+Big brown bat,19.7,0.023,3.1354942159291497,insecti,lc
+Horse,2.9,521.0,13.163505320735505,herbi,domesticated
+Donkey,3.1,187.0,12.138863895836725,herbi,domesticated
+European hedgehog,10.1,0.77,6.646390514847729,omni,lc
+Patas monkey,10.9,10.0,9.210340371976184,omni,lc
+Western american chipmunk,14.9,0.071,4.2626798770413155,herbi,
+Domestic cat,12.5,3.3,8.101677747454572,carni,domesticated
+Galago,9.8,0.2,5.298317366548036,omni,
+Giraffe,1.9,899.995,13.71014448673546,herbi,cd
+Pilot whale,2.7,800.0,13.592367006650065,carni,cd
+Gray seal,6.2,85.0,11.350406535472453,carni,lc
+Gray hyrax,6.3,2.625,7.872836175025724,herbi,lc
+Human,8.0,62.0,11.03488966402723,omni,
+Mongoose lemur,9.5,1.67,7.4205789054108005,herbi,vu
+African elephant,3.3,6654.0,15.71072873556056,herbi,vu
+Thick-tailed opposum,19.4,0.37,5.91350300563827,carni,lc
+Macaque,10.1,6.8,8.824677891164198,omni,
+Mongolian gerbil,14.2,0.053,3.970291913552122,herbi,lc
+Golden hamster,14.3,0.12,4.787491742782046,herbi,en
+Vole ,12.8,0.035,3.5553480614894135,herbi,
+House mouse,12.5,0.022,3.091042453358316,herbi,nt
+Little brown bat,19.9,0.01,2.302585092994046,insecti,
+Round-tailed muskrat,14.6,0.266,5.583496308781699,herbi,nt
+Slow loris,11.0,1.4,7.24422751560335,carni,
+Degu,7.7,0.21,5.3471075307174685,herbi,lc
+Northern grasshopper mouse,14.5,0.028,3.332204510175204,carni,lc
+Rabbit,8.4,2.5,7.824046010856292,herbi,domesticated
+Sheep,3.8,55.5,10.924138299734526,herbi,domesticated
+Chimpanzee,9.7,52.2,10.86283777387073,omni,
+Tiger,15.8,162.564,11.998827049368737,carni,en
+Jaguar,10.4,100.0,11.512925464970229,carni,nt
+Lion,13.5,161.499,11.992254229675213,carni,vu
+Baboon,9.4,25.235,10.135987198774362,omni,
+Desert hedgehog,10.3,0.55,6.309918278226516,,lc
+Potto,11.0,1.1,7.003065458786462,omni,lc
+Deer mouse,11.5,0.021,3.044522437723423,,
+Phalanger,13.7,1.62,7.3901814282264295,,
+Caspian seal,3.5,86.0,11.362102575235644,carni,vu
+Common porpoise,5.6,53.18,10.88143766479701,carni,vu
+Potoroo,11.1,1.1,7.003065458786462,herbi,
+Giant armadillo,18.1,60.0,11.002099841204238,insecti,en
+Rock hyrax,5.4,3.6,8.1886891244442,,lc
+Laboratory rat,13.0,0.32,5.768320995793772,herbi,lc
+African striped mouse,8.7,0.044,3.784189633918261,omni,
+Squirrel monkey,9.6,0.743,6.610696044717759,omni,
+Eastern american mole,8.4,0.075,4.31748811353631,insecti,lc
+Cotton rat,11.3,0.148,4.997212273764115,herbi,
+Mole rat,10.6,0.122,4.804021044733257,,
+Arctic ground squirrel,16.6,0.92,6.824373670043086,herbi,lc
+Thirteen-lined ground squirrel,13.8,0.101,4.61512051684126,herbi,lc
+Golden-mantled ground squirrel,15.9,0.205,5.3230099791384085,herbi,lc
+Musk shrew,12.8,0.048,3.871201010907891,,
+Pig,9.1,86.25,11.365005334893606,omni,domesticated
+Short-nosed echidna,8.6,4.5,8.411832675758411,insecti,
+Eastern american chipmunk,15.8,0.112,4.718498871295094,herbi,
+Brazilian tapir,4.4,207.501,12.242891437918386,herbi,vu
+Tenrec,15.6,0.9,6.802394763324311,omni,
+Tree shrew,8.9,0.104,4.6443908991413725,omni,
+Bottle-nosed dolphin,5.2,173.33,12.062952570935357,carni,
+Genet,6.3,2.0,7.600902459542082,carni,
+Arctic fox,12.5,3.38,8.125630988477065,carni,
+Red fox,9.8,4.23,8.349957272040324,carni,
