@@ -1,0 +1,169 @@
+restaurant,price,food,decor,service,geo
+Daniella Ristorante,43.0,22.0,18.0,20.0,west
+Tello's Ristorante,32.0,20.0,19.0,19.0,west
+Biricchino,34.0,21.0,13.0,18.0,west
+Bottino,41.0,20.0,20.0,17.0,west
+Da Umberto,54.0,24.0,19.0,21.0,west
+Le Madri,52.0,22.0,22.0,21.0,west
+Le Zie,34.0,22.0,16.0,21.0,west
+Pasticcio,34.0,20.0,18.0,21.0,east
+Belluno,39.0,22.0,19.0,22.0,east
+Cinque Terre,44.0,21.0,17.0,19.0,east
+Fino,45.0,19.0,17.0,20.0,east
+Marchi's,47.0,21.0,19.0,21.0,east
+Nicola Paone,52.0,21.0,19.0,20.0,east
+Notaro,35.0,19.0,17.0,19.0,east
+Rossini's,47.0,20.0,18.0,21.0,east
+Trattoria Alba,37.0,21.0,19.0,21.0,east
+Villa Berulia,45.0,22.0,18.0,23.0,east
+Il Postino,57.0,24.0,21.0,22.0,east
+Luna Blu,38.0,19.0,17.0,18.0,east
+San Giusto,51.0,22.0,20.0,22.0,east
+Grifone,54.0,23.0,20.0,23.0,east
+Nanni's,51.0,23.0,17.0,21.0,east
+Osteria Laguna,38.0,20.0,18.0,18.0,east
+Bellini,49.0,22.0,21.0,21.0,east
+Cellini,45.0,22.0,20.0,22.0,east
+Anche Vivolo,37.0,19.0,17.0,19.0,east
+Bruno Ristorante,50.0,22.0,19.0,22.0,east
+Chianti,43.0,20.0,16.0,18.0,east
+Da Antonio Ristorante,49.0,22.0,19.0,20.0,east
+Harry Cipriani,65.0,21.0,20.0,20.0,east
+La Gioconda,34.0,20.0,16.0,18.0,east
+Bice,51.0,21.0,20.0,18.0,east
+Coco Pazzo Café,49.0,20.0,19.0,19.0,east
+DeGrezia,51.0,23.0,22.0,23.0,east
+FELIDIA,62.0,25.0,22.0,23.0,east
+Fresco by Scotto,50.0,23.0,21.0,21.0,east
+Giambelli,51.0,21.0,18.0,20.0,east
+Il Menestrello,52.0,22.0,19.0,22.0,east
+Il Nido,57.0,24.0,20.0,23.0,east
+Il Valentino,49.0,21.0,20.0,21.0,east
+Luna Piena,33.0,19.0,17.0,18.0,east
+Paper Moon Milano,43.0,19.0,17.0,17.0,east
+Teodora,41.0,21.0,17.0,18.0,east
+San Pietro,58.0,24.0,21.0,23.0,east
+Bravo Gianni,56.0,22.0,17.0,21.0,east
+Canaletto,44.0,22.0,17.0,21.0,east
+Il Gatto & La Volpe,37.0,20.0,15.0,20.0,east
+Il Valletto Due Mila,56.0,21.0,17.0,20.0,east
+Scalinatella,58.0,24.0,18.0,21.0,east
+Barbaresco,44.0,16.0,16.0,16.0,east
+Da Filippo,46.0,20.0,18.0,20.0,east
+East River Cafe,40.0,20.0,20.0,20.0,east
+Fred's at Barneys NY,39.0,19.0,18.0,17.0,east
+Il Vagabondo,36.0,17.0,14.0,17.0,east
+Mediterraneo,34.0,18.0,15.0,16.0,east
+Nello,54.0,18.0,16.0,15.0,east
+Primola,51.0,23.0,17.0,20.0,east
+Gino,41.0,20.0,14.0,19.0,east
+Via Oreto,40.0,22.0,17.0,20.0,east
+Bardolino,24.0,18.0,13.0,18.0,east
+Campagnola,53.0,24.0,20.0,21.0,east
+Cucina Vivolo,31.0,19.0,16.0,17.0,east
+Grace's Trattoria,35.0,18.0,16.0,17.0,east
+Lumi,49.0,20.0,19.0,19.0,east
+Mezzaluna,38.0,19.0,15.0,17.0,east
+Sette Mezzo,48.0,21.0,16.0,18.0,east
+Vivolo,43.0,20.0,19.0,20.0,east
+Zucchero e Pomodori,29.0,17.0,14.0,15.0,east
+Baraonda,37.0,17.0,18.0,15.0,east
+Coco Pazzo,55.0,22.0,21.0,20.0,east
+Due,37.0,22.0,18.0,20.0,east
+Il Monello,55.0,23.0,20.0,22.0,east
+Lusardi's,49.0,24.0,20.0,22.0,east
+Maruzzella,33.0,19.0,14.0,18.0,east
+Nino's,52.0,23.0,20.0,22.0,east
+Parma,47.0,22.0,16.0,21.0,east
+Il Riccio,43.0,21.0,16.0,20.0,east
+Andiamo,33.0,18.0,17.0,18.0,east
+Caffe Grazie,38.0,18.0,16.0,19.0,east
+Giovanni Venticinque,48.0,21.0,18.0,19.0,east
+Girasole,50.0,21.0,18.0,21.0,east
+Paola's,46.0,23.0,19.0,21.0,east
+Rughetta,38.0,23.0,19.0,24.0,east
+Triangolo,33.0,20.0,16.0,19.0,east
+Cafe Trevi,46.0,23.0,19.0,23.0,east
+Divino Ristorante,37.0,19.0,15.0,19.0,east
+Elio's,50.0,23.0,18.0,20.0,east
+Erminia,54.0,25.0,24.0,24.0,east
+Firenze,41.0,21.0,19.0,21.0,east
+Luca,37.0,21.0,15.0,18.0,east
+Nicola's,50.0,22.0,18.0,21.0,east
+Primavera,60.0,24.0,22.0,23.0,east
+Sirabella's,36.0,23.0,16.0,22.0,east
+Sistina,54.0,23.0,19.0,21.0,east
+Spada,39.0,19.0,18.0,18.0,east
+Trattoria Rustica,35.0,20.0,16.0,18.0,east
+Carino Ristorante,30.0,19.0,13.0,20.0,east
+Quattro Gatti,41.0,19.0,17.0,19.0,east
+Tony's Di Napoli,30.0,19.0,14.0,17.0,east
+Ecco-la,25.0,18.0,15.0,15.0,east
+Joanna's,43.0,19.0,18.0,21.0,east
+Vico,45.0,20.0,15.0,17.0,east
+Rao's,57.0,23.0,16.0,20.0,east
+Basta Pasta,32.0,18.0,15.0,17.0,west
+Campagna,51.0,24.0,21.0,21.0,east
+Follonico,48.0,23.0,20.0,21.0,east
+Ribollita,36.0,18.0,16.0,16.0,east
+Bondí Ristorante´,37.0,20.0,17.0,19.0,west
+Casa Mia,31.0,20.0,19.0,19.0,east
+Novitá,47.0,23.0,19.0,21.0,east
+Paul & Jimmy's,40.0,19.0,16.0,19.0,east
+Sal Anthony's,37.0,18.0,16.0,18.0,east
+Enoteca i Trulli,43.0,23.0,20.0,21.0,east
+I Trulli,51.0,23.0,22.0,21.0,east
+Lamarca,19.0,18.0,9.0,15.0,east
+Supreme Macaroni Co.,28.0,17.0,14.0,17.0,west
+Veronica,22.0,21.0,6.0,14.0,west
+Arno,41.0,19.0,17.0,19.0,west
+Amarone,33.0,19.0,15.0,18.0,west
+Cara Mia,29.0,19.0,15.0,17.0,west
+Casa Di Meglio,33.0,19.0,17.0,18.0,west
+La Rivista,45.0,19.0,16.0,18.0,west
+Trattoria Dopo Teatro,38.0,17.0,16.0,17.0,west
+Barbetta,52.0,20.0,23.0,20.0,west
+Becco,38.0,20.0,17.0,19.0,west
+Coco Pazzo Teatro,47.0,18.0,18.0,17.0,west
+Orso,46.0,22.0,18.0,20.0,west
+Osteria al Doge,40.0,20.0,17.0,18.0,west
+Pietrasanta,32.0,20.0,15.0,19.0,west
+Rainbow Grill,65.0,19.0,23.0,18.0,west
+Torre di Pisa,47.0,19.0,21.0,17.0,west
+San Domenico,65.0,23.0,22.0,22.0,west
+Trionfo,45.0,20.0,17.0,21.0,west
+ViceVersa,46.0,22.0,22.0,20.0,west
+Artusi,44.0,20.0,19.0,20.0,west
+Ciao Europa,40.0,19.0,19.0,18.0,west
+Limoncello,46.0,19.0,18.0,20.0,west
+Puttanesca,32.0,19.0,15.0,17.0,west
+Rino Trattoria,23.0,20.0,14.0,16.0,west
+Sette MoMA,42.0,18.0,21.0,17.0,west
+Trattoria Del Sogno,29.0,21.0,18.0,19.0,west
+Castellano,49.0,21.0,18.0,20.0,west
+Circo Osteria del,53.0,22.0,24.0,21.0,west
+Giovanni,45.0,22.0,19.0,21.0,west
+Palio,63.0,22.0,25.0,22.0,west
+Remi,52.0,23.0,23.0,21.0,west
+Tuscan Square,40.0,19.0,20.0,17.0,west
+Vago Ristorante,45.0,22.0,21.0,23.0,west
+Bello,38.0,21.0,17.0,20.0,west
+Caffe Cielo,38.0,18.0,17.0,18.0,west
+Da Tommaso,42.0,21.0,16.0,20.0,west
+Il Tinello,57.0,23.0,19.0,23.0,west
+Nocello,39.0,21.0,19.0,20.0,west
+Tino's,43.0,20.0,18.0,18.0,west
+Mangia e Bevi,29.0,17.0,14.0,16.0,west
+Patsy's,42.0,20.0,16.0,19.0,west
+Gabriel's,50.0,22.0,19.0,21.0,west
+Pappardella,34.0,18.0,16.0,17.0,west
+Ernie's,31.0,16.0,15.0,16.0,west
+Pomodoro Rosso,31.0,20.0,17.0,19.0,west
+Scaletta,46.0,21.0,19.0,22.0,west
+"La Grolla, Ristorante",42.0,21.0,15.0,19.0,west
+"Sambuca, Trattoria",31.0,19.0,16.0,18.0,west
+Baci,31.0,17.0,15.0,16.0,west
+Puccini,26.0,20.0,16.0,17.0,west
+Bella Luna,31.0,18.0,16.0,17.0,west
+Métisse,38.0,22.0,17.0,21.0,west
+Gennaro,34.0,24.0,10.0,16.0,west
