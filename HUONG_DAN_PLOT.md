@@ -194,3 +194,19 @@ Các đoạn “Đọc code vẽ” nằm ngay trước ô vẽ tương ứng. C
 ## Tài liệu API chính thức
 
 [Matplotlib: Figure và Axes](https://matplotlib.org/stable/users/explain/quick_start.html), [Plotly: tạo và cập nhật hình](https://plotly.com/python/creating-and-updating-figures/).
+
+## Bổ sung cho tuần 09–15
+
+
+| API | Dùng khi nào | Cách đọc |
+|---|---|---|
+| `ax.hlines(row, lower, upper)` | Khoảng tin cậy | Một đoạn là một lần lấy mẫu; đường dọc tại μ không đổi. |
+| `ax.fill_between` | Đuôi t/F/χ² | Tô riêng từng đoạn liên tiếp; không nối hai đuôi bằng một đoạn xuyên giữa. |
+| `ax.scatter(..., s=...)` | Số người từng tầng/bin | `s` là diện tích điểm; đọc tên trục và chú giải. |
+| `plt.subplots(nrows,ncols)` | So n, thiết kế hoặc nhóm | Mỗi Axes là một ô; kiểm tra thang từng ô trước khi so sánh. |
+| `go.Scatter` + `sliders` | Cỡ mẫu, leverage | Các đường được tính trước; slider chọn kịch bản, không sinh thêm dữ liệu thật. |
+| `go.Heatmap` | Ma trận nhầm lẫn theo ngưỡng | Hàng=thực tế, cột=dự đoán; chỉ dùng validation khi dò ngưỡng. |
+
+Mỗi ô vẽ dùng bảng đã tạo trong ô tính trước đó. Khi sửa tham số, chạy lại ô tính và các ô vẽ phụ thuộc. Các màu vùng đuôi chỉ hướng đến tập kết quả cực đoan; xác suất được tính bằng phân phối, không ước lượng từ mắt nhìn diện tích màn hình.
+
+Xem [mục lục tuần 09–15](./README_W09_W15.md).

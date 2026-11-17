@@ -1,0 +1,10 @@
+# Versions used for local verification, Python 3.14.6
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.18.0
+statsmodels==0.14.6
+jupyterlab==4.5.9
+ipykernel==6.31.0
+nbformat==5.10.4
+matplotlib==3.11.0
+plotly==6.7.0
