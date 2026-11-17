@@ -195,3 +195,19 @@ Các đoạn “Đọc code vẽ” nằm ngay trước ô vẽ tương ứng. C
 ## Tài liệu API chính thức
 
 [Plotnine: ánh xạ thuộc tính](https://plotnine.org/guide/aesthetic-mappings.html), [các lớp hình học](https://plotnine.org/guide/geometric-objects.html), [facet](https://plotnine.org/guide/facets.html).
+
+## Bổ sung cho tuần 09–15
+
+
+| API | Dùng khi nào | Cách đọc |
+|---|---|---|
+| `geom_segment(aes(xend=..., yend=...))` | Khoảng tin cậy, sơ đồ | Mỗi hàng xác định hai đầu đoạn; đường tại μ là mốc cố định. |
+| `geom_area` | Vùng đuôi phân phối | Diện tích biểu diễn xác suất khi trục tung là mật độ; tách nhóm đoạn liên tiếp để không nối hai đuôi qua giữa. |
+| `geom_label`, `geom_text` | Sơ đồ lấy mẫu, thiết kế | Vị trí x/y là bố cục; không phải số đo nghiên cứu. |
+| `facet_wrap` | Nhiều n, nhiều thiết kế | Đọc tiêu đề từng ô; `scales='free'` nghĩa là thang có thể khác, không so chiều cao trực tiếp. |
+| `geom_abline(intercept=0,slope=1)` | Calibration | Đường y=x là mốc xác suất dự đoán bằng tỉ lệ thực tế. |
+| `aes(size='n')` | Số người ở tầng/bin | Diện tích điểm phản ánh số lượng; đọc chú giải trước khi so chấm. |
+
+`ggplot` dùng bản sao của bảng để đổi thứ tự facet mà không sửa dữ liệu tính toán. Ở hình t/F/χ², biến `_segment` tách những đoạn liên tiếp: hai vùng cùng màu ở hai đầu không được nối thẳng qua phần giữa. Khi thử tham số, chạy lại ô tính bảng rồi ô vẽ, không chỉ ô vẽ.
+
+Xem [mục lục tuần 09–15](./README_W09_W15.md).

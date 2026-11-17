@@ -14,7 +14,7 @@ Mỗi notebook có lộ trình **học trên lớp – tự luyện – đọc s
 
 ## Bản notebook trong thư mục này
 
-Bản phát hành mặc định nằm trên nhánh [`main`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/main), dùng Plotnine. Nhánh `plotnine` được đồng bộ với bản này. Toàn bộ **8 notebook** của Tuần 1–7 và bản TFT dùng backend của branch này. Hai phiên bản giữ cùng nội dung thống kê, lý thuyết, ví dụ và bài tập, kể cả phần Grammar of Graphics.
+Bản phát hành mặc định nằm trên nhánh [`main`](https://github.com/h2bach/UET.MAT1052-Labs-Materials/tree/main), dùng Plotnine. Nhánh `plotnine` được đồng bộ với bản này. Toàn bộ **15 notebook** của Tuần 1–7, 9–15 và bản TFT dùng backend của branch này. Hai phiên bản giữ cùng nội dung thống kê, lý thuyết, ví dụ và bài tập, kể cả phần Grammar of Graphics.
 
 Mọi hình được dựng bằng `plotnine`, từ bảng dữ liệu, ánh xạ `aes` và các lớp `geom_*`; ảnh nguồn giữ nguyên. Các hoạt động dùng `ipywidgets` hoặc tham số sửa rồi chạy lại theo hướng dẫn trong ô. GitHub và HTML tĩnh hiển thị PNG đã lưu; slider cần kernel Jupyter đang chạy. Mặt phẳng hồi quy được biểu diễn bằng lát cắt 2D và đồ thị quan sát–dự đoán.
 
@@ -47,13 +47,13 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | 6 | Khái quát dữ liệu (2/7) | Phân phối xác suất; quy tắc đếm; biến ngẫu nhiên rời rạc; nhị thức, siêu bội và hàm phân phối tích lũy | [`W6_PhanPhoiVaBienNgauNhien.ipynb`](./W6_PhanPhoiVaBienNgauNhien.ipynb) |
 | 7 | Khái quát dữ liệu (3/7) | Kỳ vọng; phương sai; độ lệch chuẩn; phân phối liên tục; tổng và trung bình; định lý giới hạn trung tâm | [`W7_KyVongPhuongSaiVaXapXiChuan.ipynb`](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 | 8 | Kiểm tra giữa kỳ | Ôn tập và đánh giá thống kê mô tả, trực quan hóa, xác suất và các phân phối thông dụng | Chưa có trong repository |
-| 9 | Khái quát dữ liệu (5/7) | Mẫu và quần thể; nguồn sai số; phân phối mẫu; khoảng tin cậy cho trung bình và tỉ lệ | Chưa có trong repository |
-| 10 | Khái quát dữ liệu (6/7) | Bootstrap; mở đầu kiểm định giả thuyết; p-value và các thành phần của một kiểm định | Chưa có trong repository |
-| 11 | Khái quát dữ liệu (7/7) | Kiểm định giả thuyết; một phía và hai phía; mức ý nghĩa; sai lầm loại I và sức mạnh kiểm định | Chưa có trong repository |
-| 12 | Phân tích nhân quả (1/2) | Phản thực; thách thức của nhân quả; thí nghiệm ngẫu nhiên và nguyên tắc thiết kế thực nghiệm | Chưa có trong repository |
-| 13 | Phân tích nhân quả (2/2) | Nghiên cứu quan sát; thí nghiệm tự nhiên; nhiễu ẩn; thiết kế trước/sau và dữ liệu theo thời gian | Chưa có trong repository |
-| 14 | Dự đoán (1/2) | Khái niệm dự đoán; hồi quy tuyến tính; đánh giá và cải thiện mô hình dự đoán | Chưa có trong repository |
-| 15 | Dự đoán (2/2) | Quá khớp; tập huấn luyện và tập kiểm tra; hồi quy logistic | Chưa có trong repository |
+| 9 | Khái quát dữ liệu (5/7) | Mẫu và quần thể; nguồn sai số; phân phối mẫu; khoảng tin cậy cho trung bình và tỉ lệ | [`W9_TuMauDenTongTheVaKhoangTinCay.ipynb`](./W9_TuMauDenTongTheVaKhoangTinCay.ipynb) |
+| 10 | Khái quát dữ liệu (6/7) | Bootstrap; mở đầu kiểm định giả thuyết; p-value và các thành phần của một kiểm định | [`W10_BootstrapVaMoDauKiemDinh.ipynb`](./W10_BootstrapVaMoDauKiemDinh.ipynb) |
+| 11 | Khái quát dữ liệu (7/7) | Kiểm định giả thuyết; một phía và hai phía; mức ý nghĩa; sai lầm loại I và sức mạnh kiểm định | [`W11_KiemDinhHaiMauVaChiBinhPhuong.ipynb`](./W11_KiemDinhHaiMauVaChiBinhPhuong.ipynb) |
+| 12 | Phân tích nhân quả (1/2) | Phản thực; thách thức của nhân quả; thí nghiệm ngẫu nhiên và nguyên tắc thiết kế thực nghiệm | [`W12_QuanHeNhanQua.ipynb`](./W12_QuanHeNhanQua.ipynb) |
+| 13 | Phân tích nhân quả (2/2) | Nghiên cứu quan sát; thí nghiệm tự nhiên; nhiễu ẩn; thiết kế trước/sau và dữ liệu theo thời gian | [`W13_ThietKeThiNghiemVaNghienCuuQuanSat.ipynb`](./W13_ThietKeThiNghiemVaNghienCuuQuanSat.ipynb) |
+| 14 | Dự đoán (1/2) | Khái niệm dự đoán; hồi quy tuyến tính; đánh giá và cải thiện mô hình dự đoán | [`W14_DanhGiaVaCaiThienDuDoan.ipynb`](./W14_DanhGiaVaCaiThienDuDoan.ipynb) |
+| 15 | Dự đoán (2/2) | Quá khớp; tập huấn luyện và tập kiểm tra; hồi quy logistic | [`W15_QuaKhopVaHoiQuyLogistic.ipynb`](./W15_QuaKhopVaHoiQuyLogistic.ipynb) |
 
 ## 3. Học liệu hiện có
 
@@ -67,7 +67,7 @@ Python 3 là ngôn ngữ thực hành chính thức. Notebook có thể chạy b
 | [Tuần 6 - Phân phối và biến ngẫu nhiên](./W6_PhanPhoiVaBienNgauNhien.ipynb) | Quy tắc đếm; PMF/CDF; đều, Bernoulli, nhị thức, siêu bội, Poisson; đủ 21 ví dụ gốc | Phép đếm chính xác; mô hình hộp; mô phỏng theo giả định | [Mở W6 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W6_PhanPhoiVaBienNgauNhien.ipynb) |
 | [Tuần 7 - Kỳ vọng, phương sai và xấp xỉ chuẩn](./W7_KyVongPhuongSaiVaXapXiChuan.ipynb) | Kỳ vọng/SD; liên tục; chuẩn; luật số lớn; CLT; đủ 15 ví dụ và 10 bài tập gốc | Hộp 10 vé; roulette; mô phỏng iid và tổng/trung bình | [Mở W7 bằng Colab](https://colab.research.google.com/github/h2bach/UET.MAT1052-Labs-Materials/blob/main/W7_KyVongPhuongSaiVaXapXiChuan.ipynb) |
 
-Cả 8 notebook có hướng dẫn Plot theo đúng thư viện của branch, kèm nội dung thống kê, ví dụ, thực hành và đáp án. Bắt đầu với [hướng dẫn Plot](./HUONG_DAN_PLOT.md), rồi mở bài theo thứ tự Tuần 1–7. Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
+Cả 15 notebook có hướng dẫn Plot theo đúng thư viện của branch, kèm nội dung thống kê, ví dụ, thực hành và đáp án. Bắt đầu với [hướng dẫn Plot](./HUONG_DAN_PLOT.md), rồi mở bài theo thứ tự Tuần 1–7. Lý thuyết Grammar of Graphics giữ nguyên. Các hình nguồn nằm trong `figures/`; ảnh Tuần 6–7 cũng được nhúng trực tiếp trong notebook.
 
 Các notebook sử dụng `numpy`, `pandas`, `scipy`, `statsmodels` và `plotnine`. Hình được dựng từ dữ liệu, `aes` và các lớp `geom_*`. Các hoạt động thay tham số dùng `ipywidgets` hoặc sửa giá trị rồi chạy lại theo hướng dẫn trong ô; mặt phẳng hồi quy được trình bày bằng các lát cắt 2D.
 
@@ -107,7 +107,7 @@ Hướng dẫn từng bước cho Windows, macOS và Google Colab nằm trong ph
 
 ## 5. Dữ liệu
 
-Repository có 12 file CSV phục vụ trực tiếp cho các hoạt động học tập.
+Repository có 22 file CSV phục vụ trực tiếp cho các hoạt động học tập.
 
 | File | Đơn vị quan sát hoặc nội dung | Dùng ở |
 |---|---|---|
@@ -131,6 +131,21 @@ Nguồn, giấy phép và ghi chú chi tiết cho từng bộ dữ liệu đư�
 Lộ trình nội dung bám theo học phần UET.MAT1052, biên dịch bởi TS. Hoàng Thị Điệp, TS. Nghiêm Nguyễn Việt Dũng, TS. Lê Thị Hường, Khoa Công nghệ Thông tin, Trường Đại học Công nghệ, ĐHQGHN. Cách tổ chức các chủ đề có tham khảo Stat 20 - *Introduction to Probability and Statistics* của UC Berkeley cùng các tài liệu và bộ dữ liệu thống kê mở.
 
 ---
+
+## Notebook tuần 09–15 (bổ sung 17/11/2026)
+
+Bảy tuần tiếp theo đã có đủ hai bản thực hành cục bộ, kèm dữ liệu, hình và kết quả đã chạy. Mở [hướng dẫn và mục lục tuần 09–15](./README_W09_W15.md).
+
+| Tuần | Bài |
+|---|---|
+| 09 | [Khái quát dữ liệu (5/7): Từ mẫu đến tổng thể và khoảng tin cậy](./W9_TuMauDenTongTheVaKhoangTinCay.ipynb) |
+| 10 | [Khái quát dữ liệu (6/7): Bootstrap và mở đầu kiểm định](./W10_BootstrapVaMoDauKiemDinh.ipynb) |
+| 11 | [Khái quát dữ liệu (7/7): Kiểm định hai mẫu, χ² và lực kiểm định](./W11_KiemDinhHaiMauVaChiBinhPhuong.ipynb) |
+| 12 | [Phân tích Nhân quả (1/2): Kết quả tiềm năng và tác động trung bình](./W12_QuanHeNhanQua.ipynb) |
+| 13 | [Phân tích Nhân quả (2/2): Thiết kế thí nghiệm và nghiên cứu quan sát](./W13_ThietKeThiNghiemVaNghienCuuQuanSat.ipynb) |
+| 14 | [Dự đoán (1/2): Đánh giá và cải thiện dự đoán](./W14_DanhGiaVaCaiThienDuDoan.ipynb) |
+| 15 | [Dự đoán (2/2): Quá khớp và hồi quy logistic](./W15_QuaKhopVaHoiQuyLogistic.ipynb) |
+
 
 # Phụ lục
 
@@ -319,7 +334,7 @@ Trong JupyterLab, chọn **Kernel > Change Kernel** và chọn kernel thuộc m�
 
 ### Hình hoặc slider chưa cập nhật
 
-Cả 8 notebook dùng Plotnine và lưu PNG ban đầu. Slider `ipywidgets` cần kernel đang chạy; nếu viewer không hỗ trợ, sửa tham số trong ô và chạy lại theo hướng dẫn. Các hoạt động khác cũng dùng thao tác sửa tham số rồi chạy lại. Phần hồi quy đa biến dùng lát cắt 2D thay thao tác xoay 3D.
+Cả 15 notebook dùng Plotnine và lưu PNG ban đầu. Slider `ipywidgets` cần kernel đang chạy; nếu viewer không hỗ trợ, sửa tham số trong ô và chạy lại theo hướng dẫn. Các hoạt động khác cũng dùng thao tác sửa tham số rồi chạy lại. Phần hồi quy đa biến dùng lát cắt 2D thay thao tác xoay 3D.
 
 ## Nguồn hướng dẫn kỹ thuật
 
